@@ -1,6 +1,5 @@
 ﻿# Módulo 7 — Perfil NeTEx Portugal
 
-> **Este módulo é único em todo o ecossistema de recursos NeTEx** — não existe nada equivalente em nenhuma língua sobre o perfil português especificamente.
 
 ## Objetivos de Aprendizagem
 
@@ -17,9 +16,9 @@ Após completar este módulo, o leitor será capaz de:
 
 ## 1. O que é um Perfil Nacional NeTEx?
 
-O NeTEx (CEN/TS 16614) é uma especificação muito vasta — cobre desde paragens simples até tarifas complexas, acessibilidade detalhada e gestão operacional. Um ficheiro NeTEx "completo" pode ter centenas de elementos possíveis.
+O NeTEx (CEN/TS 16614) é uma especificação muito vasta, cobre desde paragens simples até tarifas complexas, acessibilidade detalhada e gestão operacional. Um ficheiro NeTEx "completo" pode ter centenas de elementos possíveis.
 
-Um **perfil nacional** define um subconjunto obrigatório e recomendado desses elementos para um país específico. O perfil responde às perguntas:
+Um perfil nacional define um subconjunto obrigatório e recomendado desses elementos para um país específico. O perfil responde às seguintes questões:
 
 - Quais os elementos que o NAP nacional exige obrigatoriamente?
 - Quais os campos que são recomendados mas opcionais?
@@ -48,7 +47,7 @@ O Perfil Nacional NeTEx Portugal, também referido como **PT-EPIP** (European Pa
 https://ptprofiles.azurewebsites.net
 ```
 
-É mantido pelo **IMT — Instituto da Mobilidade e dos Transportes** e define os requisitos para a submissão de dados ao NAP Portugal.
+É mantido pelo IMT (Instituto da Mobilidade e dos Transportes) e define os requisitos para a submissão de dados ao NAP Portugal.
 
 ### 2.1 Estrutura do Perfil PT
 
@@ -60,7 +59,8 @@ O perfil PT organiza os requisitos em três níveis:
 | Recomendado | **R** (Recommended) | O elemento DEVERIA estar presente; ausência gera aviso |
 | Opcional | **O** (Optional) | O elemento PODE estar presente; sem penalidade |
 
-### 2.2 Campos Obrigatórios — ResourceFrame (Authority e Operator)
+### 2.2 Campos Obrigatórios 
+- #### ResourceFrame (Authority e Operator)
 
 | Elemento | Campo | Nível |
 |---------|-------|-------|
@@ -71,7 +71,7 @@ O perfil PT organiza os requisitos em três níveis:
 | `Operator` | `ContactDetails/Url` | **M** |
 | `Operator` | `OrganisationType=operator` | **M** |
 
-### 2.3 Campos Obrigatórios — ServiceFrame (Rede)
+- #### ServiceFrame (Rede)
 
 | Elemento | Campo | Nível |
 |---------|-------|-------|
@@ -83,7 +83,7 @@ O perfil PT organiza os requisitos em três níveis:
 | `ServiceJourneyPattern` | `id`, `version`, `RouteRef` | **M** |
 | `PassengerStopAssignment` | `ScheduledStopPointRef`, `StopPlaceRef`, `QuayRef` | **M** |
 
-### 2.4 Campos Obrigatórios — SiteFrame (Infraestrutura)
+- #### SiteFrame (Infraestrutura)
 
 | Elemento | Campo | Nível |
 |---------|-------|-------|
@@ -92,7 +92,7 @@ O perfil PT organiza os requisitos em três níveis:
 | `Quay` | `id`, `version`, `Name`, `QuayType` | **M** |
 | `Quay` | `Centroid/Location` | **M** |
 
-### 2.5 Campos Obrigatórios — TimetableFrame (Horários)
+- #### TimetableFrame (Horários)
 
 | Elemento | Campo | Nível |
 |---------|-------|-------|

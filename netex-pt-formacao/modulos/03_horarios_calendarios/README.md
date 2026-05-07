@@ -1,4 +1,4 @@
-﻿# Módulo 3 — Horários e Calendários
+# Módulo 3 — Horários e Calendários
 
 ## Objetivos de Aprendizagem
 
@@ -63,9 +63,59 @@ Quando `arrival_time` = `departure_time` (sem espera), NeTEx aceita usar apenas 
 
 ### 1.4 JourneyPatternRef — Reutilização
 
-Note que a `ServiceJourney` não repete a lista de paragens — apenas referencia o `ServiceJourneyPattern` definido no Módulo 2. Os `TimetabledPassingTime` usam `StopPointInJourneyPatternRef` para indicar a qual paragem do padrão corresponde cada tempo.
+Note que a `ServiceJourney` não repete a lista de paragens, apenas referencia o `ServiceJourneyPattern` definido no Módulo 2. Os `TimetabledPassingTime` usam `StopPointInJourneyPatternRef` para indicar a qual paragem do padrão corresponde cada tempo.
 
 Isto evita duplicação: se 50 viagens usam o mesmo padrão de paragens (e.g., todas as viagens da Linha 200 IDA), o padrão é definido uma vez e referenciado 50 vezes.
+
+### 1.5 Como construir uma ServiceJourney
+
+Quando o operador precisa representar uma viagem real. Por exemplo, a partida das 06:00 da Linha 200 em dia útil, o processo é direto. Partindo da sua tabela de horários (seja um ficheiro Excel, uma base de dados ou um sistema de bordo), identifique:
+
+1. **O padrão de percurso (JourneyPattern)** – Lista a sequência de paragens.
+2. **O tipo de dia (DayType)** – por exemplo, “Dias Úteis”, “Sábados” ou “Feriados”.
+3. **Os tempos de passagem** – para cada paragem do padrão, a hora de chegada e/ou partida.
+
+Com esses três elementos, criar a `ServiceJourney` é uma tarefa de mapeamento direto: cada paragem do padrão recebe um `TimetabledPassingTime` com a respetiva hora. Se o seu negócio trabalha com viagens de sentido único (ex: ida sem regresso), preencha `DepartureTime` para todas as paragens exceto a última, onde utiliza `ArrivalTime`. Para viagens circulares ou com tempos de espera, distinga claramente `ArrivalTime` e `DepartureTime`.
+
+**Exemplo prático (uma viagem de 4 paragens):**
+Suponha que a Linha 100 tem um padrão `JP_100_IDA` com as paragens: `Paragem_A`, `Paragem_B`, `Paragem_C`, `Paragem_D`. Os horários operacionais da primeira viagem do dia são:
+- Parte de A às 06:00
+- Chega a B às 06:10 e parte às 06:10 (tempo de espera zero)
+- Chega a C às 06:22 e parte às 06:23 (1 minuto de espera)
+- Chega a D (terminal) às 06:35
+
+O operador gera então o seguinte XML (as referências aos IDs do padrão e do tipo de dia são as que já definiu no sistema):
+
+```xml
+<ServiceJourney id="PT:OPERADOR:ServiceJourney:100_0600_V1" version="1">
+  <JourneyPatternRef ref="PT:OPERADOR:JP:100_IDA" version="1"/>
+  <DayTypeRefs>
+    <DayTypeRef ref="PT:OPERADOR:DayType:DiasUteis" version="1"/>
+  </DayTypeRefs>
+  <passingTimes>
+    <TimetabledPassingTime>
+      <StopPointInJourneyPatternRef ref="PT:OPERADOR:SPIJP:100_IDA_A" version="1"/>
+      <DepartureTime>06:00:00</DepartureTime>
+    </TimetabledPassingTime>
+    <TimetabledPassingTime>
+      <StopPointInJourneyPatternRef ref="PT:OPERADOR:SPIJP:100_IDA_B" version="1"/>
+      <ArrivalTime>06:10:00</ArrivalTime>
+      <DepartureTime>06:10:00</DepartureTime>
+    </TimetabledPassingTime>
+    <TimetabledPassingTime>
+      <StopPointInJourneyPatternRef ref="PT:OPERADOR:SPIJP:100_IDA_C" version="1"/>
+      <ArrivalTime>06:22:00</ArrivalTime>
+      <DepartureTime>06:23:00</DepartureTime>
+    </TimetabledPassingTime>
+    <TimetabledPassingTime>
+      <StopPointInJourneyPatternRef ref="PT:OPERADOR:SPIJP:100_IDA_D" version="1"/>
+      <ArrivalTime>06:35:00</ArrivalTime>
+    </TimetabledPassingTime>
+  </passingTimes>
+</ServiceJourney>
+```
+
+Note que este processo pode ser automatizado, sempre que os seus dados de negócio tiverem uma tabela de horários, uma rotina simples de conversão gera o XML NeTEx, garantindo consistência e rastreabilidade.
 
 ---
 
@@ -87,7 +137,7 @@ A STCP usa **exclusivamente `calendar_dates.txt`** com `exception_type=1` (servi
 
 ### 2.2 DayType — O Tipo de Dia
 
-Um **`DayType`** define uma categoria de dias de operação. [[STD-02]](#STD-02) Corresponde ao `service_id` do GTFS, mas é mais expressivo — pode incluir propriedades como dias da semana.
+Um **`DayType`** define uma categoria de dias de operação. [[STD-02]](#STD-02) Corresponde ao `service_id` do GTFS, mas é mais expressivo, pode incluir propriedades como dias da semana.
 
 ```xml
 <DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1">
@@ -153,6 +203,40 @@ Todos estes objetos vivem no **`ServiceCalendarFrame`**:
   </dayTypeAssignments>
 </ServiceCalendarFrame>
 ```
+
+### 2.5 Como construir os DayType e o calendário
+
+Na prática, o operador já sabe quais dias o serviço funciona. Se utiliza um sistema interno ou mesmo uma folha de cálculo com a lista de todas as datas do ano (ex: “2026-04-30 – Dia Útil”, “2026-05-01 – Feriado”, “2026-05-02 – Sábado”, etc.), criar o `DayType` e o calendário NeTEx é um processo simples:
+
+1. **Defina os tipos de dia** que existem na sua operação (ex: “Dias Úteis”, “Sábados”, “Domingos e Feriados”).
+2. **Para cada data** do seu calendário operacional, crie um `OperatingDay` e uma `DayTypeAssignment` que ligue essa data ao tipo de dia correspondente.
+3. **Associe depois** cada `ServiceJourney` ao `DayType` adequado (via `DayTypeRef`).
+
+Se o seu negócio já produz um ficheiro `calendar_dates.txt` no formato GTFS (com `service_id` e `date`), a conversão para NeTEx é direta: cada linha desse ficheiro origina um `OperatingDay` + uma `DayTypeAssignment`. O `service_id` GTFS vira o `DayType`, e a data vira o `OperatingDay`.
+
+**Exemplo prático:**
+O operador tem uma tabela de serviço para maio de 2026:
+
+| Data | Tipo de serviço |
+|------|-----------------|
+| 2026-05-01 | DomingosFeriados |
+| 2026-05-02 | Sabados |
+| 2026-05-04 | DiasUteis |
+
+O sistema gera:
+
+```xml
+<OperatingDay id="PT:OPERADOR:OperatingDay:20260501" version="1">
+  <CalendarDate>2026-05-01</CalendarDate>
+</OperatingDay>
+<DayTypeAssignment id="PT:OPERADOR:DTA:20260501_DF" version="1" order="1">
+  <DayTypeRef ref="PT:OPERADOR:DayType:DomingosFeriados" version="1"/>
+  <OperatingDayRef ref="PT:OPERADOR:OperatingDay:20260501" version="1"/>
+</DayTypeAssignment>
+<!-- repetir para 2026-05-02 (Sabados) e 2026-05-04 (DiasUteis) ... -->
+```
+
+Este método é fácil de automatizar e garante que as `ServiceJourney` só correm nos dias corretos, tal como acontece atualmente com os `service_id` do GTFS. Ao manter a mesma lógica de “lista explícita de datas”, o operador não perde controle sobre exceções (pontes, feriados regionais, dias de greve ou de oferta especial).
 
 ---
 

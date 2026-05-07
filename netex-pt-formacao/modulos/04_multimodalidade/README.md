@@ -61,7 +61,7 @@ Todos os objetos físicos vivem no **`SiteFrame`**: [[STD-01]](#STD-01)
 </SiteFrame>
 ```
 
-O `SiteFrame` é o único frame que não tem equivalente direto em GTFS — é a grande adição do NeTEx para modelar a infraestrutura física de transporte.
+O `SiteFrame` é o único frame que não tem equivalente direto em GTFS, é a grande adição do NeTEx para modelar a infraestrutura física de transporte.
 
 ---
 
@@ -69,7 +69,7 @@ O `SiteFrame` é o único frame que não tem equivalente direto em GTFS — é a
 
 ### 3.1 StopPlace
 
-Um **`StopPlace`** é o local físico — o cruzamento, a praça, o edifício ou a estação onde os passageiros acedem ao transporte. [[STD-01]](#STD-01)
+Um **`StopPlace`** é o local físico como o cruzamento, a praça, o edifício ou a estação onde os passageiros acedem ao transporte. [[STD-01]](#STD-01)
 
 Um `StopPlace` pode ter:
 - **Múltiplos `Quay`** — uma plataforma por direção/modo

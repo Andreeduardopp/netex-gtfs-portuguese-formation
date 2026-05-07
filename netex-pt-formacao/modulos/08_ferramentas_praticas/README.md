@@ -14,7 +14,7 @@ Após completar este módulo, o leitor será capaz de:
 
 ## 1. Validação — netex-validator (Entur)
 
-O **`netex-validator`** é a ferramenta de validação NeTEx de referência, desenvolvida e mantida pela Entur (NAP da Noruega). É open-source e é usada como base por vários NAPs europeus, incluindo o sistema de validação do NAP Portugal. [[TOOL-01]](#TOOL-01)
+O `netex-validator` é a ferramenta de validação NeTEx de referência, desenvolvida e mantida pela Entur (NAP da Noruega). É open-source e é usada como base por vários NAPs europeus, incluindo o sistema de validação do NAP Portugal. [[TOOL-01]](#TOOL-01)
 
 ### 1.1 Instalação
 
@@ -255,7 +255,7 @@ Use esta checklist antes de cada submissão ao NAP Portugal:
 
 ## Exemplos
 
-- [`exemplos/08_01_erros_frequentes.xml`](exemplos/08_01_erros_frequentes.xml) — Os 10 erros mais frequentes na submissão ao NAP Portugal, cada um com comentário explicativo e a correção correspondente
+- [`exemplos/08_01_erros_frequentes.xml`](exemplos/08_01_erros_frequentes.xml) — Erros frequentes na submissão ao NAP Portugal, cada um com comentário explicativo e a correção correspondente
 
 ---
 

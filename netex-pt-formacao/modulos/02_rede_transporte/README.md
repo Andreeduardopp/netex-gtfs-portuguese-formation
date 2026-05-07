@@ -133,6 +133,71 @@ ServiceJourneyPattern 200_IDA
 └── StopPointInJourneyPattern 30 → ref: CQ10 (Castelo do Queijo)
 ```
 
+### 1.7 Como construir Linhas, Rotas e Padrões de Viagem
+
+O operador já conhece as suas linhas comerciais, os sentidos de circulação e a ordem das paragens em cada percurso. A conversão para NeTEx segue uma sequência lógica que espelha a realidade operacional:
+
+1. **Para cada linha comercial** (ex: “Linha 200”), crie uma `Line` com o código público e o nome que aparece nas paragens e nos autocarros.
+2. **Para cada sentido** (ida/volta), crie uma `Direction` com o nome do destino (ex: “Castelo do Queijo”).
+3. **Para cada variante de percurso** (normal, curta, desvio), crie uma `Route` associada à linha e à direção, que contenha a sequência de pontos da rota.
+4. **Para cada paragem** onde o veículo efetivamente pára, crie um `ScheduledStopPoint`. Se várias rotas partilham a mesma paragem, usam o mesmo `ScheduledStopPoint`.
+5. **Para cada rota**, crie um `ServiceJourneyPattern` que lista os `StopPointInJourneyPattern` – cada um destes aponta para um `ScheduledStopPoint` e define a ordem da paragem no percurso.
+
+Este processo é facilmente automatizado a partir das bases de dados internas do operador. Um ficheiro CSV com a lista de percursos (ex: `route_id`, `stop_sequence`, `stop_id`, `stop_name`) é tudo o que precisa para gerar os elementos NeTEx correspondentes.
+
+**Exemplo prático (Linha 200, sentido Castelo do Queijo, primeiras três paragens):**
+
+```xml
+<!-- Linha comercial -->
+<Line id="PT:OPERADOR:Line:200" version="1">
+  <PublicCode>200</PublicCode>
+  <Name>Bolhão — Castelo do Queijo</Name>
+  <TransportMode>bus</TransportMode>
+</Line>
+
+<!-- Direção -->
+<Direction id="PT:OPERADOR:Direction:200_CQ" version="1">
+  <Name>Castelo do Queijo</Name>
+</Direction>
+
+<!-- Rota (sequência de RoutePoints, neste exemplo apenas os pontos que são paragens) -->
+<Route id="PT:OPERADOR:Route:200_IDA_NORMAL" version="1">
+  <LineRef ref="PT:OPERADOR:Line:200" version="1"/>
+  <DirectionRef ref="PT:OPERADOR:Direction:200_CQ" version="1"/>
+  <pointsInSequence>
+    <RoutePoint id="PT:OPERADOR:RoutePoint:BLRB1" version="1">
+      <ProjectedPointRef ref="PT:OPERADOR:ScheduledStopPoint:BLRB1" version="1"/>
+    </RoutePoint>
+    <RoutePoint id="PT:OPERADOR:RoutePoint:MCBL" version="1">
+      <ProjectedPointRef ref="PT:OPERADOR:ScheduledStopPoint:MCBL" version="1"/>
+    </RoutePoint>
+    <RoutePoint id="PT:OPERADOR:RoutePoint:CQ10" version="1">
+      <ProjectedPointRef ref="PT:OPERADOR:ScheduledStopPoint:CQ10" version="1"/>
+    </RoutePoint>
+    <!-- ... mais RoutePoints ... -->
+  </pointsInSequence>
+</Route>
+
+<!-- Padrão de viagem (reutilizável por todas as viagens da mesma rota) -->
+<ServiceJourneyPattern id="PT:OPERADOR:SJP:200_IDA_NORMAL" version="1">
+  <RouteRef ref="PT:OPERADOR:Route:200_IDA_NORMAL" version="1"/>
+  <pointsInSequence>
+    <StopPointInJourneyPattern id="PT:OPERADOR:SPIJP:200_IDA_01" version="1" order="1">
+      <ScheduledStopPointRef ref="PT:OPERADOR:ScheduledStopPoint:BLRB1" version="1"/>
+    </StopPointInJourneyPattern>
+    <StopPointInJourneyPattern id="PT:OPERADOR:SPIJP:200_IDA_02" version="1" order="2">
+      <ScheduledStopPointRef ref="PT:OPERADOR:ScheduledStopPoint:MCBL" version="1"/>
+    </StopPointInJourneyPattern>
+    <!-- ... até à última paragem ... -->
+    <StopPointInJourneyPattern id="PT:OPERADOR:SPIJP:200_IDA_30" version="1" order="30">
+      <ScheduledStopPointRef ref="PT:OPERADOR:ScheduledStopPoint:CQ10" version="1"/>
+    </StopPointInJourneyPattern>
+  </pointsInSequence>
+</ServiceJourneyPattern>
+```
+
+Uma vez definidos estes objetos, a criação de cada `ServiceJourney` resume-se a referenciar o `ServiceJourneyPattern` e a adicionar os horários de passagem para cada `StopPointInJourneyPattern`. Desta forma, a topologia fica separada dos horários, permitindo grande reutilização e manutenção simplificada.
+
 ---
 
 ## 2. Da Linha à Rota: o Processo de Conversão GTFS → NeTEx

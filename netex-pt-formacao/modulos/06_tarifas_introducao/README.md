@@ -12,7 +12,7 @@ Após completar este módulo, o leitor será capaz de:
 
 ---
 
-## 1. O Problema: GTFS Não Tem Tarifas Estruturadas
+## 1. A Limitação:
 
 O GTFS tem uma extensão opcional chamada `fare_attributes.txt` / `fare_rules.txt` (versão legada) e uma nova `fares v2` (ainda em discussão), mas nenhuma delas é universalmente adotada ou suficientemente expressiva para o sistema tarifário português.
 
@@ -25,7 +25,7 @@ O GTFS tem uma extensão opcional chamada `fare_attributes.txt` / `fare_rules.tx
 | Títulos com validade temporal | Não modeláveis em GTFS |
 | Descontos (jovem, sénior, estudante) | Não modeláveis em GTFS |
 
-O NeTEx (Parte 3 — Fares) tem um modelo de tarifas completo e muito expressivo. Este módulo cobre apenas os conceitos introdutórios — a especificação completa de tarifas ficará para uma versão futura do curso.
+O NeTEx (Parte 3 — Fares) tem um modelo de tarifas completo e muito expressivo. Este módulo cobre apenas os conceitos introdutórios, ficando a especificação completa de tarifas para uma versão futura do curso.
 
 ---
 

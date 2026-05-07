@@ -4,7 +4,7 @@
 
 Após completar este módulo, o leitor será capaz de:
 
-- Compreender a diferença entre acessibilidade do **veículo** e acessibilidade da **infraestrutura** em NeTEx
+- Compreender a diferença entre acessibilidade do veículo e acessibilidade da infraestrutura em NeTEx
 - Aplicar `AccessibilityAssessment` e `AccessibilityLimitation` a `ServiceJourney`, `StopPlace` e `Quay`
 - Usar correctamente os valores de `LimitationStatusEnumeration`: `yes`, `no`, `partial`, `unknown`
 - Modelar rampas, elevadores, piso tátil, informação sonora e informação visual
@@ -26,8 +26,8 @@ Esta codificação binária é insuficiente para vários cenários reais:
 
 | Situação | GTFS | Limitação |
 |----------|------|-----------|
-| Rampa disponível mas só com assistência | `wheelchair_accessible=1` | Não distingue "independente" de "com ajuda" |
-| Paragem parcialmente acessível (rampa existe mas elevação excessiva) | Não representável | Sem valor "parcial" |
+| Rampa disponível mas só com assistência | `wheelchair_accessible=1` | Não distingue independente de com ajuda |
+| Paragem parcialmente acessível (rampa existe mas elevação excessiva) | Não representável | Sem valor parcial |
 | Informação sonora no veículo | Não existe campo | Passageiros invisuais não contemplados |
 | Piso tátil na plataforma | Não existe campo | Deficiência visual não modelada |
 | Elevador avariado temporariamente | Não representável | Sem mecanismo de estado temporal |
@@ -44,11 +44,11 @@ O NeTEx resolve isto com um modelo de acessibilidade multi-dimensional que cobre
 
 ## 2. AccessibilityAssessment — O Elemento Central
 
-O **`AccessibilityAssessment`** é o container que agrega todas as informações de acessibilidade de um objeto. [[STD-01]](#STD-01)
+O `AccessibilityAssessment` é o container que agrega todas as informações de acessibilidade de um objeto. [[STD-01]](#STD-01)
 
 Pode ser associado a:
-- `ServiceJourney` — acessibilidade do **veículo** nesta viagem concreta
-- `StopPlace` / `Quay` — acessibilidade da **infraestrutura** física
+- `ServiceJourney` — acessibilidade do veículo nesta viagem concreta
+- `StopPlace` / `Quay` — acessibilidade da infraestrutura física
 - `Line` — acessibilidade geral da linha
 
 ### 2.1 Estrutura Básica
@@ -126,7 +126,7 @@ Estação de metro com elevador (pode estar avariado):
 
 ## 4. AccessibilityAssessment na ServiceJourney vs StopPlace
 
-A distinção entre acessibilidade do **veículo** e da **infraestrutura** é uma das contribuições mais importantes do NeTEx para a acessibilidade real dos sistemas de transporte. [[STD-01]](#STD-01)
+A distinção entre acessibilidade do veículo e da infraestrutura é uma contribuição valiosa do NeTEx para a acessibilidade real dos sistemas de transporte. [[STD-01]](#STD-01)
 
 ```
 Um percurso verdadeiramente acessível requer DOIS componentes:
