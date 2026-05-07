@@ -49,7 +49,7 @@ O modelo de rede no NeTEx separa claramente três camadas: [[STD-01]](#STD-01)
 
 Uma `Line` representa a linha de transporte como é conhecida pelos passageiros — o "Linha 200" ou "Metro Azul". Contém apenas informação comercial: nome, código público, cor, modo de transporte. [[STD-01]](#STD-01)
 
-**A `Line` NÃO contém a sequência de paragens.** Isso é responsabilidade da `Route`.
+A `Line` NÃO contém a sequência de paragens. Isso é responsabilidade da `Route`.
 
 ```xml
 <!-- Equivalente GTFS: uma linha de routes.txt -->
@@ -103,13 +103,13 @@ Line 200
 └── Route 200_VOLTA (Castelo do Queijo → Bolhão)
 ```
 
-**Correspondência GTFS**: no GTFS, `trips.txt` liga cada viagem ao seu percurso via `shape_id`. Em NeTEx, a `Route` é uma entidade reutilizável — muitas viagens podem usar a mesma `Route`.
+**Correspondência GTFS**: no GTFS, `trips.txt` liga cada viagem ao seu percurso via `shape_id`. Em NeTEx, a `Route` é uma entidade reutilizável, muitas viagens podem usar a mesma `Route`.
 
 ### 1.5 RoutePoint e ScheduledStopPoint
 
-Um **`RoutePoint`** é um ponto na geometria da rota (pode ser apenas um ponto de inflexão, não necessariamente uma paragem). [[STD-01]](#STD-01)
+Um `RoutePoint` é um ponto na geometria da rota (pode ser apenas um ponto de inflexão, não necessariamente uma paragem). [[STD-01]](#STD-01)
 
-Um **`ScheduledStopPoint`** é um ponto específico onde o veículo pára e os passageiros podem embarcar/desembarcar. É um conceito **lógico** (associado ao horário), não físico.
+Um `ScheduledStopPoint` é um ponto específico onde o veículo pára e os passageiros podem embarcar/desembarcar. É um conceito lógico (associado ao horário), não físico.
 
 A relação entre os dois: um `RoutePoint` pode ou não corresponder a um `ScheduledStopPoint`. Nos casos mais simples (que é o caso deste curso), todos os `RoutePoint` correspondem a `ScheduledStopPoint`.
 

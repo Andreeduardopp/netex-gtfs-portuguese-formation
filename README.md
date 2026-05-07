@@ -7,12 +7,12 @@ Recursos educativos abertos em português sobre os dois principais padrões de d
 ## Cursos disponíveis
 
 ### [GTFS PT Formação](gtfs-pt-formacao/README.md)
-O primeiro recurso educativo aberto em português sobre **GTFS** (General Transit Feed Specification).
-9 módulos completos — do conceito base à publicação e validação de um feed real.
+Recurso educativo aberto em português sobre **GTFS** (General Transit Feed Specification).
+9 módulos completos, do conceito base à publicação e validação de um feed real.
 
 ### [NeTEx PT Formação](netex-pt-formacao/README.md)
-O primeiro recurso educativo aberto em português sobre **NeTEx** (Network Timetable Exchange).
-9 módulos completos — conceitos, horários, multimodalidade, tarifas e o Perfil Nacional Português.
+Recurso educativo aberto em português sobre **NeTEx** (Network Timetable Exchange).
+9 módulos completos, do conceito base, horários, multimodalidade, tarifas e o Perfil Nacional Português.
 
 ---
 

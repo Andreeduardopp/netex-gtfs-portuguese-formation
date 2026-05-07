@@ -16,7 +16,7 @@ Após completar este módulo, o leitor será capaz de:
 
 ### 1.1 NeTEx é Orientado a Objetos
 
-O NeTEx herda do Transmodel uma abordagem **orientada a objetos**: tudo é uma entidade com atributos e relações com outras entidades. [[STD-04]](#STD-04)
+O NeTEx herda do Transmodel uma abordagem orientada a objetos: tudo é uma entidade com atributos e relações com outras entidades. [[STD-04]](#STD-04)
 
 A classe raiz de quase tudo em NeTEx é `EntityInVersion`, que garante que cada objeto tem:
 
@@ -34,9 +34,9 @@ EntityInVersion
 └── ...             (atributos específicos de cada subclasse)
 ```
 
-> **Nota:** Em XML, `id` e `version` são atributos XML (`<Line id="..." version="...">`), enquanto `validBetween` é um **elemento filho** (`<validBetween><FromDate>...</FromDate></validBetween>`).
+> **Nota:** Em XML, `id` e `version` são atributos XML (`<Line id="..." version="...">`), enquanto `validBetween` é um  elemento filho (`<validBetween><FromDate>...</FromDate></validBetween>`).
 
-Em GTFS, os objetos são linhas de CSV sem versão nem validade. Em NeTEx, cada objeto "sabe" quando foi criado, qual é a sua versão, e quando deixa de ser válido.
+Em GTFS, os objetos são linhas de CSV sem versão nem validade. Em NeTEx, cada objeto sabe quando foi criado, qual é a sua versão, e quando deixa de ser válido.
 
 ### 1.2 Hierarquia de Classes Simplificada
 
@@ -60,7 +60,7 @@ EntityInVersion
 
 ### 1.3 Relações Entre Objetos
 
-Em NeTEx, as relações entre objetos usam **referências por ID** (`ref`). Por exemplo:
+Em NeTEx, as relações entre objetos usam referências por ID (`ref`). Por exemplo:
 
 - Uma `Route` referencia uma `Line` via `lineRef`
 - Um `ServiceJourney` referencia um `ServiceJourneyPattern` via `journeyPatternRef`
@@ -107,10 +107,10 @@ Um **VersionFrame** é o contentor principal de um ficheiro NeTEx. Agrupa objeto
 | `FareFrame` | Zonas tarifárias, produtos, regras | `fare_*.txt` — muito mais rico |
 | `CompositeFrame` | Contentor de múltiplos frames | *(não existe em GTFS)* |
 
-### 2.3 PublicationDelivery — O Envelope
+### 2.3 PublicationDelivery 
 
 O elemento raiz de qualquer ficheiro NeTEx é `PublicationDelivery`: [[STD-01]](#STD-01)
-
+>Funciona como um contentor de mensagens que agrupa metadados de transação e os objetos de dados reais (dataObjects), permitindo o controle de versões e a rastreabilidade da troca de informações.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <PublicationDelivery
@@ -131,7 +131,7 @@ O elemento raiz de qualquer ficheiro NeTEx é `PublicationDelivery`: [[STD-01]](
 </PublicationDelivery>
 ```
 
-O `ParticipantRef` identifica quem publicou os dados — neste caso, a STCP.
+O `ParticipantRef` identifica quem publicou os dados, neste caso, a STCP.
 
 ---
 
@@ -163,7 +163,7 @@ O sufixo `:LOC` indica que o identificador é local (válido apenas no âmbito n
 
 **Comparação com GTFS:**
 
-No GTFS, o `stop_id` `BLRB1` é apenas local — não há forma de saber que pertence à STCP, que está em Portugal, ou que tipo de objecto é. No NeTEx, `PT:STCP:StopPlace:BLRB:LOC` contém toda essa informação.
+No GTFS, o `stop_id` `BLRB1` é apenas local, não há forma de saber que pertence à STCP, que está em Portugal, ou que tipo de objecto é. No NeTEx, `PT:STCP:StopPlace:BLRB:LOC` contém toda essa informação.
 
 ### 3.2 Referências (`ref`)
 

@@ -1,4 +1,4 @@
-﻿# Módulo 0 — Antes de Começar
+# Módulo 0 — Antes de Começar
 
 > *Tempo estimado: 1–2 horas*
 
@@ -36,13 +36,14 @@ O NeTEx foi desenvolvido a partir do **Transmodel** (CEN EN 12896), o modelo con
 
 A primeira versão do NeTEx foi publicada em 2014. A versão atual (2024) inclui três partes principais e uma parte dedicada à informação ao passageiro (**EPIAP** — *European Passenger Information and Access Profile*).
 
-### 1.3 Porque Importa para Operadores Portugueses
+### 1.3 Porque Importa para Operadores (Públicos e Privados) em Portugal
 
-Até recentemente, a maioria dos operadores portugueses publicava os seus dados em **GTFS** (Google Transit Feed Specification). [[STD-07]](#STD-07) O GTFS é prático e amplamente adotado, mas:
+Até recentemente, a maioria dos operadores portugueses publicava os seus dados em **GTFS** (Google Transit Feed Specification). [[STD-07]](#STD-07) O GTFS é prático e amplamente adotado para visualização em mapas, mas:
 
-1. **É insuficiente para cumprir a regulação europeia.** O Regulamento Delegado (UE) 2024/490 obriga os operadores a partilhar dados no formato NeTEx/SIRI com o Ponto de Acesso Nacional (NAP). [[REG-01]](#REG-01)
-2. **Não modela toda a complexidade do serviço.** Tarifas avançadas (como o Navegante Metropolitano), acessibilidade detalhada e intermodalidade ficam fora do alcance do GTFS.
-3. **Não é interoperável a nível europeu.** O NeTEx permite que sistemas de diferentes países "falem a mesma língua", o que é essencial no espaço Schengen.
+- **É insuficiente para cumprir a regulação europeia.** O Regulamento Delegado (UE) 2024/490 obriga os operadores a partilhar dados no formato NeTEx/SIRI com o Ponto de Acesso Nacional (NAP). [[REG-01]](#REG-01)
+- **Não modela toda a complexidade do serviço.** Tarifas avançadas (como o Navegante Metropolitano), acessibilidade detalhada da infraestrutura e regras de intermodalidade ficam fora do alcance do GTFS.
+- **Não é interoperável a nível europeu.** O NeTEx permite que sistemas de diferentes países "falem a mesma língua", o que é essencial no espaço Schengen.
+- **É limitativo para redes privadas e serviços especializados.** Para operadores de vaivéns corporativos, redes universitárias ou serviços a pedido, o GTFS falha ao assumir que o acesso é universal. O NeTEx permite modelar regras restritas de acesso (ex: "apenas funcionários com crachá"), contratos de financiamento corporativo (B2B) e facilita a integração destas frotas privadas em plataformas empresariais de MaaS (*Mobility as a Service*). Além disso, garante a granularidade necessária para reportar SLAs (Níveis de Serviço) rigorosos em regimes de subconcessão.
 
 Em Portugal, o **IMT-IP** (Instituto da Mobilidade e dos Transportes) é a entidade responsável pela implementação do NAP e pela definição do Perfil Nacional NeTEx Portugal. [[PT-03]](#PT-03)
 
@@ -66,12 +67,13 @@ Se já trabalha com GTFS, esta tabela mostra onde cada standard se posiciona:
 
 ### 2.1 A Analogia Certa
 
-Pense no GTFS como uma **folha de cálculo** e no NeTEx como uma **base de dados relacional**:
+Pense no GTFS como o Menu do Restaurante e no NeTEx como o Sistema ERP da Cozinha:
 
-- O GTFS resolve rapidamente o problema de "publicar horários"
-- O NeTEx resolve o problema de "modelar o serviço de transporte de forma completa e interoperável"
+- O GTFS (O Menu): Diz ao cliente exatamente o que está disponível, quando pode ser consumido e a que preço. Resolve rapidamente o problema da informação ao público.
 
-Para quem já conhece GTFS, aprender NeTEx é essencialmente aprender **como o mesmo serviço é descrito com mais rigor e mais profundidade**.
+- O NeTEx (O Sistema da Cozinha): Modela os ingredientes, as receitas, as escalas de turno dos cozinheiros, as regras de substituição de pratos e a logística de entrega. Resolve o problema de gerir e interoperar o negócio.
+
+Transitar do GTFS para o NeTEx significa deixar de olhar apenas para o produto final que o passageiro consome e passar a modelar toda a linha de montagem do serviço de transporte público, com rigor e profundidade.
 
 ### 2.2 Equivalências Diretas (Prévia)
 
@@ -119,11 +121,11 @@ O NeTEx não existe isolado. Faz parte de um ecossistema de standards europeus c
 
 O **Transmodel** é o modelo de dados de referência para transporte público europeu, mantido pelo CEN. [[STD-04]](#STD-04) Define os conceitos abstratos: o que é uma linha, uma paragem, uma viagem.
 
-O NeTEx e o SIRI são *implementações* do Transmodel para diferentes casos de uso:
+O NeTEx e o SIRI são implementações do Transmodel para diferentes casos de uso:
 - **NeTEx** = dados estáticos/planeados (horários, tarifas, topologia)
 - **SIRI** = dados dinâmicos/tempo real (posição de veículos, perturbações)
 
-Isto significa que quem aprende NeTEx também está a aprender Transmodel — os conceitos são os mesmos.
+Isto significa que quem aprende NeTEx também está a aprender Transmodel, os conceitos são os mesmos.
 
 ### 3.2 O Papel do NAP
 
@@ -137,7 +139,7 @@ Em Portugal, o NAP é gerido pelo **IMT-IP** e aceita dados no formato NeTEx. O 
 
 ### 4.1 O Regulamento MMTIS (2024/490)
 
-O **Regulamento Delegado (UE) 2024/490** — conhecido como MMTIS (Multimodal Travel Information Services) — é a principal obrigação legal para operadores portugueses. [[REG-01]](#REG-01) Substitui o regulamento anterior (2017/1926).
+O **Regulamento Delegado (UE) 2024/490**, conhecido como MMTIS (Multimodal Travel Information Services), é a principal obrigação legal para operadores portugueses. [[REG-01]](#REG-01) Substitui o regulamento anterior (2017/1926).
 
 O regulamento obriga os estados-membros a:
 
@@ -145,7 +147,7 @@ O regulamento obriga os estados-membros a:
 2. Publicar esses dados num Ponto de Acesso Nacional (NAP)
 3. Garantir qualidade e atualização regular dos dados
 
-Os **formatos exigidos** para dados estáticos são NeTEx (obrigatório para dados avançados) e GTFS (aceite para dados básicos). Para dados em tempo real, o SIRI é o standard de referência.
+Os formatos exigidos para dados estáticos são NeTEx (obrigatório para dados avançados) e GTFS (aceite para dados básicos). Para dados em tempo real, o SIRI é o standard de referência.
 
 ### 4.2 Que Dados São Obrigatórios?
 
@@ -168,9 +170,9 @@ O MMTIS surge no âmbito da **Diretiva ITS 2010/40/UE** (Sistemas de Transporte 
 
 Para um técnico de um operador português, as implicações práticas são:
 
-1. O feed GTFS existente **não é suficiente** para cumprir a regulação — é preciso converter ou criar dados NeTEx
-2. Os dados devem ser submetidos ao **NAP Portugal** com um perfil validado
-3. O **Perfil Nacional NeTEx Portugal** (definido pelo IMT) especifica exatamente o que é obrigatório vs opcional para Portugal (ver Módulo 7)
+1. O feed GTFS existente não é suficiente para cumprir a regulação, é preciso converter ou criar dados NeTEx
+2. Os dados devem ser submetidos ao NAP Portugal com um perfil validado
+3. O Perfil Nacional NeTEx Portugal (definido pelo IMT) especifica exatamente o que é obrigatório vs opcional para Portugal (ver Módulo 7)
 
 ---
 
@@ -178,7 +180,7 @@ Para um técnico de um operador português, as implicações práticas são:
 
 ### 5.1 Pré-requisitos
 
-Este curso **não ensina GTFS** — parte do princípio que o leitor já conhece GTFS. O público-alvo é:
+Este módulo não ensina GTFS, parte do princípio que o leitor já conhece o standard e, caso ainda não o conheça, recomendamos a consulta prévia do [GTFS PT Formação](../../gtfs-pt-formacao/README.md). O público-alvo é:
 
 - Técnicos de operadores de transporte público portugueses
 - Profissionais de sistemas de informação de mobilidade
@@ -201,11 +203,11 @@ Extensões VS Code recomendadas:
 
 ### 5.3 A Rede Âncora: STCP Porto
 
-Todos os exemplos XML deste curso são baseados em dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)**. [[DATA-03]](#DATA-03) Usamos a **Linha 200 (Bolhão → Castelo do Queijo)** como caso principal.
+Todos os exemplos XML deste curso são baseados em dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)**. [[DATA-03]](#DATA-03) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
 
 A escolha de dados reais (vs. uma rede fictícia) tem uma razão pedagógica: os exemplos são mais credíveis quando podemos verificar que correspondem a uma realidade que o leitor conhece ou pode consultar.
 
-Os ficheiros GTFS de base estão disponíveis em `netex-pt-formacao/exemplos/rede_exemplo_portugal/gtfs/` (raiz do repositório).
+Os ficheiros GTFS de base estão disponíveis em [`netex-pt-formacao/exemplos/rede_exemplo_portugal/gtfs/`](../../exemplos/rede_exemplo_portugal/gtfs/) (na raiz deste repositório).
 
 ### 5.4 Estrutura de Cada Módulo
 
@@ -217,11 +219,11 @@ Cada módulo segue esta estrutura:
 4. **Exercícios** — exercícios práticos com solução comentada
 5. **Referências** — todas as fontes citadas no módulo
 
-Os ficheiros XML de exemplo têm comentários extensivos que explicam **o porquê** de cada elemento — não apenas o que faz, mas porque existe e que problema resolve.
+Os ficheiros XML de exemplo têm comentários extensivos que explicam o porquê de cada elemento, não apenas o que faz, mas porque existe e que problema resolve.
 
 ### 5.5 Como Navegar os Módulos
 
-O curso é **sequencial**: cada módulo constrói sobre o anterior. A progressão recomendada é:
+O curso é sequencial. Cada módulo constrói sobre o anterior. A progressão recomendada é:
 
 ```
 Módulo 0 (este)
