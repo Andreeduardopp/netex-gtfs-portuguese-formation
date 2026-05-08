@@ -16,12 +16,12 @@ Após completar este módulo, o leitor será capaz de:
 
 ### 1.1 GTFS como Base de Dados Relacional
 
-O GTFS é, na sua essência, uma **base de dados relacional exportada como ficheiros CSV**. [[STD-01]](#STD-01) Cada ficheiro `.txt` corresponde a uma tabela, com:
+O GTFS é, na sua essência, uma base de dados relacional exportada como ficheiros CSV. [[STD-01]](#STD-01) Cada ficheiro `.txt` corresponde a uma tabela, com:
 
-- Uma **linha de cabeçalho** que define os nomes dos campos (colunas)
-- **Linhas de dados** com valores separados por vírgula
-- **Chaves primárias** que identificam cada registo de forma única
-- **Chaves estrangeiras** que ligam registos entre tabelas
+- Uma linha de cabeçalho que define os nomes dos campos (colunas)
+- Linhas de dados com valores separados por vírgula
+- Chaves primárias que identificam cada registo de forma única
+- Chaves estrangeiras que ligam registos entre tabelas
 
 A analogia certa: pense no GTFS como uma base de dados PostgreSQL ou SQLite onde cada tabela foi exportada para CSV e empacotada num ZIP.
 
@@ -101,7 +101,7 @@ MCBL,Mercado do Bolhão,41.149509,-8.607564
 
 ### 2.3 Estrutura do ZIP
 
-O feed GTFS é distribuído como um ficheiro `.zip` que contém **diretamente** os ficheiros `.txt` na raiz — sem pastas intermediárias: [[BP-01]](#BP-01)
+O feed GTFS é distribuído como um ficheiro `.zip` que contém diretamente os ficheiros `.txt` na raiz — sem pastas intermediárias: [[BP-01]](#BP-01)
 
 ```
 feed_stcp.zip

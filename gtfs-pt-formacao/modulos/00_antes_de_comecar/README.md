@@ -51,7 +51,7 @@ O GTFS alimenta uma vasta gama de aplicações:
 
 ### 1.4 Porque Importa para Operadores Portugueses
 
-Para operadores de transporte público em Portugal, a adoção do GTFS é relevante por três razões:
+Para operadores de transporte público em Portugal, a adoção do GTFS é relevante por quatro razões:
 
 1. **Visibilidade nas plataformas de mobilidade.** Publicar dados GTFS permite que serviços como Google Maps, Moovit e Transit App incluam o operador nos seus resultados de pesquisa, tornando a rede acessível a milhões de utilizadores.
 
@@ -59,7 +59,14 @@ Para operadores de transporte público em Portugal, a adoção do GTFS é releva
 
 3. **Base para a transição para NeTEx.** Muitos operadores portugueses já publicam dados em GTFS. Compreender bem o GTFS é o primeiro passo para a transição para NeTEx, que o regulamento europeu exige para dados avançados.
 
-Em Portugal, o **IMT-IP** (Instituto da Mobilidade e dos Transportes) é a entidade responsável pelo NAP Portugal. [[PT-01]](#PT-01) [[PT-02]](#PT-02)
+Para empresas privadas de transporte (rodoviário, ferroviário, serviços de transporte a pedido), adotar GTFS (e posteriormente NeTEx) não é apenas uma questão regulatória, mas uma vantagem competitiva. Operadores privados que disponibilizam dados estruturados e interoperáveis conseguem:
+
+1. **Participar em concursos públicos** com maior qualificação técnica, uma vez que muitos cadernos de encargos já exigem a produção de dados em GTFS/NeTEx.
+2. **Integrar-se em plataformas de Mobilidade como Serviço (MaaS)** como a PickMe, a Moovit ou o Google Maps, aumentando a sua visibilidade e potencialmente o número de passageiros.
+3. **Aceder a fundos comunitários** (por exemplo, CEEAC, POSEUR, PT2020) que frequentemente condicionam financiamentos à publicação de dados abertos e normalizados.
+4. **Reduzir custos de manutenção** dos seus sistemas ao substituir formatos proprietários por padrões abertos, facilitando a interoperabilidade com sistemas de bilhética, informação ao cliente e planeamento de frota.
+
+Em Portugal, a entidade responsável pelo NAP é o **IMT-IP** (Instituto da Mobilidade e dos Transportes). [[PT-01]](#PT-01) [[PT-02]](#PT-02)
 
 ---
 
@@ -67,7 +74,7 @@ Em Portugal, o **IMT-IP** (Instituto da Mobilidade e dos Transportes) é a entid
 
 ### 2.1 Visão Geral
 
-Um feed GTFS é um arquivo **ZIP** contendo um conjunto de ficheiros de texto (`.txt`), cada um formatado como **CSV** (valores separados por vírgula) com uma linha de cabeçalho definida. [[STD-01]](#STD-01)
+Um feed GTFS é um arquivo ZIP contendo um conjunto de ficheiros de texto (.txt), cada um formatado como CSV (valores separados por vírgula) com uma linha de cabeçalho definida. [[STD-01]](#STD-01)
 
 ```
 feed_gtfs.zip
@@ -92,7 +99,7 @@ feed_gtfs.zip
 
 ### 2.2 A Natureza Relacional
 
-O GTFS é, na sua essência, uma **base de dados relacional** exportada como série de ficheiros CSV. [[BP-01]](#BP-01) As relações entre ficheiros funcionam como chaves estrangeiras:
+O GTFS é, na sua essência, uma base de dados relacional exportada como série de ficheiros CSV. [[BP-01]](#BP-01) As relações entre ficheiros funcionam como chaves estrangeiras:
 
 ```
 agency.txt
@@ -103,7 +110,7 @@ agency.txt
               └── calendar.txt / calendar_dates.txt (service_id)
 ```
 
-Compreender esta hierarquia relacional é fundamental para produzir feeds corretos — uma viagem (`trip`) sem rota (`route`) associada, ou um horário (`stop_time`) sem paragem (`stop`) válida, são erros que invalidam o feed.
+Compreender esta hierarquia relacional, e possuir um banco compativel com essa arquitetura, é fundamental para produzir feeds corretos, visto que uma viagem (`trip`) sem rota (`route`) associada, ou um horário (`stop_time`) sem paragem (`stop`) válida, são erros que invalidam o feed.
 
 ### 2.3 Ficheiros Obrigatórios vs Recomendados vs Opcionais
 
@@ -120,12 +127,12 @@ Compreender esta hierarquia relacional é fundamental para produzir feeds corret
 
 ### 3.1 O Regulamento MMTIS (2024/490)
 
-O **Regulamento Delegado (UE) 2024/490** — conhecido como MMTIS (Multimodal Travel Information Services) — é a principal obrigação legal europeia para operadores de transporte público. [[REG-01]](#REG-01) Substitui o regulamento anterior (2017/1926).
+O Regulamento Delegado (UE) 2024/490, conhecido como MMTIS (Multimodal Travel Information Services), é a principal obrigação legal europeia para operadores de transporte público. [[REG-01]](#REG-01) Substitui o regulamento anterior (2017/1926).
 
 O regulamento obriga os estados-membros a:
 
 1. Tornar disponíveis dados de transporte público em formatos interoperáveis
-2. Publicar esses dados num **Ponto de Acesso Nacional (NAP)**
+2. Publicar esses dados num Ponto de Acesso Nacional (NAP)
 3. Garantir qualidade e atualização regular dos dados
 
 ### 3.2 GTFS e NeTEx: Papéis Complementares
@@ -145,9 +152,9 @@ Para a maioria dos operadores portugueses, a estratégia prática é:
 
 ### 3.3 O Papel do NAP Portugal
 
-O **Ponto de Acesso Nacional (NAP)** é a plataforma onde os operadores publicam os seus dados para consumo por aplicações de mobilidade, investigadores e outros stakeholders. [[PT-01]](#PT-01)
+O Ponto de Acesso Nacional (NAP) é a plataforma onde os operadores publicam os seus dados para consumo por aplicações de mobilidade, investigadores e outros stakeholders. [[PT-01]](#PT-01)
 
-Em Portugal, o NAP é gerido pelo **IMT-IP** e aceita dados nos formatos GTFS (dados básicos) e NeTEx (dados avançados).
+Em Portugal, o NAP, gerido pelo IMT-IP, aceita dados nos formatos GTFS (dados básicos) e NeTEx (dados avançados).
 
 ---
 
@@ -165,7 +172,7 @@ Quando os operadores publicam dados em formato GTFS, garantem: [[STD-03]](#STD-0
 
 ### 4.2 Boas Práticas como Requisito
 
-O **GTFS Best Practices Working Group** — convocado pelo Rocky Mountain Institute e composto por 17 organizações — estabeleceu que boas práticas coordenadas são essenciais para prevenir requisitos divergentes e datasets incompatíveis. [[BP-01]](#BP-01)
+O GTFS Best Practices Working Group, convocado pelo Rocky Mountain Institute e composto por 17 organizações, estabeleceu que boas práticas coordenadas são essenciais para prevenir requisitos divergentes e datasets incompatíveis. [[BP-01]](#BP-01)
 
 Operadores que adotam GTFS e seguem as suas boas práticas contribuem para um ecossistema de dados de transporte mais saudável e interoperável.
 
@@ -175,7 +182,7 @@ Operadores que adotam GTFS e seguem as suas boas práticas contribuem para um ec
 
 ### 5.1 Pré-requisitos
 
-Este curso destina-se a quem precisa de **produzir, gerir ou consumir feeds GTFS**. O público-alvo inclui:
+Este curso destina-se a quem precisa de produzir, gerir ou consumir feeds GTFS. O público-alvo inclui:
 
 - Técnicos de operadores de transporte público portugueses
 - Profissionais de sistemas de informação de mobilidade
@@ -196,11 +203,11 @@ Extensões VS Code recomendadas:
 - **Edit CSV** — edição tabular interativa de CSV
 - **GitLens** — navegação do histórico do repositório
 
-**Validação de feeds**: O **Canonical GTFS Validator** da MobilityData permite validar feeds GTFS contra a especificação oficial. [[TOOL-01]](#TOOL-01) Será introduzido no Módulo 8.
+Validação de feeds: O Canonical GTFS Validator da MobilityData permite validar feeds GTFS contra a especificação oficial. [[TOOL-01]](#TOOL-01) Será introduzido no Módulo 8.
 
 ### 5.3 A Rede Âncora: STCP Porto
 
-Todos os exemplos deste curso são baseados em dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)**. [[DATA-01]](#DATA-01) Usamos a **Linha 200 (Bolhão → Castelo do Queijo)** como caso principal.
+Todos os exemplos deste curso são baseados em dados reais da STCP (Sociedade de Transportes Colectivos do Porto). [[DATA-01]](#DATA-01) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
 
 A escolha de dados reais (vs. uma rede fictícia) tem uma razão pedagógica: os exemplos são mais credíveis quando podemos verificar que correspondem a uma realidade que o leitor conhece ou pode consultar.
 

@@ -31,7 +31,7 @@ O `agency.txt` identifica a(s) empresa(s) que operam o serviço: [[STD-01]](#STD
 
 *`agency_id` é obrigatório quando o feed contém dados de múltiplos operadores.
 
-### 1.2 STCP — Exemplo Real
+### 1.2 STCP — Exemplo
 
 ```csv
 agency_id,agency_name,agency_url,agency_timezone,agency_lang
@@ -79,7 +79,7 @@ O `stops.txt` define todos os locais de embarque e desembarque: [[STD-01]](#STD-
 
 *`stop_name`, `stop_lat` e `stop_lon` são obrigatórios para `location_type` 0, 1 e 2 (paragens, estações, entradas/saídas). Opcionais apenas para tipos 3 e 4 (nós genéricos, zonas de embarque).
 
-### 2.2 Hierarquia `location_type`
+### 2.2 Hierarquia location_type
 
 O campo `location_type` define o tipo de local na hierarquia física: [[STD-01]](#STD-01)
 
@@ -93,7 +93,7 @@ O campo `location_type` define o tipo de local na hierarquia física: [[STD-01]]
 
 A maioria das paragens de autocarro em Portugal usa `location_type=0` (ou campo vazio, que é equivalente). A hierarquia completa é mais relevante para estações de metro e comboio.
 
-### 2.3 `parent_station` — Agrupar Paragens
+### 2.3 parent_station — Agrupar Paragens
 
 Quando uma estação tem múltiplas plataformas, cada plataforma é uma paragem (`location_type=0`) e a estação é o `parent_station` (`location_type=1`):
 
@@ -127,12 +127,11 @@ A Linha 200 tem 30 paragens na direção IDA (Bolhão → Castelo do Queijo) e 3
 
 ### 2.5 Precisão das Coordenadas
 
-As Best Practices especificam que as coordenadas devem ter um erro máximo de **4 metros** em relação à posição real da paragem, e devem ser colocadas junto ao passeio/cais de embarque onde o passageiro espera. [[BP-01]](#BP-01)
+As boas práticas especificam que as coordenadas devem ter um erro máximo de 4 metros em relação à posição real da paragem, e devem ser colocadas junto ao passeio/cais de embarque onde o passageiro espera. [[BP-01]](#BP-01)
 
 ```
-✅ Correto: Coordenadas no passeio junto ao poste de paragem
-❌ Errado: Coordenadas no centro da estrada
-❌ Errado: Coordenadas no edifício adjacente
+Correto: Coordenadas no passeio junto ao poste de paragem
+Errado: Coordenadas no centro da estrada ou no edifício adjacente
 ```
 
 ---
@@ -173,7 +172,7 @@ Os códigos mais relevantes para operadores portugueses: [[STD-01]](#STD-01)
 | `11` | Trolleybus | — (não existe atualmente em PT) |
 | `12` | Monorail | — (não existe atualmente em PT) |
 
-### 3.3 STCP Linha 200 — Exemplo Real
+### 3.3 STCP Linha 200 
 
 ```csv
 route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
@@ -200,9 +199,9 @@ A ligação entre os três ficheiros é feita pelo `agency_id`:
 ```
 agency.txt                routes.txt
 ┌──────────────┐          ┌───────────────────────┐
-│ agency_id=STCP│ ◄─────── │ agency_id=STCP         │
-│ agency_name=  │          │ route_id=200           │
-│   STCP        │          │ route_short_name=200   │
+│agency_id=STCP│ ◄─────── │ agency_id=STCP        │
+│agency_name=  │          │ route_id=200          │
+│  STCP        │          │ route_short_name=200  │
 └──────────────┘          └───────────────────────┘
 
 stops.txt (independente nesta fase — ligado via stop_times.txt no Módulo 3)

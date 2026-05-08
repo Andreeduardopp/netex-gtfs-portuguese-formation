@@ -44,7 +44,7 @@ O campo `direction_id` distingue as duas direções de uma rota: [[STD-01]](#STD
 
 ### 1.4 `block_id` — Blocos Operacionais
 
-O `block_id` identifica o **bloco** — a sequência de viagens que o mesmo veículo físico realiza consecutivamente. Se duas viagens têm o mesmo `block_id`, significa que o passageiro pode permanecer no veículo durante a transição: [[STD-01]](#STD-01)
+O `block_id` identifica o bloco, a sequência de viagens que o mesmo veículo físico realiza consecutivamente. Se duas viagens têm o mesmo `block_id`, significa que o passageiro pode permanecer no veículo durante a transição: [[STD-01]](#STD-01)
 
 ```csv
 route_id,service_id,trip_id,block_id,direction_id
@@ -94,7 +94,7 @@ Cada viagem referencia:
 
 ### 2.2 Formato de Hora e o Problema da Meia-Noite
 
-No GTFS, os tempos usam o formato `HH:MM:SS` e **podem exceder `24:00:00`**. [[STD-01]](#STD-01)
+No GTFS, os tempos usam o formato `HH:MM:SS` e podem exceder `24:00:00`. [[STD-01]](#STD-01)
 
 ```csv
 trip_id,arrival_time,departure_time,stop_id,stop_sequence
@@ -177,11 +177,11 @@ Cada viagem em `trips.txt` referencia uma shape via `shape_id`. Múltiplas viage
 
 ### 3.3 Porque São Importantes
 
-Embora tecnicamente opcionais, as shapes são **fortemente recomendadas**: [[BP-01]](#BP-01)
+Embora tecnicamente opcionais, as shapes são fortemente recomendadas: [[BP-01]](#BP-01)
 
 - Permitem que Google Maps, Moovit e outras apps desenhem a rota no mapa
 - Sem shapes, as apps traçam linhas retas entre paragens, o que é visualmente incorreto
-- A fonte primária para shapes é tipicamente dados **AVL (Automatic Vehicle Location)**
+- A fonte primária para shapes é tipicamente dados AVL (Automatic Vehicle Location)
 
 ---
 
@@ -189,7 +189,7 @@ Embora tecnicamente opcionais, as shapes são **fortemente recomendadas**: [[BP-
 
 ### 4.1 Quando Usar
 
-Alguns serviços de transporte não têm horários fixos — operam com uma **frequência** (headway). Por exemplo: "um autocarro a cada 10 minutos entre as 07:00 e as 20:00". [[STD-01]](#STD-01)
+Alguns serviços de transporte não têm horários fixos, operam com uma frequência (headway). Por exemplo: "um autocarro a cada 10 minutos entre as 07:00 e as 20:00". [[STD-01]](#STD-01)
 
 | Campo | Tipo | Obrigatório | Descrição |
 |-------|------|-------------|-----------|

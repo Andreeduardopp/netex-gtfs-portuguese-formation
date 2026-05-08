@@ -63,15 +63,15 @@ Cada viagem pode também indicar a acessibilidade do veículo que a realiza: [[S
 | `1` | Bicicletas permitidas |
 | `2` | Bicicletas não permitidas |
 
-Para que um utilizador em cadeira de rodas receba uma rota acessível, **ambas** as condições devem ser satisfeitas:
+Para que um utilizador em cadeira de rodas receba uma rota acessível, ambas as condições devem ser satisfeitas:
 1. A paragem deve ter `wheelchair_boarding=1`
 2. A viagem deve ter `wheelchair_accessible=1`
 
-Se um dos dois campos for `0` (desconhecido), as aplicações tipicamente não filtram — mas também não garantem acessibilidade. Se um dos dois for `2`, a rota é marcada como inacessível.
+Se um dos dois campos for `0` (desconhecido), as aplicações tipicamente não filtram, mas também não garantem acessibilidade. Se um dos dois for `2`, a rota é marcada como inacessível.
 
 ### 1.3 Importância para Portugal
 
-A acessibilidade nos transportes públicos é uma obrigação legal e um imperativo social: [[REG-01]](#REG-01)
+A acessibilidade nos transportes públicos é uma obrigação legal e um imperativo social: [[REG-01]](#REG-01) [[DL-01]](#DL-01)
 
 - **Regulamento Delegado (UE) 2024/490** (MMTIS) — exige que os dados de acessibilidade sejam publicados em formatos abertos, incluindo informação sobre acessibilidade em cadeira de rodas nas paragens e nos veículos
 - **Decreto-Lei n.º 163/2006** — regulamenta as normas técnicas de acessibilidade em edifícios e espaços públicos em Portugal, incluindo interfaces de transporte
@@ -122,8 +122,8 @@ BLH_STCP_301,BLH_METRO_D,2,240
 ```
 
 Leitura:
-- **Metro → STCP Linha 200**: `transfer_type=2` com `min_transfer_time=180` (3 minutos) — o passageiro precisa de subir da plataforma do metro até à paragem de autocarro à superfície
-- **STCP Linha 200 → Metro**: `transfer_type=2` com `min_transfer_time=240` (4 minutos) — sentido inverso demora mais porque inclui descer ao piso subterrâneo e validar o título de transporte
+- **Metro → STCP Linha 200**: `transfer_type=2` com `min_transfer_time=180` (3 minutos), o passageiro precisa de subir da plataforma do metro até à paragem de autocarro à superfície
+- **STCP Linha 200 → Metro**: `transfer_type=2` com `min_transfer_time=240` (4 minutos), sentido inverso demora mais porque inclui descer ao piso subterrâneo e validar o título de transporte
 - As transferências entre a Linha 301 e o Metro seguem a mesma lógica
 
 O tempo assimétrico (3 min vs 4 min) reflete a realidade física: descer é tipicamente mais rápido do que subir num interface com desníveis.
@@ -174,9 +174,9 @@ Esta informação é crítica para:
 | `pathway_mode` | Tipo | Acessível cadeira de rodas? |
 |-----------------|------|----------------------------|
 | `1` | Corredor/passadiço (walkway) | Sim (se largura suficiente) |
-| `2` | Escadas (stairs) | **Não** |
+| `2` | Escadas (stairs) | Não |
 | `3` | Passadeira rolante (moving sidewalk) | Sim |
-| `4` | Escada rolante (escalator) | **Não** |
+| `4` | Escada rolante (escalator) | Não |
 | `5` | Elevador (elevator) | Sim |
 | `6` | Portão de entrada tarifário (fare gate) | Depende da largura |
 | `7` | Portão de saída (exit gate) | Depende da largura |
@@ -318,3 +318,4 @@ O NeTEx oferece uma modelação de acessibilidade significativamente mais rica, 
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 relativo ao quadro europeu para serviços de informação sobre viagens multimodais (MMTIS). |
 | <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DL-01"></a>[DL-01] | Decreto-Lei n.º 163/2006 — regulamenta as normas técnicas de acessibilidade em edifícios e espaços públicos em Portugal, incluindo interfaces de transporte

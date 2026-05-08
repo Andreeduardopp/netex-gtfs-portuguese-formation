@@ -28,7 +28,7 @@ O GTFS oferece dois mecanismos complementares para modelar esta complexidade.
 
 ### 1.2 O `service_id` — A Abstração Central
 
-O `service_id` é o identificador que liga viagens (`trips.txt`) a padrões de calendário. Não é um atributo do calendário em si — é uma **abstração** que desacopla a definição da viagem da definição de quando opera. [[STD-01]](#STD-01)
+O `service_id` é o identificador que liga viagens (`trips.txt`) a padrões de calendário. Não é um atributo do calendário em si, é uma abstração que desacopla a definição da viagem da definição de quando opera. [[STD-01]](#STD-01)
 
 ```
 trips.txt:
@@ -42,7 +42,7 @@ calendar.txt / calendar_dates.txt:
   DOMINGOS_FERIADOS → opera aos domingos e feriados nacionais
 ```
 
-Esta separação permite que **muitas viagens partilhem o mesmo `service_id`** sem redundância.
+Esta separação permite que muitas viagens partilhem o mesmo `service_id` sem redundância.
 
 ---
 
@@ -87,7 +87,7 @@ Este exemplo define três padrões:
 
 ### 3.1 Estrutura
 
-O `calendar_dates.txt` define exceções — adições ou remoções de serviço em datas específicas: [[STD-01]](#STD-01)
+O `calendar_dates.txt` define exceções, adições ou remoções de serviço em datas específicas: [[STD-01]](#STD-01)
 
 | Campo | Tipo | Obrigatório | Descrição |
 |-------|------|-------------|-----------|
@@ -99,10 +99,10 @@ O `calendar_dates.txt` define exceções — adições ou remoções de serviço
 
 | `exception_type` | Significado | Caso de uso |
 |-------------------|-------------|-------------|
-| `1` (adição) | O serviço opera nesta data **mesmo que o `calendar.txt` diga que não** | Feriado com serviço especial |
-| `2` (remoção) | O serviço **não** opera nesta data **mesmo que o `calendar.txt` diga que sim** | Dia útil que é feriado |
+| `1` (adição) | O serviço opera nesta data mesmo que o `calendar.txt` diga que não | Feriado com serviço especial |
+| `2` (remoção) | O serviço não opera nesta data mesmo que o `calendar.txt` diga que sim | Dia útil que é feriado |
 
-### 3.3 Exemplo: Feriados Portugueses 2026
+### 3.3 Exemplo:
 
 Combinando `calendar.txt` com `calendar_dates.txt` para tratar feriados:
 
@@ -124,9 +124,9 @@ Leitura:
 
 ### 4.1 A Abordagem Baseada em Exceções
 
-A STCP usa **exclusivamente `calendar_dates.txt`** com `exception_type=1`. Não existe `calendar.txt` no feed. [[DATA-01]](#DATA-01)
+A STCP usa exclusivamente `calendar_dates.txt` com `exception_type=1`. Não existe `calendar.txt` no feed. [[DATA-01]](#DATA-01)
 
-Isto significa que o feed lista explicitamente **cada data** em que cada `service_id` está ativo:
+Isto significa que o feed lista explicitamente cada data em que cada `service_id` está ativo:
 
 ```csv
 service_id,date,exception_type
@@ -171,7 +171,7 @@ Esta abordagem é comum entre operadores que geram feeds programaticamente a par
 
 ---
 
-## 5. `calendar.txt` vs `calendar_dates.txt`: Quando Usar Cada Um
+## 5. Quando utilizar `calendar.txt` e `calendar_dates.txt`
 
 ### 5.1 Três Estratégias Possíveis
 
@@ -181,36 +181,13 @@ Esta abordagem é comum entre operadores que geram feeds programaticamente a par
 | **Regras + exceções** | Padrão semanal | Exceções (feriados, etc.) | Caso mais comum e recomendado |
 | **Só exceções** | Não usado | Todas as datas (type=1) | Geração programática, serviço irregular |
 
-### 5.2 Recomendação das Best Practices
+### 5.2 As Best Practices Recomendam
 
-As GTFS Best Practices recomendam: [[BP-01]](#BP-01)
-
-1. **Incluir ambos os ficheiros** para legibilidade humana — `calendar.txt` para o padrão base, `calendar_dates.txt` para exceções
+1. Incluir ambos os ficheiros para legibilidade humana, `calendar.txt` para o padrão base, `calendar_dates.txt` para exceções
 2. Usar `service_id` descritivos (ex: `WEEKDAY_SUMMER_2026` em vez de `SVC_001`)
 3. Remover `service_id` expirados ou não utilizados do feed antes de publicar
 4. Garantir que as datas `start_date` e `end_date` em `calendar.txt` cobrem todo o período de validade do feed
 
-### 5.3 Feriados Nacionais Portugueses (Referência)
-
-Para operadores portugueses que precisam de tratar feriados no calendário GTFS:
-
-| Data | Feriado |
-|------|---------|
-| 1 Janeiro | Ano Novo |
-| Variável (Mar/Abr) | Sexta-feira Santa |
-| Variável (Mar/Abr) | Domingo de Páscoa |
-| 25 Abril | Dia da Liberdade |
-| 1 Maio | Dia do Trabalhador |
-| Variável (Mai/Jun) | Corpo de Deus |
-| 10 Junho | Dia de Portugal |
-| 15 Agosto | Assunção de Nossa Senhora |
-| 5 Outubro | Implantação da República |
-| 1 Novembro | Dia de Todos os Santos |
-| 1 Dezembro | Restauração da Independência |
-| 8 Dezembro | Imaculada Conceição |
-| 25 Dezembro | Natal |
-
-Além destes, cada concelho tem um feriado municipal (ex: Porto — 24 de Junho, São João).
 
 ---
 
@@ -220,9 +197,9 @@ Além destes, cada concelho tem um feriado municipal (ex: Porto — 24 de Junho,
 
 Um feed GTFS bem gerido deve ter datas de validade claras: [[BP-01]](#BP-01) [[BP-02]](#BP-02)
 
-- O feed deve ser válido para **pelo menos os próximos 7 dias**
-- Idealmente, deve cobrir **30 dias ou todo o período de serviço**
-- Novos feeds devem ser publicados **pelo menos 7 dias antes** de alterações de horário entrarem em vigor
+- O feed deve ser válido para pelo menos os próximos 7 dias
+- Idealmente, deve cobrir 30 dias ou todo o período de serviço
+- Novos feeds devem ser publicados pelo menos 7 dias antes de alterações de horário entrarem em vigor
 
 ### 6.2 Publicação e Atualização
 
