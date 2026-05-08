@@ -16,7 +16,7 @@ Após completar este módulo, o leitor será capaz de:
 
 ### 1.1 MobilityData Canonical GTFS Validator
 
-O **Canonical GTFS Validator** é a ferramenta oficial de referência para validação de feeds GTFS. É desenvolvido pela MobilityData e usado pelo Google Transit como critério de aceitação. [[TOOL-01]](#TOOL-01)
+O Canonical GTFS Validator é a ferramenta oficial de referência para validação de feeds GTFS. É desenvolvido pela MobilityData e usado pelo Google Transit como critério de aceitação. [[TOOL-01]](#TOOL-01)
 
 **Instalação e execução:**
 

@@ -14,7 +14,7 @@ Após completar este módulo, o leitor será capaz de:
 
 ## 1. Fontes de Dados
 
-Um feed GTFS não nasce do nada. Os dados que o compõem vêm de múltiplos sistemas dentro de um operador de transporte. Compreender estas fontes é essencial para desenhar um pipeline de dados robusto. [[STD-01]](#STD-01)
+Os dados que compõem um feed GTFS vêm de múltiplos sistemas dentro de um operador de transporte. Compreender estas fontes é essencial para desenhar um pipeline de dados robusto. [[STD-01]](#STD-01)
 
 ### 1.1 Sistemas AVL (Automatic Vehicle Location)
 
@@ -43,7 +43,7 @@ O software de planeamento de serviço é, na prática, a fonte primária de um f
 - **Ferramentas comuns**: HASTUS (Giro), REMIX, Optibus, Trapeze, IVU
 - **Fluxo típico**: o planeador define horários no software → o software exporta (ou um script extrai) os dados → transformação para formato GTFS [[BP-02]](#BP-02)
 
-A STCP, por exemplo, gera o seu feed GTFS a partir do sistema interno de planeamento, o que explica a abordagem de usar exclusivamente `calendar_dates.txt` com `exception_type=1` — os dados são gerados programaticamente, data a data. [[DATA-01]](#DATA-01)
+A STCP, por exemplo, gera o seu feed GTFS a partir do sistema interno de planeamento, o que explica a abordagem de usar exclusivamente `calendar_dates.txt` com `exception_type=1`, os dados são gerados programaticamente, data a data. [[DATA-01]](#DATA-01)
 
 ### 1.4 Dados Geoespaciais
 
@@ -148,7 +148,7 @@ Após a validação, o feed deve ser publicado em locais acessíveis aos consumi
 
 #### NAP Portugal
 
-O Ponto de Acesso Nacional (NAP) português é gerido pelo IMT e disponibiliza feeds de operadores nacionais: [[PT-01]](#PT-01)
+O Ponto de Acesso Nacional (NAP) português disponibiliza feeds de operadores nacionais: [[PT-01]](#PT-01)
 
 - **URL**: https://nap-portugal.imt-ip.pt
 - **Obrigação legal**: o Regulamento Delegado (UE) 2024/490 (MMTIS) exige que os operadores disponibilizem dados de transporte em formatos normalizados através dos NAP nacionais [[REG-01]](#REG-01)
@@ -205,7 +205,7 @@ A frequência de atualização de um feed GTFS depende da dinâmica do serviço:
 
 As Best Practices recomendam: [[BP-01]](#BP-01) [[BP-02]](#BP-02)
 
-- Publicar o novo feed **pelo menos 7 dias antes** da data de entrada em vigor
+- Publicar o novo feed pelo menos 7 dias antes da data de entrada em vigor
 - Manter o feed anterior acessível durante um período de transição
 - Para alterações menores dentro de 7 dias, usar GTFS Realtime (service alerts) em vez de republicar o feed estático
 
@@ -274,7 +274,7 @@ Com base na experiência de validação de feeds de operadores portugueses: [[DA
 Para manter um feed GTFS de alta qualidade ao longo do tempo: [[BP-01]](#BP-01) [[BP-02]](#BP-02)
 
 1. **Automatizar o pipeline** — da extração à validação, minimizar passos manuais
-2. **Validar sempre antes de publicar** — zero ERRORs é o mínimo aceitável
+2. **Validar sempre antes de publicar** — Buscar um arquivo sem error
 3. **Monitorizar a expiração** — alertas automáticos quando `feed_end_date` está a menos de 14 dias
 4. **Documentar o processo** — quem gera o feed, com que ferramenta, com que frequência
 5. **Designar um responsável** — uma pessoa ou equipa com responsabilidade clara pelo feed

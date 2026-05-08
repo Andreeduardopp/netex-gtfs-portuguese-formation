@@ -107,7 +107,7 @@ O modelo v1 não consegue representar: [[STD-05]](#STD-05)
 
 ---
 
-## 3. Fares v2 — O Modelo Moderno
+## 3. Fares v2 
 
 ### 3.1 Porque o v2?
 
@@ -165,7 +165,7 @@ PASSE_MENSAL_Z2,Passe Mensal Z2,ANDANTE_CARD,ADULT,30.00,EUR
 
 **Cenário**: Modelar a tarifa Z2 para adulto e criança, com validação no cartão e na app.
 
-No **v1**, seria necessário criar entradas separadas em `fare_attributes.txt` sem poder distinguir categorias nem suportes — uma limitação que obriga a soluções alternativas fora do standard.
+No **v1**, seria necessário criar entradas separadas em `fare_attributes.txt` sem poder distinguir categorias nem suportes, uma limitação que obriga a soluções alternativas fora do standard.
 
 No **v2**, cada combinação produto + suporte + categoria é explicitamente modelada, permitindo que as aplicações de planeamento de viagem mostrem o preço correto para cada utilizador.
 
