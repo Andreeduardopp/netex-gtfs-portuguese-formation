@@ -7,7 +7,7 @@ Após completar este módulo, o leitor será capaz de:
 - Distinguir `Line`, `Route`, `RoutePoint` e `ScheduledStopPoint` e as suas relações
 - Explicar a diferença entre ponto lógico (`ScheduledStopPoint`) e lugar físico (`StopPlace`/`Quay`)
 - Converter `routes.txt` e `stops.txt` do GTFS para os elementos NeTEx equivalentes
-- Criar um ficheiro NeTEx com a Linha 200 da STCP, do simples para o completo
+- Criar um ficheiro NeTEx com a Linha 200 da Operadora Exemplo, do simples para o completo
 
 ---
 
@@ -53,7 +53,7 @@ A `Line` NÃO contém a sequência de paragens. Isso é responsabilidade da `Rou
 
 ```xml
 <!-- Equivalente GTFS: uma linha de routes.txt -->
-<Line id="PT:STCP:Line:200:LOC" version="1">
+<Line id="PT:EXEMPLO:Line:200:LOC" version="1">
   <Name>Bolhão — Castelo do Queijo</Name>
   <PublicCode>200</PublicCode>
   <TransportMode>bus</TransportMode>
@@ -72,19 +72,19 @@ A `Line` NÃO contém a sequência de paragens. Isso é responsabilidade da `Rou
 | `route_type` | `3` (bus) | `TransportMode` = `bus` | `Line` |
 | `route_color` | `187EC2` | `Presentation/Colour` | `Line` |
 | `route_text_color` | `FFFFFF` | `Presentation/TextColour` | `Line` |
-| `agency_id` | `STCP` | `OperatorRef` | `Line` |
+| `agency_id` | `Operadora Exemplo` | `OperatorRef` | `Line` |
 
 ### 1.3 Direction — A Direção da Linha
 
 Uma linha tem tipicamente duas direções (ida e volta). No NeTEx, cada direção é representada por um objeto `Direction`: [[STD-01]](#STD-01)
 
 ```xml
-<Direction id="PT:STCP:Direction:200_CQ:LOC" version="1">
+<Direction id="PT:EXEMPLO:Direction:200_CQ:LOC" version="1">
   <!-- Direção → Castelo do Queijo -->
   <Name>Castelo do Queijo</Name>
 </Direction>
 
-<Direction id="PT:STCP:Direction:200_BL:LOC" version="1">
+<Direction id="PT:EXEMPLO:Direction:200_BL:LOC" version="1">
   <!-- Direção → Bolhão -->
   <Name>Bolhão</Name>
 </Direction>
@@ -223,7 +223,7 @@ O que o GTFS **não tem** e o NeTEx **acrescenta**:
 
 ## 3. Paragens da Linha 200 (Direção → Castelo do Queijo)
 
-Dados extraídos do feed GTFS da STCP [[DATA-03]](#DATA-03):
+Dados extraídos do feed GTFS da Operadora Exemplo [[DATA-03]](#DATA-03):
 
 | Seq | `stop_id` | Nome | Lat | Lon | Zona |
 |-----|-----------|------|-----|-----|------|
@@ -280,4 +280,4 @@ Dados extraídos do feed GTFS da STCP [[DATA-03]](#DATA-03):
 | <a id="STD-01"></a>[STD-01] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-1:2024 (Parte 1: Topologia de Rede). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="STD-04"></a>[STD-04] | CEN. "Transmodel – Reference Data Model for Public Transport." EN 12896. https://transmodel-cen.eu |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

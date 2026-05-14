@@ -5,7 +5,7 @@
   Módulo 6 — Tarifas (Introdução)
 
   O Andante é o sistema de transportes intermodal de Porto. O cartão Andante
-  permite viajar em STCP (autocarro), Metro do Porto, CP (linha do Porto) e
+  permite viajar em EXEMPLO (autocarro), Metro do Porto, CP (linha do Porto) e
   outros operadores da Área Metropolitana do Porto com um único título.
 
   O sistema é baseado em ZONAS:
@@ -40,7 +40,7 @@
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
   <!--
     ParticipantRef=PT:Andante porque os dados tarifários são da autoridade
-    Andante (TIP — Transportes Intermodais do Porto), não da STCP.
+    Andante (TIP — Transportes Intermodais do Porto), não da EXEMPLO.
     A separação entre quem define tarifas e quem opera serviços é um
     princípio fundamental do NeTEx.
   -->
@@ -58,7 +58,7 @@
              ServiceFrame — ScheduledStopPoint com TariffZone
              As paragens têm as suas zonas tarifárias definidas aqui.
              ═══════════════════════════════════════════════════════════════ -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:L200_Tarifas_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:L200_Tarifas_SvF:LOC" version="1">
           <scheduledStopPoints>
 
             <!--
@@ -66,7 +66,7 @@
               Em GTFS, este campo seria stops.txt: zone_id=Z2.
               Em NeTEx, a ligação é feita por referência explícita ao TariffZone.
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
               <tariffZones>
                 <TariffZoneRef ref="PT:Andante:TariffZone:Z2:LOC" version="1"/>
@@ -74,7 +74,7 @@
             </ScheduledStopPoint>
 
             <!-- Carmo está também em Z2 (centro histórico do Porto) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1">
               <Name>Carmo</Name>
               <tariffZones>
                 <TariffZoneRef ref="PT:Andante:TariffZone:Z2:LOC" version="1"/>
@@ -85,7 +85,7 @@
               Mercado da Foz (MFZ1) está em Z3 — periferia imediata do Porto.
               Uma viagem de Bolhão (Z2) a MFZ1 (Z3) requer bilhete Z3.
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <tariffZones>
                 <TariffZoneRef ref="PT:Andante:TariffZone:Z3:LOC" version="1"/>
@@ -96,7 +96,7 @@
               Castelo do Queijo (CQ10) está em Z4 — extremidade da linha.
               Uma viagem de Bolhão a CQ10 atravessa Z2 → Z3 → Z4 → requer Z4.
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <tariffZones>
                 <TariffZoneRef ref="PT:Andante:TariffZone:Z4:LOC" version="1"/>

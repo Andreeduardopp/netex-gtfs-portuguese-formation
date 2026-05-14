@@ -28,7 +28,7 @@ O `netex-validator` requer Java 17+.
 java -jar netex-validator-java.jar --input meu_ficheiro.xml
 
 # Ou validar um ZIP
-java -jar netex-validator-java.jar --input STCP_NeTEx_2026-04-30.zip
+java -jar netex-validator-java.jar --input EXEMPLO_NeTEx_2026-04-30.zip
 ```
 
 ### 1.2 Interpretar os Resultados
@@ -45,7 +45,7 @@ O validador produz relatórios com três níveis:
 
 ```
 [ERROR] Line 42: Element 'Line' missing required attribute 'PublicCode'
-[ERROR] Line 87: Reference 'PT:STCP:DayType:XYZ:LOC' not found in document
+[ERROR] Line 87: Reference 'PT:EXEMPLO:DayType:XYZ:LOC' not found in document
 [WARNING] Line 156: StopPlace missing recommended field 'AccessibilityAssessment'
 [INFO] Validated 341 ServiceJourney, 59 ScheduledStopPoint, 2 DayType
 ```

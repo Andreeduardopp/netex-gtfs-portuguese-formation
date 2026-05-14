@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Neste exercício, vai explorar o feed GTFS real da STCP (Linha 200) disponível em `exemplos/rede_exemplo_portugal/gtfs/`.
+Neste exercício, vai explorar o feed GTFS real da Operadora Exemplo (Linha 200) disponível em `exemplos/rede_exemplo_portugal/gtfs/`.
 
 ---
 
@@ -11,7 +11,7 @@ Neste exercício, vai explorar o feed GTFS real da STCP (Linha 200) disponível 
 Abra cada ficheiro `.txt` do feed e responda:
 
 1. Quantos ficheiros existem no feed? Quais são obrigatórios e quais são recomendados/opcionais?
-2. Qual é o `agency_id` da STCP?
+2. Qual é o `agency_id` da Operadora Exemplo?
 3. Quantas rotas existem no feed?
 4. Qual é o `route_type` da Linha 200? O que significa?
 
@@ -38,7 +38,7 @@ Usando os ficheiros do feed, trace o caminho relacional para a primeira viagem d
 
 ## Questões de Reflexão
 
-1. Porque é que a STCP usa apenas `calendar_dates.txt` em vez de `calendar.txt`? Que vantagens e desvantagens tem esta abordagem?
+1. Porque é que a Operadora Exemplo usa apenas `calendar_dates.txt` em vez de `calendar.txt`? Que vantagens e desvantagens tem esta abordagem?
 2. Se quisesse adicionar uma segunda rota (ex: Linha 201) ao feed, que ficheiros precisaria de modificar?
 3. Qual é o ficheiro mais pesado do feed? Porque é expectável que assim seja?
 

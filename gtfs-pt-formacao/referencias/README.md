@@ -59,7 +59,7 @@
 
 | ID | Referência | URL |
 |----|-----------|-----|
-| **DATA-01** | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP disponibilizado pela operadora. | — |
+| **DATA-01** | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo disponibilizado pela operadora. | — |
 | **DATA-02** | MobilityData. "Mobility Database." Agregador global de feeds GTFS. | https://mobilitydatabase.org |
 | **DATA-03** | "European transport feeds." EU National Access Points Feed Registry. | https://eu.data.public-transport.earth |
 | **DATA-04** | Portal de Dados Abertos da Administração Pública Portuguesa. | https://dados.gov.pt |

@@ -63,7 +63,7 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id,wheelchair_acces
 200,DOMINGOS_FERIADOS,200_DF_0600,Castelo do Queijo,0,shape_200_ida,1
 ```
 
-> **Nota**: os dados reais da STCP usam IDs como `DIAS UTEIS`, `SÁBADOS` e `DOMINGOS|FERIADOS` por razões históricas. Neste curso usamos IDs alfanuméricos simples (`[a-zA-Z0-9_-]`), conforme recomendado pelas Best Practices. [[BP-01]](#BP-01)
+> **Nota**: os dados reais da Operadora Exemplo usam IDs como `DIAS UTEIS`, `SÁBADOS` e `DOMINGOS|FERIADOS` por razões históricas. Neste curso usamos IDs alfanuméricos simples (`[a-zA-Z0-9_-]`), conforme recomendado pelas Best Practices. [[BP-01]](#BP-01)
 
 Ver ficheiro: [`exemplos/03_01_trips_200.txt`](exemplos/03_01_trips_200.txt)
 
@@ -213,7 +213,7 @@ Neste exemplo, o autocarro passa a cada 600 segundos (10 minutos) entre as 07:00
 | Quando usar | Horários fixos e publicados | Serviço de alta frequência |
 | Precisão | Hora exata de passagem | Intervalo aproximado |
 | Volume de dados | Uma linha por paragem por viagem | Uma linha por período |
-| Exemplo | Linha 200 STCP (horários fixos) | Metro do Porto (cada 6 min) |
+| Exemplo | Linha 200 Operadora Exemplo (horários fixos) | Metro do Porto (cada 6 min) |
 
 A maioria dos operadores de autocarro em Portugal usa `stop_times.txt` com horários explícitos. O `frequencies.txt` é mais comum em metros e serviços de alta frequência.
 
@@ -251,4 +251,4 @@ Para quem seguirá o curso NeTEx, as equivalências são:
 |----|-----------|
 | <a id="STD-01"></a>[STD-01] | MobilityData. "GTFS Schedule Reference." https://gtfs.org/schedule/reference |
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

@@ -53,7 +53,7 @@ Camada 3 — LIGAÇÃO (ServiceFrame):
 Todos os objetos físicos vivem no **`SiteFrame`**: [[STD-01]](#STD-01)
 
 ```xml
-<SiteFrame id="PT:STCP:SiteFrame:Porto_SF:LOC" version="1">
+<SiteFrame id="PT:EXEMPLO:SiteFrame:Porto_SF:LOC" version="1">
   <stopPlaces>
     <StopPlace> ... </StopPlace>
     <StopPlace> ... </StopPlace>
@@ -77,7 +77,7 @@ Um `StopPlace` pode ter:
 - **`StopPlaceEntrance`** — portas de entrada/saída
 
 ```xml
-<StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+<StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
   <Name>Bolhão</Name>
   <Centroid>                 <!-- coordenadas do centro do StopPlace -->
     <Location>
@@ -96,7 +96,7 @@ Um `StopPlace` pode ter:
 Um **`Quay`** é a plataforma específica onde os passageiros embarcam/desembarcam de um veículo. [[STD-01]](#STD-01) Cada `Quay` tem coordenadas próprias (o ponto exato na rua) e pode ter informação de acessibilidade.
 
 ```xml
-<Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="1">
+<Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1">
   <Name>Bolhão — Sentido Castelo do Queijo</Name>
   <Centroid>
     <Location>
@@ -131,14 +131,14 @@ O **`PassengerStopAssignment`** é o elemento que liga a camada lógica (`Schedu
 ```xml
 <!-- No ServiceFrame, junto aos scheduledStopPoints -->
 <stopAssignments>
-  <PassengerStopAssignment id="PT:STCP:PSA:BLRB1_Bolhao_IDA:LOC" version="1"
+  <PassengerStopAssignment id="PT:EXEMPLO:PSA:BLRB1_Bolhao_IDA:LOC" version="1"
                            order="1">
     <!-- O ponto lógico (do horário) -->
-    <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+    <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
     <!-- O lugar físico -->
-    <StopPlaceRef ref="PT:STCP:StopPlace:Bolhao:LOC" version="1"/>
+    <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1"/>
     <!-- A plataforma específica -->
-    <QuayRef ref="PT:STCP:Quay:Bolhao_IDA:LOC" version="1"/>
+    <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1"/>
   </PassengerStopAssignment>
 </stopAssignments>
 ```
@@ -152,7 +152,7 @@ Porque a relação lógico/físico pode ser complexa:
 
 ## 5. Multimodalidade — Bolhão Porto
 
-O nó Bolhão em Porto é servido por autocarro (STCP, múltiplas linhas) e metro (Metro do Porto, Linha D Amarela). No GTFS, estes modos estão em feeds separados sem ligação estrutural.
+O nó Bolhão em Porto é servido por autocarro (Operadora Exemplo, múltiplas linhas) e metro (Metro do Porto, Linha D Amarela). No GTFS, estes modos estão em feeds separados sem ligação estrutural.
 
 Em NeTEx, um único `StopPlace` do tipo `monomodalStopPlace` (apenas autocarros) pode ter adjacentes/dentro de si outros StopPlace para outros modos, ligados por `PathLink`.
 
@@ -178,7 +178,7 @@ O campo `StopPlaceType` classifica o lugar físico: [[STD-01]](#STD-01)
 
 | Valor | Descrição | Exemplo Porto |
 |-------|-----------|---------------|
-| `onstreetBus` | Paragem de autocarro à beira da estrada | Bolhão (STCP) |
+| `onstreetBus` | Paragem de autocarro à beira da estrada | Bolhão (Operadora Exemplo) |
 | `onstreetTram` | Paragem de eléctrico à beira da estrada | Eléctricos históricos |
 | `metroStation` | Estação de metro | Bolhão (Metro Porto) |
 | `railStation` | Estação ferroviária | Campanhã (CP) |
@@ -202,7 +202,7 @@ O Perfil Nacional NeTEx Portugal adopta o formato IFOPT para os `StopPlace` e `Q
 
 Em termos práticos, no Perfil PT o `id` de um `StopPlace` deve seguir a convenção:
 ```
-PT:STCP:StopPlace:Bolhao:LOC
+PT:EXEMPLO:StopPlace:Bolhao:LOC
 ```
 Onde `Bolhao` é o identificador local reconhecido pelo operador/autoridade.
 
@@ -228,4 +228,4 @@ Onde `Bolhao` é o identificador local reconhecido pelo operador/autoridade.
 | <a id="STD-01"></a>[STD-01] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-1:2024 (Parte 1). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="STD-05"></a>[STD-05] | CEN. "IFOPT – Identification of Fixed Objects in Public Transport." CEN/TS 28701. |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

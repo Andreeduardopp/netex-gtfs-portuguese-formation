@@ -13,7 +13,7 @@
      pertence à entidade pública; os horários e serviços pertencem a cada
      operador. A separação no NeTEx reflete esta responsabilidade real:
        - SiteFrame com ParticipantRef=PT:IMT (ou PT:AMUP)
-       - TimetableFrame com ParticipantRef=PT:STCP (ou PT:MetroPorto)
+       - TimetableFrame com ParticipantRef=PT:EXEMPLO (ou PT:MetroPorto)
      Vantagem: uma única "verdade" sobre a paragem física, consultada por
      todos os operadores. Desvantagem: requer coordenação entre entidades.
 
@@ -68,8 +68,8 @@
 
           <stopPlaces>
 
-            <!-- StopPlace de autocarros STCP — Trindade -->
-            <StopPlace id="PT:STCP:StopPlace:Trindade:LOC" version="1">
+            <!-- StopPlace de autocarros EXEMPLO — Trindade -->
+            <StopPlace id="PT:EXEMPLO:StopPlace:Trindade:LOC" version="1">
               <Name>Trindade</Name>
               <Centroid>
                 <Location>
@@ -84,7 +84,7 @@
               <quays>
 
                 <!-- TRD1 — sentido variável conforme a linha -->
-                <Quay id="PT:STCP:Quay:Trindade_TRD1:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Trindade_TRD1:LOC" version="1">
                   <Name>Trindade — TRD1</Name>
                   <Centroid>
                     <Location>
@@ -96,7 +96,7 @@
                 </Quay>
 
                 <!-- TRD2 -->
-                <Quay id="PT:STCP:Quay:Trindade_TRD2:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Trindade_TRD2:LOC" version="1">
                   <Name>Trindade — TRD2</Name>
                   <Centroid>
                     <Location>
@@ -108,7 +108,7 @@
                 </Quay>
 
                 <!-- TRD3 -->
-                <Quay id="PT:STCP:Quay:Trindade_TRD3:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Trindade_TRD3:LOC" version="1">
                   <Name>Trindade — TRD3</Name>
                   <Centroid>
                     <Location>
@@ -165,7 +165,7 @@
             <PathLink id="PT:IMT:PathLink:Trindade_TRD1_Metro:LOC" version="1">
               <Name>TRD1 → Metro Trindade</Name>
               <From>
-                <PlaceRef ref="PT:STCP:Quay:Trindade_TRD1:LOC"
+                <PlaceRef ref="PT:EXEMPLO:Quay:Trindade_TRD1:LOC"
                           nameOfRefClass="Quay" version="1"/>
               </From>
               <To>
@@ -185,7 +185,7 @@
             <PathLink id="PT:IMT:PathLink:Trindade_TRD2_Metro:LOC" version="1">
               <Name>TRD2 → Metro Trindade</Name>
               <From>
-                <PlaceRef ref="PT:STCP:Quay:Trindade_TRD2:LOC"
+                <PlaceRef ref="PT:EXEMPLO:Quay:Trindade_TRD2:LOC"
                           nameOfRefClass="Quay" version="1"/>
               </From>
               <To>
@@ -203,7 +203,7 @@
         </SiteFrame>
 
         <!-- PARTE C: ServiceFrame com SSP e PassengerStopAssignment -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:Trindade_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:Trindade_SvF:LOC" version="1">
 
           <scheduledStopPoints>
 
@@ -212,15 +212,15 @@
               Todos têm o mesmo nome "Trindade" pois são pontos no mesmo lugar.
               As coordenadas físicas ficam nos Quay (não aqui).
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRD1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRD1:LOC" version="1">
               <Name>Trindade</Name>
             </ScheduledStopPoint>
 
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRD2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRD2:LOC" version="1">
               <Name>Trindade</Name>
             </ScheduledStopPoint>
 
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRD3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRD3:LOC" version="1">
               <Name>Trindade</Name>
             </ScheduledStopPoint>
 
@@ -230,32 +230,32 @@
 
             <!-- TRD1 → StopPlace Trindade → Quay TRD1 -->
             <PassengerStopAssignment
-                id="PT:STCP:PSA:TRD1_Trindade:LOC"
+                id="PT:EXEMPLO:PSA:TRD1_Trindade:LOC"
                 version="1"
                 order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TRD1:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Trindade:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:Trindade_TRD1:LOC" version="1"/>
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD1:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Trindade:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Trindade_TRD1:LOC" version="1"/>
             </PassengerStopAssignment>
 
             <!-- TRD2 → StopPlace Trindade → Quay TRD2 -->
             <PassengerStopAssignment
-                id="PT:STCP:PSA:TRD2_Trindade:LOC"
+                id="PT:EXEMPLO:PSA:TRD2_Trindade:LOC"
                 version="1"
                 order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TRD2:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Trindade:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:Trindade_TRD2:LOC" version="1"/>
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD2:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Trindade:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Trindade_TRD2:LOC" version="1"/>
             </PassengerStopAssignment>
 
             <!-- TRD3 → StopPlace Trindade → Quay TRD3 -->
             <PassengerStopAssignment
-                id="PT:STCP:PSA:TRD3_Trindade:LOC"
+                id="PT:EXEMPLO:PSA:TRD3_Trindade:LOC"
                 version="1"
                 order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TRD3:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Trindade:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:Trindade_TRD3:LOC" version="1"/>
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD3:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Trindade:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Trindade_TRD3:LOC" version="1"/>
             </PassengerStopAssignment>
 
           </stopAssignments>

@@ -205,9 +205,9 @@ Extensões VS Code recomendadas:
 
 Validação de feeds: O Canonical GTFS Validator da MobilityData permite validar feeds GTFS contra a especificação oficial. [[TOOL-01]](#TOOL-01) Será introduzido no Módulo 8.
 
-### 5.3 A Rede Âncora: STCP Porto
+### 5.3 A Rede Âncora: Operadora Exemplo
 
-Todos os exemplos deste curso são baseados em dados reais da STCP (Sociedade de Transportes Colectivos do Porto). [[DATA-01]](#DATA-01) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
+Todos os exemplos deste curso são baseados em dados reais da Operadora Exemplo (Sociedade de Transportes Colectivos do Porto). [[DATA-01]](#DATA-01) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
 
 A escolha de dados reais (vs. uma rede fictícia) tem uma razão pedagógica: os exemplos são mais credíveis quando podemos verificar que correspondem a uma realidade que o leitor conhece ou pode consultar.
 
@@ -261,4 +261,4 @@ Módulo 8 — Ferramentas Práticas (validação, bibliotecas Python, publicaç�
 | <a id="PT-01"></a>[PT-01] | IMT. "Ponto de Acesso Nacional (NAP) Portugal." https://nap-portugal.imt-ip.pt |
 | <a id="PT-02"></a>[PT-02] | Instituto da Mobilidade e dos Transportes (IMT-IP). https://www.imt-ip.pt |
 | <a id="TOOL-01"></a>[TOOL-01] | MobilityData. "Canonical GTFS Validator." https://github.com/MobilityData/gtfs-validator |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

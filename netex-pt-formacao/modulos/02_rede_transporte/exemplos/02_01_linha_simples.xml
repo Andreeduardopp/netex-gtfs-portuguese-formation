@@ -3,7 +3,7 @@
   EXEMPLO 02_01 — Linha de Autocarro Simples em NeTEx
   =====================================================
   Curso: NeTEx PT Formação — Módulo 2: Rede de Transporte
-  Fonte dos dados: STCP Porto, Linha 200 [DATA-03]
+  Fonte dos dados: Operadora Exemplo, Linha 200 [DATA-03]
 
   O que este ficheiro demonstra:
   - Line com código público, modo de transporte e apresentação visual
@@ -19,7 +19,7 @@
   Referências:
   - [STD-01] CEN/TS 16614-1:2024 (NeTEx Parte 1)
   - [PT-01]  IMT. Perfil Nacional NeTEx Portugal
-  - [DATA-03] STCP. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
+  - [DATA-03] EXEMPLO. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
 -->
 <PublicationDelivery
     xmlns="http://www.netex.org.uk/netex"
@@ -27,22 +27,22 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:STCP_L200_Simples:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:EXEMPLO_L200_Simples:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
       </validBetween>
       <frames>
 
         <!-- ResourceFrame: operador e autoridade (ver Módulo 1) -->
-        <ResourceFrame id="PT:STCP:ResourceFrame:L200_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:L200_RF:LOC" version="1">
           <organisations>
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
               <Name>Sociedade de Transportes Colectivos do Porto, E.I.M., S.A.</Name>
-              <ShortName>STCP</ShortName>
-              <PublicCode>STCP</PublicCode>
+              <ShortName>EXEMPLO</ShortName>
+              <PublicCode>EXEMPLO</PublicCode>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -51,16 +51,16 @@
           ServiceFrame: contém a definição da rede lógica.
           Este é o frame principal deste módulo.
         -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:L200_SF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:L200_SF:LOC" version="1">
 
           <!--
             Network: agrupamento de linhas sob uma marca comum.
-            A rede STCP Porto agrega todas as linhas de autocarro.
+            A rede Operadora Exemplo agrega todas as linhas de autocarro.
           -->
-          <Network id="PT:STCP:Network:STCP_Porto:LOC" version="1">
-            <Name>Rede de Autocarros STCP — Porto</Name>
-            <ShortName>STCP</ShortName>
-            <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+          <Network id="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1">
+            <Name>Rede de Autocarros EXEMPLO — Porto</Name>
+            <ShortName>EXEMPLO</ShortName>
+            <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
           </Network>
 
           <!--
@@ -73,10 +73,10 @@
             Em NeTEx, a Direction é uma entidade com identidade própria e nome descritivo.
           -->
           <directions>
-            <Direction id="PT:STCP:Direction:200_CQ:LOC" version="1">
+            <Direction id="PT:EXEMPLO:Direction:200_CQ:LOC" version="1">
               <Name>Castelo do Queijo</Name>
             </Direction>
-            <Direction id="PT:STCP:Direction:200_BL:LOC" version="1">
+            <Direction id="PT:EXEMPLO:Direction:200_BL:LOC" version="1">
               <Name>Bolhão</Name>
             </Direction>
           </directions>
@@ -100,7 +100,7 @@
                 route_text_color → Presentation/TextColour
                 route_url        → Url
             -->
-            <Line id="PT:STCP:Line:200:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:200:LOC" version="1">
               <Name>Bolhão — Castelo do Queijo</Name>
               <ShortName>200</ShortName>
               <PublicCode>200</PublicCode>
@@ -112,9 +112,9 @@
                 <Colour>187EC2</Colour>
                 <TextColour>FFFFFF</TextColour>
               </Presentation>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <NetworkRef ref="PT:STCP:Network:STCP_Porto:LOC" version="1"/>
-              <Url>https://www.stcp.pt/pt/viajar/linhas/?linha=200</Url>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <NetworkRef ref="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1"/>
+              <Url>https://www.exemplo.pt/pt/viajar/linhas/?linha=200</Url>
             </Line>
           </lines>
 
@@ -138,7 +138,7 @@
               Bolhão — terminal de partida da Linha 200.
               GTFS: stop_id=BLRB1, lat=41.151868, lon=-8.607115, zone_id=PRT1
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
               <Location>
                 <Longitude>-8.607115</Longitude>
@@ -150,7 +150,7 @@
               Carmo — paragem no centro histórico.
               GTFS: stop_id=CMO, lat=41.147223, lon=-8.616926, zone_id=PRT1
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1">
               <Name>Carmo</Name>
               <Location>
                 <Longitude>-8.616926</Longitude>
@@ -162,7 +162,7 @@
               Praça da Galiza — fronteira aproximada entre centro e zona ribeirinha.
               GTFS: stop_id=PRG4, lat=41.152531, lon=-8.627041, zone_id=PRT1
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1">
               <Name>Praça da Galiza</Name>
               <Location>
                 <Longitude>-8.627041</Longitude>
@@ -177,7 +177,7 @@
               Nota: a mudança de zona tarifária (PRT1 → PRT2) ocorre entre a
               paragem de Jardim Botânico (JB1, seq. 14, PRT1) e Lordelo (LRD1, seq. 15, PRT2).
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <Location>
                 <Longitude>-8.673343</Longitude>
@@ -189,7 +189,7 @@
               Castelo do Queijo — terminal da linha, junto à costa.
               GTFS: stop_id=CQ10, lat=41.167422, lon=-8.689127, zone_id=PRT2
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <Location>
                 <Longitude>-8.689127</Longitude>
@@ -216,10 +216,10 @@
               No GTFS, a sequência de paragens está em stop_times.txt, não em trips.txt.
               No NeTEx, a Route é reutilizável — a sequência de pontos existe independentemente das viagens.
             -->
-            <Route id="PT:STCP:Route:200_IDA:LOC" version="1">
+            <Route id="PT:EXEMPLO:Route:200_IDA:LOC" version="1">
               <Name>200 — Bolhão → Castelo do Queijo</Name>
-              <lineRef ref="PT:STCP:Line:200:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:200_CQ:LOC" version="1"/>
+              <lineRef ref="PT:EXEMPLO:Line:200:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:200_CQ:LOC" version="1"/>
               <DirectionType>outbound</DirectionType>
 
               <!--
@@ -236,29 +236,29 @@
               -->
               <pointsInSequence>
 
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_01:LOC" version="1"
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_01:LOC" version="1"
                               order="1">
-                  <PointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+                  <PointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
                 </PointOnRoute>
 
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_02:LOC" version="1"
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_02:LOC" version="1"
                               order="2">
-                  <PointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/>
+                  <PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/>
                 </PointOnRoute>
 
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_03:LOC" version="1"
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_03:LOC" version="1"
                               order="3">
-                  <PointRef ref="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1"/>
+                  <PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1"/>
                 </PointOnRoute>
 
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_04:LOC" version="1"
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_04:LOC" version="1"
                               order="4">
-                  <PointRef ref="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1"/>
+                  <PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1"/>
                 </PointOnRoute>
 
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_05:LOC" version="1"
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_05:LOC" version="1"
                               order="5">
-                  <PointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/>
+                  <PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/>
                 </PointOnRoute>
 
               </pointsInSequence>
@@ -278,46 +278,46 @@
             (ex: viagem normal vs. viagem expresso que salta algumas paragens).
           -->
           <journeyPatterns>
-            <ServiceJourneyPattern id="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1">
+            <ServiceJourneyPattern id="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1">
               <Name>200 IDA — Normal (todas as paragens)</Name>
-              <RouteRef ref="PT:STCP:Route:200_IDA:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:200_CQ:LOC" version="1"/>
-              <DestinationDisplayRef ref="PT:STCP:DestinationDisplay:CQ:LOC" version="1"/>
+              <RouteRef ref="PT:EXEMPLO:Route:200_IDA:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:200_CQ:LOC" version="1"/>
+              <DestinationDisplayRef ref="PT:EXEMPLO:DestinationDisplay:CQ:LOC" version="1"/>
 
               <pointsInSequence>
 
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"
                                            order="1">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
                   <ForAlighting>false</ForAlighting>
                   <ForBoarding>true</ForBoarding>
-                  <DestinationDisplayRef ref="PT:STCP:DestinationDisplay:CQ:LOC" version="1"/>
+                  <DestinationDisplayRef ref="PT:EXEMPLO:DestinationDisplay:CQ:LOC" version="1"/>
                 </StopPointInJourneyPattern>
 
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_02:LOC" version="1"
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_02:LOC" version="1"
                                            order="2">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/>
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
 
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_03:LOC" version="1"
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_03:LOC" version="1"
                                            order="3">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1"/>
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
 
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_04:LOC" version="1"
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_04:LOC" version="1"
                                            order="4">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1"/>
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
 
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_05:LOC" version="1"
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_05:LOC" version="1"
                                            order="5">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/>
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
@@ -332,10 +332,10 @@
             Em NeTEx, é uma entidade reutilizável referenciada por StopPointInJourneyPattern.
           -->
           <destinationDisplays>
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:CQ:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:CQ:LOC" version="1">
               <FrontText>Castelo do Queijo</FrontText>
             </DestinationDisplay>
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:BL:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:BL:LOC" version="1">
               <FrontText>Bolhão</FrontText>
             </DestinationDisplay>
           </destinationDisplays>

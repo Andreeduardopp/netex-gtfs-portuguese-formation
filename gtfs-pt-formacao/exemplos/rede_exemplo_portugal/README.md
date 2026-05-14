@@ -1,8 +1,8 @@
-# Rede Exemplo: STCP Porto — Linha 200
+# Rede Exemplo: Operadora Exemplo — Linha 200
 
 ## Decisão Âncora
 
-Todos os exemplos deste curso utilizam dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)**, especificamente a **Linha 200 (Bolhão → Castelo do Queijo)** como caso de estudo principal. [[DATA-01]](#DATA-01)
+Todos os exemplos deste curso utilizam dados reais da **Operadora Exemplo (Sociedade de Transportes Colectivos do Porto)**, especificamente a **Linha 200 (Bolhão → Castelo do Queijo)** como caso de estudo principal. [[DATA-01]](#DATA-01)
 
 ### Porquê dados reais?
 
@@ -10,7 +10,7 @@ Todos os exemplos deste curso utilizam dados reais da **STCP (Sociedade de Trans
 - Demonstra complexidades que dados fictícios não capturariam (zonas tarifárias, variações de calendário, múltiplas direções)
 - Alinhamento com o curso NeTEx PT Formação, que usa a mesma rede âncora
 
-### Porquê a STCP e a Linha 200?
+### Porquê a Operadora Exemplo e a Linha 200?
 
 - Operador de grande dimensão com dados GTFS publicados
 - Linha que atravessa zonas tarifárias diferentes (Andante Z2, Z3, Z4)
@@ -21,7 +21,7 @@ Todos os exemplos deste curso utilizam dados reais da **STCP (Sociedade de Trans
 
 | Ficheiro | Conteúdo | Registos |
 |----------|----------|----------|
-| `agency.txt` | Operador STCP | 1 |
+| `agency.txt` | Operador Operadora Exemplo | 1 |
 | `routes.txt` | Linha 200 | 1 |
 | `stops.txt` | Paragens da Linha 200 | ~59 |
 | `trips.txt` | Viagens da Linha 200 | ~340 |
@@ -35,7 +35,7 @@ A spec GTFS permite que as colunas apareçam em qualquer ordem dentro de cada fi
 
 ## Fonte
 
-Dados extraídos do feed GTFS oficial da STCP (versão Escolar 228, 2026-04-30). [[DATA-01]](#DATA-01)
+Dados extraídos do feed GTFS oficial da Operadora Exemplo (versão Escolar 228, 2026-04-30). [[DATA-01]](#DATA-01)
 
 ---
 
@@ -43,4 +43,4 @@ Dados extraídos do feed GTFS oficial da STCP (versão Escolar 228, 2026-04-30).
 
 | ID | Referência |
 |----|-----------|
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP disponibilizado pela operadora. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo disponibilizado pela operadora. |

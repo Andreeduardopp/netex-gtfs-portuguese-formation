@@ -8,7 +8,7 @@
 
 Vai criar um `ServiceCalendarFrame` e um `TimetableFrame` completos para uma segunda partida da Linha 200 — a das **06:20** em Dias Úteis — e para a **primeira partida de Sábado** (também às 06:00 de Bolhão).
 
-Os dados vêm diretamente do feed GTFS da STCP [DATA-03].
+Os dados vêm diretamente do feed GTFS da Operadora Exemplo [DATA-03].
 
 ---
 
@@ -67,7 +67,7 @@ trip_id,arrival_time,departure_time,stop_id,stop_sequence
 
 Crie um `ServiceCalendarFrame` com:
 
-1. Os 3 `DayType` da STCP (já viu no exemplo `03_horarios.xml` — podem ser copiados)
+1. Os 3 `DayType` da Operadora Exemplo (já viu no exemplo `03_horarios.xml` — podem ser copiados)
 2. `OperatingDay` para as 7 datas do extrato acima
 3. `DayTypeAssignment` corretos para cada data:
    - 20260430 (quinta-feira) → ?
@@ -100,7 +100,7 @@ Crie a `ServiceJourney` para a viagem `200_SAB_0600`:
 
 2. Em GTFS, o campo `wheelchair_accessible=1` está em `trips.txt`. Em NeTEx, o equivalente (`AccessibilityAssessment`) pode estar na `ServiceJourney` (como neste módulo) ou na `StopPlace`/`Quay` (Módulo 4). O que modela cada um? São mutuamente exclusivos?
 
-3. O feed GTFS da STCP tem 341 viagens para a Linha 200. Numa implementação real em NeTEx, todas elas teriam de ser representadas como `ServiceJourney`. Que estratégias existem para gerir esta escala?
+3. O feed GTFS da Operadora Exemplo tem 341 viagens para a Linha 200. Numa implementação real em NeTEx, todas elas teriam de ser representadas como `ServiceJourney`. Que estratégias existem para gerir esta escala?
 
 ---
 
@@ -117,4 +117,4 @@ A solução está em [`solucoes/exercicio_03_solucao.xml`](solucoes/exercicio_03
 - [ ] Os `DayTypeAssignment` têm atributo `order`?
 - [ ] Os `TimetabledPassingTime` usam `ArrivalTime` na última paragem e `DepartureTime` na primeira?
 - [ ] As viagens de dias úteis e de sábado têm `DayTypeRef` diferentes?
-- [ ] O `id` das `ServiceJourney` segue o formato `PT:STCP:ServiceJourney:...:LOC`?
+- [ ] O `id` das `ServiceJourney` segue o formato `PT:EXEMPLO:ServiceJourney:...:LOC`?

@@ -39,7 +39,7 @@ Isto é particularmente relevante para estações intermodais como o Bolhão, on
 ```
 Estação Bolhão (parent_station, wheelchair_boarding=1)
   ├── Plataforma Metro Linha D (wheelchair_boarding=0 → herda 1 da estação)
-  ├── Plataforma STCP Linha 200 (wheelchair_boarding=1 → explícito)
+  ├── Plataforma Operadora Exemplo Linha 200 (wheelchair_boarding=1 → explícito)
   └── Acesso provisório obras (wheelchair_boarding=2 → sem acesso cadeira rodas)
 ```
 
@@ -109,21 +109,21 @@ O `transfers.txt` permite definir regras especiais de transferência entre parag
 | `2` | Transferência com tempo mínimo | Necessário um tempo mínimo entre chegada e partida |
 | `3` | Transferência não possível | Proibir transferência entre estas paragens |
 
-### 2.4 Exemplo: Bolhão (Metro ↔ STCP)
+### 2.4 Exemplo: Bolhão (Metro ↔ Operadora Exemplo)
 
-O interface intermodal do Bolhão, no Porto, é um ponto de transferência crítico entre o Metro do Porto (Linha D — Amarela) e várias linhas de autocarro da STCP, incluindo a Linha 200. [[DATA-01]](#DATA-01)
+O interface intermodal do Bolhão, no Porto, é um ponto de transferência crítico entre o Metro do Porto (Linha D — Amarela) e várias linhas de autocarro da Operadora Exemplo, incluindo a Linha 200. [[DATA-01]](#DATA-01)
 
 ```csv
 from_stop_id,to_stop_id,transfer_type,min_transfer_time
 BLH_METRO_D,BLRB1,2,180
 BLRB1,BLH_METRO_D,2,240
-BLH_METRO_D,BLH_STCP_301,2,180
-BLH_STCP_301,BLH_METRO_D,2,240
+BLH_METRO_D,BLH_EXEMPLO_301,2,180
+BLH_EXEMPLO_301,BLH_METRO_D,2,240
 ```
 
 Leitura:
-- **Metro → STCP Linha 200**: `transfer_type=2` com `min_transfer_time=180` (3 minutos), o passageiro precisa de subir da plataforma do metro até à paragem de autocarro à superfície
-- **STCP Linha 200 → Metro**: `transfer_type=2` com `min_transfer_time=240` (4 minutos), sentido inverso demora mais porque inclui descer ao piso subterrâneo e validar o título de transporte
+- **Metro → Operadora Exemplo Linha 200**: `transfer_type=2` com `min_transfer_time=180` (3 minutos), o passageiro precisa de subir da plataforma do metro até à paragem de autocarro à superfície
+- **Operadora Exemplo Linha 200 → Metro**: `transfer_type=2` com `min_transfer_time=240` (4 minutos), sentido inverso demora mais porque inclui descer ao piso subterrâneo e validar o título de transporte
 - As transferências entre a Linha 301 e o Metro seguem a mesma lógica
 
 O tempo assimétrico (3 min vs 4 min) reflete a realidade física: descer é tipicamente mais rápido do que subir num interface com desníveis.
@@ -300,7 +300,7 @@ O NeTEx oferece uma modelação de acessibilidade significativamente mais rica, 
 ## Exemplos
 
 - [`exemplos/05_01_stops_acessibilidade.txt`](exemplos/05_01_stops_acessibilidade.txt) — Paragens com campos de acessibilidade (`wheelchair_boarding`) para a Estação de Bolhão
-- [`exemplos/05_02_transfers_bolhao.txt`](exemplos/05_02_transfers_bolhao.txt) — Transferências no interface intermodal do Bolhão (Metro ↔ STCP)
+- [`exemplos/05_02_transfers_bolhao.txt`](exemplos/05_02_transfers_bolhao.txt) — Transferências no interface intermodal do Bolhão (Metro ↔ Operadora Exemplo)
 
 ---
 
@@ -317,5 +317,5 @@ O NeTEx oferece uma modelação de acessibilidade significativamente mais rica, 
 | <a id="STD-01"></a>[STD-01] | MobilityData. "GTFS Schedule Reference." https://gtfs.org/schedule/reference |
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 relativo ao quadro europeu para serviços de informação sobre viagens multimodais (MMTIS). |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |
 | <a id="DL-01"></a>[DL-01] | Decreto-Lei n.º 163/2006 — regulamenta as normas técnicas de acessibilidade em edifícios e espaços públicos em Portugal, incluindo interfaces de transporte

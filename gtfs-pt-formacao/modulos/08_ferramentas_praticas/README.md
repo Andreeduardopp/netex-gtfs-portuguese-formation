@@ -56,12 +56,12 @@ Com base na experiência de validação de feeds de operadores portugueses: [[DA
 
 ### 1.4 Exemplo de Relatório
 
-Ao validar o feed STCP (versão Escolar 228), o validador tipicamente reporta:
+Ao validar o feed Operadora Exemplo (versão Escolar 228), o validador tipicamente reporta:
 
 ```
 Validation Report
 =================
-Validated feed: stcp_gtfs.zip
+Validated feed: exemplo_gtfs.zip
 GTFS files: 7 files
 Errors: 0
 Warnings: 3
@@ -81,7 +81,7 @@ O `partridge` é uma biblioteca Python que carrega feeds GTFS em DataFrames do p
 import partridge as ptg
 
 # Carregar feed filtrando por data
-feed = ptg.load_geo_feed("stcp_gtfs.zip", view={"trips.txt": {"service_id": "DIAS UTEIS"}})
+feed = ptg.load_geo_feed("exemplo_gtfs.zip", view={"trips.txt": {"service_id": "DIAS UTEIS"}})
 
 # Explorar rotas
 print(feed.routes[["route_id", "route_short_name", "route_long_name"]])
@@ -99,7 +99,7 @@ Para quem prefere controlo total, os ficheiros GTFS são CSV simples que o `pand
 import pandas as pd
 import zipfile
 
-with zipfile.ZipFile("stcp_gtfs.zip") as z:
+with zipfile.ZipFile("exemplo_gtfs.zip") as z:
     stops = pd.read_csv(z.open("stops.txt"), dtype=str)
     routes = pd.read_csv(z.open("routes.txt"), dtype=str)
     trips = pd.read_csv(z.open("trips.txt"), dtype=str)
@@ -234,7 +234,7 @@ Para operadores com feeds que mudam regularmente:
 
 - **Cron job / GitHub Actions**: executar o pipeline diariamente ou semanalmente
 - **Monitorização**: alertas quando a validação falha
-- **Versionamento**: guardar cada versão do feed com data no nome (`stcp_gtfs_20260503.zip`)
+- **Versionamento**: guardar cada versão do feed com data no nome (`exemplo_gtfs_20260503.zip`)
 - **Diff**: comparar feed anterior com novo para detetar alterações inesperadas
 
 ---
@@ -257,7 +257,7 @@ O `feed_info.txt` contém metadados sobre o feed como um todo: [[STD-01]](#STD-0
 
 ```csv
 feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
-STCP,https://www.stcp.pt,pt,20260430,20261231,Escolar_228
+Operadora Exemplo,https://www.exemplo.pt,pt,20260430,20261231,Escolar_228
 ```
 
 As Best Practices recomendam que `feed_start_date` e `feed_end_date` estejam sempre preenchidos. [[BP-01]](#BP-01)
@@ -289,6 +289,6 @@ As Best Practices recomendam que `feed_start_date` e `feed_end_date` estejam sem
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="TOOL-01"></a>[TOOL-01] | MobilityData. "Canonical GTFS Validator." https://github.com/MobilityData/gtfs-validator |
 | <a id="TOOL-02"></a>[TOOL-02] | Remix. "partridge — Python GTFS library." https://github.com/remix/partridge |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |
 | <a id="DATA-02"></a>[DATA-02] | MobilityData. "Mobility Database." https://mobilitydatabase.org |
 | <a id="PT-01"></a>[PT-01] | IMT. "NAP Portugal." https://nap-portugal.imt-ip.pt |

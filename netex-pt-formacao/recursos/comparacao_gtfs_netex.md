@@ -13,7 +13,7 @@ Uma análise lado-a-lado dos dois standards para técnicos que já conhecem GTFS
 | **Formato** | CSV (ficheiros `.txt` num `.zip`) | XML (por norma um `.xml` por `Frame`) |
 | **Modelo conceptual** | Pragmático, sem modelo formal | Baseado no Transmodel CEN EN 12896 [STD-04] |
 | **Cobertura** | Horários, paragens, rotas, tarifas básicas | Tudo do GTFS + acessibilidade, multimodalidade, tarifas complexas, informação ao passageiro |
-| **Identificadores** | Locais (sem formato obrigatório) | Globais e hierárquicos: `PT:STCP:Line:200:LOC` |
+| **Identificadores** | Locais (sem formato obrigatório) | Globais e hierárquicos: `PT:EXEMPLO:Line:200:LOC` |
 | **Versionamento** | Não existe | Nativo — cada objeto tem `version` e `validFrom/To` |
 | **Complexidade** | Baixa — 6 ficheiros obrigatórios | Alta — schema XSD com ~500 tipos XML |
 | **Adoção** | 10.000+ agências globalmente | Obrigatório na UE (Regulamento 2024/490) [REG-01] |
@@ -51,7 +51,7 @@ Capacidades que o GTFS não tem (ou tem de forma muito limitada):
 2. **Hierarquia de paragens**: `StopPlace` → `Quay` → `BoardingPosition` — distingue o edifício/praça do ponto de embarque
 3. **Multimodalidade**: um `StopPlace` pode ter `AccessSpace` e `PathLink` para modelar o percurso pedonal dentro da estação
 4. **Tarifas avançadas**: produtos como passes mensais, bilhetes combinados, zonas variáveis (ex: Andante, Navegante)
-5. **Identificadores globais**: os IDs NeTEx são únicos globalmente (`PT:STCP:Stop:BLRB1:LOC`), não apenas localmente
+5. **Identificadores globais**: os IDs NeTEx são únicos globalmente (`PT:EXEMPLO:Stop:BLRB1:LOC`), não apenas localmente
 6. **Perfis nacionais**: cada país pode definir um subconjunto obrigatório (Portugal tem o Perfil Nacional NeTEx, ver Módulo 7)
 
 ---

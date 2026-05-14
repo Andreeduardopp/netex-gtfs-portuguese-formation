@@ -53,7 +53,7 @@ Este diretório centraliza todas as referências bibliográficas e fontes utiliz
 |----|-----------|-----|----------|
 | DATA-01 | Portal de Dados Abertos do Governo Português | [dados.gov.pt](https://dados.gov.pt) | Exemplos |
 | DATA-02 | MobilityData. "Mobility Database." | [mobilitydatabase.org](https://mobilitydatabase.org) | Exemplos |
-| DATA-03 | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial disponibilizado pela operadora. | [stcp.pt](https://www.stcp.pt) | Módulos 0–6 |
+| DATA-03 | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial disponibilizado pela operadora. | [exemplo.pt](https://www.exemplo.pt) | Módulos 0–6 |
 
 ---
 
@@ -66,4 +66,4 @@ Este diretório centraliza todas as referências bibliográficas e fontes utiliz
 
 ---
 
-*Última atualização: Abril 2026 — adicionado DATA-03 (STCP Porto), usado em Módulos 0–6.*
+*Última atualização: Abril 2026 — adicionado DATA-03 (Operadora Exemplo), usado em Módulos 0–6.*

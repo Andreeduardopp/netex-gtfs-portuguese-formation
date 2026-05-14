@@ -47,7 +47,7 @@ EntityInVersion
 ├── DataManagedObject
 │   ├── Organisation
 │   │   ├── Authority          ← entidade reguladora (IMT)
-│   │   └── Operator           ← operador (STCP)
+│   │   └── Operator           ← operador (Operadora Exemplo)
 │   ├── Network                ← rede de linhas
 │   ├── Line                   ← linha comercial (ex: Linha 200)
 │   ├── Route                  ← sequência de pontos numa direção
@@ -79,7 +79,7 @@ Um **VersionFrame** é o contentor principal de um ficheiro NeTEx. Agrupa objeto
 ```xml
 <PublicationDelivery>
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:STCP_200:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:EXEMPLO_200:LOC" version="1">
       <frames>
         <ResourceFrame>    <!-- Operadores, autoridades -->
         <ServiceFrame>     <!-- Linhas, rotas, paragens -->
@@ -121,7 +121,7 @@ O elemento raiz de qualquer ficheiro NeTEx é `PublicationDelivery`: [[STD-01]](
 
   <!-- Metadados da publicação -->
   <PublicationTimestamp>2026-04-30T00:00:00</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <!-- Os frames com os dados -->
   <dataObjects>
@@ -131,7 +131,7 @@ O elemento raiz de qualquer ficheiro NeTEx é `PublicationDelivery`: [[STD-01]](
 </PublicationDelivery>
 ```
 
-O `ParticipantRef` identifica quem publicou os dados, neste caso, a STCP.
+O `ParticipantRef` identifica quem publicou os dados, neste caso, a Operadora Exemplo.
 
 ---
 
@@ -149,9 +149,9 @@ Exemplos:
 
 | ID | Decomposição |
 |----|-------------|
-| `PT:STCP:Line:200:LOC` | País=PT, Operador=STCP, Tipo=Line, Local=200, Âmbito=LOC |
+| `PT:EXEMPLO:Line:200:LOC` | País=PT, Operador=Operadora Exemplo, Tipo=Line, Local=200, Âmbito=LOC |
 | `PT:IMT:Authority:IMT:LOC` | País=PT, Autoridade=IMT, Tipo=Authority, Local=IMT |
-| `PT:STCP:StopPlace:BLRB:LOC` | País=PT, Operador=STCP, Tipo=StopPlace, Local=BLRB (Bolhão) |
+| `PT:EXEMPLO:StopPlace:BLRB:LOC` | País=PT, Operador=Operadora Exemplo, Tipo=StopPlace, Local=BLRB (Bolhão) |
 
 O sufixo `:LOC` indica que o identificador é local (válido apenas no âmbito nacional). Para identificadores com validade europeia, usam-se outros sufixos:
 
@@ -163,7 +163,7 @@ O sufixo `:LOC` indica que o identificador é local (válido apenas no âmbito n
 
 **Comparação com GTFS:**
 
-No GTFS, o `stop_id` `BLRB1` é apenas local, não há forma de saber que pertence à STCP, que está em Portugal, ou que tipo de objecto é. No NeTEx, `PT:STCP:StopPlace:BLRB:LOC` contém toda essa informação.
+No GTFS, o `stop_id` `BLRB1` é apenas local, não há forma de saber que pertence à Operadora Exemplo, que está em Portugal, ou que tipo de objecto é. No NeTEx, `PT:EXEMPLO:StopPlace:BLRB:LOC` contém toda essa informação.
 
 ### 3.2 Referências (`ref`)
 
@@ -171,13 +171,13 @@ Quando um objecto NeTEx precisa de referenciar outro, usa o atributo `ref`:
 
 ```xml
 <!-- Definição da linha -->
-<Line id="PT:STCP:Line:200:LOC" version="1">
+<Line id="PT:EXEMPLO:Line:200:LOC" version="1">
   <Name>200</Name>
 </Line>
 
 <!-- A Route referencia a Line -->
-<Route id="PT:STCP:Route:200_IDA:LOC" version="1">
-  <lineRef ref="PT:STCP:Line:200:LOC" version="1"/>
+<Route id="PT:EXEMPLO:Route:200_IDA:LOC" version="1">
+  <lineRef ref="PT:EXEMPLO:Line:200:LOC" version="1"/>
   ...
 </Route>
 ```
@@ -189,7 +189,7 @@ O atributo `version` na referência garante que se está a referenciar uma vers�
 Cada objecto NeTEx tem um número de versão:
 
 ```xml
-<Line id="PT:STCP:Line:200:LOC" version="2">
+<Line id="PT:EXEMPLO:Line:200:LOC" version="2">
   <!-- version="2" → esta é a segunda versão desta linha -->
   <validBetween>
     <FromDate>2026-04-30</FromDate>
@@ -208,9 +208,9 @@ Quando um objecto muda (ex: alteração de nome, adição de paragem), cria-se u
 
 Veja o ficheiro de exemplo [`exemplos/01_frame_basico.xml`](exemplos/01_frame_basico.xml), que contém:
 
-1. O envelope `PublicationDelivery` com metadados da STCP
+1. O envelope `PublicationDelivery` com metadados da Operadora Exemplo
 2. Um `CompositeFrame` a agrupar os frames
-3. Um `ResourceFrame` com a autoridade (IMT) e o operador (STCP)
+3. Um `ResourceFrame` com a autoridade (IMT) e o operador (Operadora Exemplo)
 4. Um `ServiceFrame` minimalista com a Linha 200 definida
 
 Cada elemento está extensivamente comentado em português para explicar **o porquê** de cada escolha estrutural.
@@ -219,7 +219,7 @@ Cada elemento está extensivamente comentado em português para explicar **o por
 
 ## Exemplos
 
-- [`exemplos/01_frame_basico.xml`](exemplos/01_frame_basico.xml) — Anatomia completa de um ficheiro NeTEx com ResourceFrame e ServiceFrame para a STCP Linha 200
+- [`exemplos/01_frame_basico.xml`](exemplos/01_frame_basico.xml) — Anatomia completa de um ficheiro NeTEx com ResourceFrame e ServiceFrame para a Operadora Exemplo Linha 200
 
 ---
 
@@ -236,4 +236,4 @@ Cada elemento está extensivamente comentado em português para explicar **o por
 | <a id="STD-01"></a>[STD-01] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-1:2024 (Parte 1: Topologia de Rede). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="STD-04"></a>[STD-04] | CEN. "Transmodel – Reference Data Model for Public Transport." EN 12896. https://transmodel-cen.eu |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

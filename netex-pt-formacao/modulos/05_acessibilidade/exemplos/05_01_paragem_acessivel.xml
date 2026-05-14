@@ -32,10 +32,10 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Acessibilidade_M05:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Acessibilidade_M05:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
         <ToDate>2027-04-29</ToDate>
@@ -46,11 +46,11 @@
              SiteFrame — Acessibilidade da INFRAESTRUTURA (paragens)
              Responde à pergunta: "o passageiro consegue aceder à paragem?"
              ═══════════════════════════════════════════════════════════════ -->
-        <SiteFrame id="PT:STCP:SiteFrame:Acessibilidade_SF:LOC" version="1">
+        <SiteFrame id="PT:EXEMPLO:SiteFrame:Acessibilidade_SF:LOC" version="1">
 
           <stopPlaces>
 
-            <StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
               <Name>Bolhão</Name>
               <Centroid>
                 <Location>
@@ -70,7 +70,7 @@
                      botão de chamada sonora.
                      GTFS: wheelchair_boarding=1
                      ───────────────────────────────────────────────────── -->
-                <Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="2">
+                <Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="2">
                   <Name>Bolhão — Sentido Castelo do Queijo</Name>
                   <Centroid>
                     <Location>
@@ -88,7 +88,7 @@
                     MobilityImpairedAccess="yes" → avaliação geral positiva.
                     É o campo mais visível — os sistemas de pesquisa filtram por aqui.
                   -->
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_Bolhao_IDA:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_Bolhao_IDA:LOC" version="1">
                     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -152,7 +152,7 @@
                      ─────────────────────────────────────────────────────
                      NOTA: Este Quay é fictício para fins pedagógicos.
                      ───────────────────────────────────────────────────── -->
-                <Quay id="PT:STCP:Quay:Exemplo_Antigo:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Exemplo_Antigo:LOC" version="1">
                   <Name>Exemplo — Paragem com Limitações</Name>
                   <Centroid>
                     <Location>
@@ -163,7 +163,7 @@
                   </Centroid>
                   <QuayType>busStop</QuayType>
 
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_Antigo:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_Antigo:LOC" version="1">
                     <!--
                       MobilityImpairedAccess=partial:
                       É possível aceder mas com condicionalismos significativos.
@@ -224,10 +224,10 @@
              ServiceFrame — Acessibilidade do VEÍCULO (viagens)
              Responde à pergunta: "o veículo desta viagem é acessível?"
              ═══════════════════════════════════════════════════════════════ -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:Acessibilidade_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:Acessibilidade_SvF:LOC" version="1">
 
           <scheduledStopPoints>
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
             </ScheduledStopPoint>
           </scheduledStopPoints>
@@ -237,20 +237,20 @@
         <!-- ═══════════════════════════════════════════════════════════════
              TimetableFrame — ServiceJourney com AccessibilityAssessment
              ═══════════════════════════════════════════════════════════════ -->
-        <TimetableFrame id="PT:STCP:TimetableFrame:Acessibilidade_TF:LOC" version="1">
+        <TimetableFrame id="PT:EXEMPLO:TimetableFrame:Acessibilidade_TF:LOC" version="1">
           <vehicleJourneys>
 
             <!-- ─────────────────────────────────────────────────────────
                  CENÁRIO A — Viagem com veículo acessível (piso baixo + rampa)
                  GTFS: wheelchair_accessible=1
                  ───────────────────────────────────────────────────────── -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0600_ACESS:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0600_ACESS:LOC" version="1">
               <Name>200 IDA — Dias Úteis 06:00 (veículo acessível)</Name>
               <DayTypeRefs>
-                <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
 
               <!--
                 AccessibilityAssessment do VEÍCULO (não da paragem):
@@ -263,7 +263,7 @@
                 ter uma viagem acessível de manhã e uma não-acessível à tarde
                 se veículos diferentes forem escalonados.
               -->
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_DU_0600:LOC" version="1">
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_DU_0600:LOC" version="1">
                 <!--
                   MobilityImpairedAccess=yes:
                   Este veículo (autocarro de piso baixo com rampa automática)
@@ -303,11 +303,11 @@
 
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:00:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:27:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
@@ -317,13 +317,13 @@
                  CENÁRIO B — Viagem com veículo não acessível (autocarro antigo)
                  GTFS: wheelchair_accessible=2
                  ───────────────────────────────────────────────────────── -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_2230_NACESS:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_2230_NACESS:LOC" version="1">
               <Name>200 IDA — Dias Úteis 22:30 (veículo não acessível)</Name>
               <DayTypeRefs>
-                <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
 
               <!--
                 Viagem noturna com autocarro de frota mais antiga.
@@ -331,7 +331,7 @@
                 Sem sistema de anúncios sonoros.
                 GTFS: wheelchair_accessible=2
               -->
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_DU_2230:LOC" version="1">
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_DU_2230:LOC" version="1">
                 <!--
                   MobilityImpairedAccess=no:
                   Este veículo não está preparado para passageiros
@@ -362,11 +362,11 @@
 
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>22:30:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>23:00:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

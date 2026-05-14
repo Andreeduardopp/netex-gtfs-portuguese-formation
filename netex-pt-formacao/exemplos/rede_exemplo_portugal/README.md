@@ -1,10 +1,10 @@
-# Rede de Exemplo — STCP Porto (Linha 200)
+# Rede de Exemplo — Operadora Exemplo (Linha 200)
 
 Dataset de referência para todos os exemplos XML ao longo do curso.
 
-> **Decisão (Task 1.3 — Abril 2026):** Este curso usa dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)** como rede âncora, em vez de uma rede fictícia. Justificação: o feed GTFS oficial da STCP está disponível e é atual (2026-04-30 → 2027-04-29), os dados são relevantes para o público-alvo português, e usar dados reais aumenta a credibilidade pedagógica dos exemplos.
+> **Decisão (Task 1.3 — Abril 2026):** Este curso usa dados reais da **Operadora Exemplo (Sociedade de Transportes Colectivos do Porto)** como rede âncora, em vez de uma rede fictícia. Justificação: o feed GTFS oficial da Operadora Exemplo está disponível e é atual (2026-04-30 → 2027-04-29), os dados são relevantes para o público-alvo português, e usar dados reais aumenta a credibilidade pedagógica dos exemplos.
 
-**Fonte:** [DATA-03] STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP.
+**Fonte:** [DATA-03] Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo.
 
 ---
 
@@ -21,12 +21,12 @@ A **Linha 200** é usada como fio condutor de todos os módulos do curso porque:
 
 | Campo GTFS | Valor |
 |------------|-------|
-| `agency_id` | STCP |
+| `agency_id` | Operadora Exemplo |
 | `route_id` | 200 |
 | `route_short_name` | 200 |
 | `route_long_name` | Bolhão - Cast.queijo |
 | `route_type` | 3 (autocarro) |
-| `route_color` | #187EC2 (azul STCP) |
+| `route_color` | #187EC2 (azul Operadora Exemplo) |
 
 ### Paragens Principais (direção → Castelo do Queijo)
 
@@ -50,7 +50,7 @@ A **Linha 200** é usada como fio condutor de todos os módulos do curso porque:
 
 | Ficheiro | Registos |
 |----------|----------|
-| `gtfs/agency.txt` | 1 agência (STCP) |
+| `gtfs/agency.txt` | 1 agência (Operadora Exemplo) |
 | `gtfs/routes.txt` | 1 rota (linha 200) |
 | `gtfs/stops.txt` | 59 paragens |
 | `gtfs/trips.txt` | 341 viagens |
@@ -74,4 +74,4 @@ A **Linha 200** é usada como fio condutor de todos os módulos do curso porque:
 
 ## Nota sobre Direitos
 
-Os dados GTFS da STCP são disponibilizados pela operadora. Todos os exemplos XML derivados destes dados são criados para fins educativos, com as devidas atribuições à fonte original.
+Os dados GTFS da Operadora Exemplo são disponibilizados pela operadora. Todos os exemplos XML derivados destes dados são criados para fins educativos, com as devidas atribuições à fonte original.

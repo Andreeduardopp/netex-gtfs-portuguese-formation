@@ -1,60 +1,60 @@
 stop_lat,stop_lon,stop_id,stop_code,stop_name,zone_id,stop_url
-41.147208,-8.610983,AL1,AL1,Av. Aliados,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=AL1
-41.151868,-8.607115,BLRB1,BLRB1,Bolhão,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=BLRB1
-41.147223,-8.616926,CMO,CMO,Carmo,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=CMO
-41.145224,-8.616026,CORD7,CORD7,Cordoaria,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=CORD7
-41.167422,-8.689127,CQ10,CQ10,Castelo Do Queijo,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=CQ10
-41.157713,-8.679766,CRTO3,CRTO3,Crasto,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=CRTO3
-41.156600,-8.680260,CRTO4,CRTO4,Crasto,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=CRTO4
-41.153634,-8.675947,DIU1,DIU1,Diu,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=DIU1
-41.163190,-8.683490,FCH1,FCH1,Funchal,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FCH1
-41.162076,-8.684057,FCH2,FCH2,Funchal,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FCH2
-41.153838,-8.641309,FCUP1,FCUP1,Faculdade De Ciências,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FCUP1
-41.153614,-8.641035,FCUP2,FCUP2,Faculdade De Ciências,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FCUP2
-41.152139,-8.655194,FLUN1,FLUN1,Fluvial (norte),PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FLUN1
-41.152111,-8.654639,FLUN2,FLUN2,Fluvial (norte),PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=FLUN2
-41.147560,-8.614767,GGF,GGF,Guil. G. Fernandes,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=GGF
-41.152639,-8.633694,GGT1,GGT1,Gólgota,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=GGT1
-41.152444,-8.634111,GGT2,GGT2,Gólgota,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=GGT2
-41.163454,-8.685965,HMLM3,HMLM3,Homem Do Leme,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=HMLM3
-41.146508,-8.620199,HSA,HSA,Hosp.sto. António,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=HSA
-41.147766,-8.622450,HSA5,HSA5,Hosp. St. António,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=HSA5
-41.154528,-8.644222,JB1,JB1,Jardim Botânico,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JB1
-41.154389,-8.643722,JB2,JB2,Jardim Botânico,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JB2
-41.152694,-8.631221,JM1,JM1,Junta Massarelos,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JM1
-41.152528,-8.630306,JM2,JM2,Junta Massarelos,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JM2
-41.153388,-8.607705,JN4,JN4,Jornal De Notícias,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JN4
-41.158107,-8.681560,JNN2,JNN2,Jacinto Nunes,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=JNN2
-41.155089,-8.677168,LIEG1,LIEG1,Pr. De Liége,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=LIEG1
-41.155061,-8.677815,LIEG2,LIEG2,Pr. De Liége,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=LIEG2
-41.154389,-8.649028,LRD1,LRD1,Lordelo,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=LRD1
-41.154139,-8.647722,LRD2,LRD2,Lordelo,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=LRD2
-41.149509,-8.607564,MCBL,MCBL,Mercado Do Bolhão,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=MCBL
-41.155048,-8.673343,MFZ1,MFZ1,Mercado Da Foz,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=MFZ1
-41.154021,-8.673914,MFZ2,MFZ2,Mercado Da Foz,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=MFZ2
-41.160158,-8.683185,MLH3,MLH3,Molhe,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=MLH3
-41.159880,-8.681660,MLH5,MLH5,Molhe,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=MLH5
-41.149145,-8.625447,PAL2,PAL2,Palácio,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PAL2
-41.148321,-8.624756,PAL4,PAL4,Palácio,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PAL4
-41.151806,-8.668056,PCL1,PCL1,Padre Luis Cabral,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PCL1
-41.151537,-8.667786,PCL2,PCL2,Padre Luis Cabral,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PCL2
-41.164550,-8.685241,PCV2,PCV2,Pero Covilhã,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PCV2
-41.150856,-8.658707,PG1,PG1,Paulo Da Gama,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PG1
-41.150701,-8.658648,PG2,PG2,Paulo Da Gama,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PG2
-41.152356,-8.652107,PLM1,PLM1,Palmeiras,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PLM1
-41.152636,-8.651333,PLM2,PLM2,Palmeiras,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PLM2
-41.153094,-8.638289,PLNT1,PLNT1,Planetário,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PLNT1
-41.152694,-8.637250,PLNT2,PLNT2,Planetário,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PLNT2
-41.147581,-8.609126,PRDJ,PRDJ,Pr. D. João I,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PRDJ
-41.148261,-8.612768,PRFL,PRFL,Pr.filipa De Lencastre,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PRFL
-41.152531,-8.627041,PRG4,PRG4,Pr. Da Galiza,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PRG4
-41.152370,-8.627780,PRG6,PRG6,Pr. Da Galiza,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PRG6
-41.150417,-8.661083,PT2,PT2,Pasteleira,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PT2
-41.150486,-8.661488,PT3,PT3,Pasteleira,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=PT3
-41.165587,-8.687170,TIM1,TIM1,Timor,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=TIM1
-41.165182,-8.687120,TIM2,TIM2,Timor,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=TIM2
-41.151789,-8.609572,TRD1,TRD1,Trindade,PRT1,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=TRD1
-41.150749,-8.664619,TRR3,TRR3,Torres,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=TRR3
-41.150529,-8.664217,TRR4,TRR4,Torres,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=TRR4
-41.153538,-8.670916,UC1,UC1,Univ. Católica,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=UC1
-41.153543,-8.671089,UC2,UC2,Univ. Católica,PRT2,http://www.stcp.pt/pt/viajar/paragens/?t=detalhe&paragem=UC2
+41.147208,-8.610983,AL1,AL1,Av. Aliados,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=AL1
+41.151868,-8.607115,BLRB1,BLRB1,Bolhão,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=BLRB1
+41.147223,-8.616926,CMO,CMO,Carmo,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=CMO
+41.145224,-8.616026,CORD7,CORD7,Cordoaria,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=CORD7
+41.167422,-8.689127,CQ10,CQ10,Castelo Do Queijo,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=CQ10
+41.157713,-8.679766,CRTO3,CRTO3,Crasto,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=CRTO3
+41.156600,-8.680260,CRTO4,CRTO4,Crasto,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=CRTO4
+41.153634,-8.675947,DIU1,DIU1,Diu,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=DIU1
+41.163190,-8.683490,FCH1,FCH1,Funchal,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FCH1
+41.162076,-8.684057,FCH2,FCH2,Funchal,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FCH2
+41.153838,-8.641309,FCUP1,FCUP1,Faculdade De Ciências,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FCUP1
+41.153614,-8.641035,FCUP2,FCUP2,Faculdade De Ciências,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FCUP2
+41.152139,-8.655194,FLUN1,FLUN1,Fluvial (norte),PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FLUN1
+41.152111,-8.654639,FLUN2,FLUN2,Fluvial (norte),PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=FLUN2
+41.147560,-8.614767,GGF,GGF,Guil. G. Fernandes,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=GGF
+41.152639,-8.633694,GGT1,GGT1,Gólgota,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=GGT1
+41.152444,-8.634111,GGT2,GGT2,Gólgota,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=GGT2
+41.163454,-8.685965,HMLM3,HMLM3,Homem Do Leme,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=HMLM3
+41.146508,-8.620199,HSA,HSA,Hosp.sto. António,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=HSA
+41.147766,-8.622450,HSA5,HSA5,Hosp. St. António,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=HSA5
+41.154528,-8.644222,JB1,JB1,Jardim Botânico,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JB1
+41.154389,-8.643722,JB2,JB2,Jardim Botânico,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JB2
+41.152694,-8.631221,JM1,JM1,Junta Massarelos,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JM1
+41.152528,-8.630306,JM2,JM2,Junta Massarelos,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JM2
+41.153388,-8.607705,JN4,JN4,Jornal De Notícias,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JN4
+41.158107,-8.681560,JNN2,JNN2,Jacinto Nunes,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=JNN2
+41.155089,-8.677168,LIEG1,LIEG1,Pr. De Liége,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=LIEG1
+41.155061,-8.677815,LIEG2,LIEG2,Pr. De Liége,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=LIEG2
+41.154389,-8.649028,LRD1,LRD1,Lordelo,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=LRD1
+41.154139,-8.647722,LRD2,LRD2,Lordelo,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=LRD2
+41.149509,-8.607564,MCBL,MCBL,Mercado Do Bolhão,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=MCBL
+41.155048,-8.673343,MFZ1,MFZ1,Mercado Da Foz,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=MFZ1
+41.154021,-8.673914,MFZ2,MFZ2,Mercado Da Foz,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=MFZ2
+41.160158,-8.683185,MLH3,MLH3,Molhe,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=MLH3
+41.159880,-8.681660,MLH5,MLH5,Molhe,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=MLH5
+41.149145,-8.625447,PAL2,PAL2,Palácio,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PAL2
+41.148321,-8.624756,PAL4,PAL4,Palácio,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PAL4
+41.151806,-8.668056,PCL1,PCL1,Padre Luis Cabral,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PCL1
+41.151537,-8.667786,PCL2,PCL2,Padre Luis Cabral,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PCL2
+41.164550,-8.685241,PCV2,PCV2,Pero Covilhã,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PCV2
+41.150856,-8.658707,PG1,PG1,Paulo Da Gama,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PG1
+41.150701,-8.658648,PG2,PG2,Paulo Da Gama,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PG2
+41.152356,-8.652107,PLM1,PLM1,Palmeiras,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PLM1
+41.152636,-8.651333,PLM2,PLM2,Palmeiras,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PLM2
+41.153094,-8.638289,PLNT1,PLNT1,Planetário,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PLNT1
+41.152694,-8.637250,PLNT2,PLNT2,Planetário,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PLNT2
+41.147581,-8.609126,PRDJ,PRDJ,Pr. D. João I,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PRDJ
+41.148261,-8.612768,PRFL,PRFL,Pr.filipa De Lencastre,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PRFL
+41.152531,-8.627041,PRG4,PRG4,Pr. Da Galiza,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PRG4
+41.152370,-8.627780,PRG6,PRG6,Pr. Da Galiza,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PRG6
+41.150417,-8.661083,PT2,PT2,Pasteleira,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PT2
+41.150486,-8.661488,PT3,PT3,Pasteleira,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=PT3
+41.165587,-8.687170,TIM1,TIM1,Timor,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=TIM1
+41.165182,-8.687120,TIM2,TIM2,Timor,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=TIM2
+41.151789,-8.609572,TRD1,TRD1,Trindade,PRT1,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=TRD1
+41.150749,-8.664619,TRR3,TRR3,Torres,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=TRR3
+41.150529,-8.664217,TRR4,TRR4,Torres,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=TRR4
+41.153538,-8.670916,UC1,UC1,Univ. Católica,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=UC1
+41.153543,-8.671089,UC2,UC2,Univ. Católica,PRT2,http://www.exemplo.pt/pt/viajar/paragens/?t=detalhe&paragem=UC2

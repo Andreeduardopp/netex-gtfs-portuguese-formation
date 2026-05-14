@@ -23,7 +23,7 @@ Os sistemas AVL rastreiam a posição dos veículos em tempo real via GPS:
 - **Dados produzidos**: posição geográfica, velocidade, aderência ao horário
 - **Relevância para GTFS**: alimentam o GTFS Realtime (posições de veículos, previsões de chegada) e permitem validar se os `shapes.txt` e `stop_times.txt` do feed estático correspondem à realidade operacional [[STD-07]](#STD-07)
 - **Protocolos comuns**: SIRI (Service Interface for Real Time Information), GTFS Realtime
-- **Exemplo STCP**: a STCP disponibiliza dados AVL que alimentam os painéis de informação ao passageiro nas paragens [[DATA-01]](#DATA-01)
+- **Exemplo Operadora Exemplo**: a Operadora Exemplo disponibiliza dados AVL que alimentam os painéis de informação ao passageiro nas paragens [[DATA-01]](#DATA-01)
 
 ### 1.2 Sistemas APC (Automatic Passenger Counting)
 
@@ -43,7 +43,7 @@ O software de planeamento de serviço é, na prática, a fonte primária de um f
 - **Ferramentas comuns**: HASTUS (Giro), REMIX, Optibus, Trapeze, IVU
 - **Fluxo típico**: o planeador define horários no software → o software exporta (ou um script extrai) os dados → transformação para formato GTFS [[BP-02]](#BP-02)
 
-A STCP, por exemplo, gera o seu feed GTFS a partir do sistema interno de planeamento, o que explica a abordagem de usar exclusivamente `calendar_dates.txt` com `exception_type=1`, os dados são gerados programaticamente, data a data. [[DATA-01]](#DATA-01)
+A Operadora Exemplo, por exemplo, gera o seu feed GTFS a partir do sistema interno de planeamento, o que explica a abordagem de usar exclusivamente `calendar_dates.txt` com `exception_type=1`, os dados são gerados programaticamente, data a data. [[DATA-01]](#DATA-01)
 
 ### 1.4 Dados Geoespaciais
 
@@ -107,9 +107,9 @@ Exemplo de transformação para `agency.txt`:
 
 ```
 Sistema interno:                    GTFS:
-  operador_codigo = "STCP"   →     agency_id = "STCP"
-  operador_nome = "STCP, SA"  →     agency_name = "STCP"
-  operador_url = "..."        →     agency_url = "https://www.stcp.pt"
+  operador_codigo = "Operadora Exemplo"   →     agency_id = "Operadora Exemplo"
+  operador_nome = "Operadora Exemplo, SA"  →     agency_name = "Operadora Exemplo"
+  operador_url = "..."        →     agency_url = "https://www.exemplo.pt"
   fuso_horario = "WET"        →     agency_timezone = "Europe/Lisbon"
 ```
 
@@ -118,7 +118,7 @@ Sistema interno:                    GTFS:
 A validação é um passo **obrigatório** antes da publicação. O validador de referência é o **Canonical GTFS Validator** da MobilityData: [[TOOL-01]](#TOOL-01)
 
 ```bash
-java -jar gtfs-validator-cli.jar -i feed_stcp.zip -o relatorio/
+java -jar gtfs-validator-cli.jar -i feed_exemplo.zip -o relatorio/
 ```
 
 O validador produz um relatório HTML com três níveis de severidade:
@@ -181,11 +181,11 @@ O ficheiro `feed_info.txt` é essencial para a gestão do ciclo de vida: [[STD-0
 
 *Campos recomendados pelas Best Practices.
 
-Exemplo para a STCP:
+Exemplo para a Operadora Exemplo:
 
 ```csv
 feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email
-STCP,https://www.stcp.pt,pt,20260430,20260731,Escolar_228,dados@stcp.pt
+Operadora Exemplo,https://www.exemplo.pt,pt,20260430,20260731,Escolar_228,dados@exemplo.pt
 ```
 
 ---
@@ -265,7 +265,7 @@ Com base na experiência de validação de feeds de operadores portugueses: [[DA
 | Paragens sem coordenadas ou com coordenadas `0,0` | Paragem nova não georreferenciada | Paragem não aparece no mapa |
 | `shapes.txt` ausente | Operador não exporta traçados | Linha reta entre paragens nas apps |
 | `feed_info.txt` ausente ou incompleto | Omissão na geração do feed | Google Transit pode rejeitar o feed |
-| Caracteres especiais em IDs | Ex: `DOMINGOS\|FERIADOS` da STCP | Problemas de parsing em alguns sistemas |
+| Caracteres especiais em IDs | Ex: `DOMINGOS\|FERIADOS` da Operadora Exemplo | Problemas de parsing em alguns sistemas |
 | Datas expiradas no calendário | Feed não atualizado | Nenhum serviço ativo — apps mostram 0 resultados |
 | Tempos de viagem irreais | Erro no `stop_times.txt` | Velocidade >150 km/h entre paragens |
 
@@ -343,7 +343,7 @@ O Regulamento (UE) 2024/490 não impõe um formato específico, mas refere o NeT
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="BP-02"></a>[BP-02] | Transit App. "Guidelines for Producing GTFS Static Data." https://resources.transitapp.com/article/458-guidelines-for-producing-gtfs-static-data-for-transit |
 | <a id="TOOL-01"></a>[TOOL-01] | MobilityData. "Canonical GTFS Validator." https://github.com/MobilityData/gtfs-validator |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |
 | <a id="DATA-02"></a>[DATA-02] | MobilityData. "Mobility Database." https://mobilitydatabase.org |
 | <a id="PT-01"></a>[PT-01] | IMT. "NAP Portugal — Ponto de Acesso Nacional." https://nap-portugal.imt-ip.pt |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 da Comissão Europeia (MMTIS). https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=OJ:L_202400490 |

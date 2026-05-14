@@ -35,13 +35,13 @@
   <!--
     ERR-01: ParticipantRef sem prefixo "PT:"
     ─────────────────────────────────────────
-    ERRADO:   <ParticipantRef>STCP</ParticipantRef>
-    CORRECTO: <ParticipantRef>PT:STCP</ParticipantRef>
+    ERRADO:   <ParticipantRef>EXEMPLO</ParticipantRef>
+    CORRECTO: <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
     O Perfil PT exige o prefixo "PT:" para identificar que a organização
     é portuguesa. O NAP rejeita qualquer ParticipantRef sem este prefixo.
   -->
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
     <!--
@@ -56,14 +56,14 @@
       O NAP Portugal requer que todos os dados tenham uma data de fim
       explícita para gestão do ciclo de vida dos dados.
     -->
-    <CompositeFrame id="PT:STCP:CompositeFrame:Erros_M08:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Erros_M08:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
         <ToDate>2027-04-29</ToDate>
       </validBetween>
       <frames>
 
-        <ResourceFrame id="PT:STCP:ResourceFrame:Erros_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:Erros_RF:LOC" version="1">
           <organisations>
 
             <!--
@@ -100,10 +100,10 @@
               version="0" é ambíguo e causa erros em sistemas que usam
               o número de versão para ordenar actualizações.
             -->
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
-              <Name>STCP</Name>
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
+              <Name>Operadora Exemplo</Name>
               <ContactDetails>
-                <Url>https://www.stcp.pt</Url>
+                <Url>https://www.exemplo.pt</Url>
               </ContactDetails>
               <OrganisationType>operator</OrganisationType>
             </Operator>
@@ -111,7 +111,7 @@
           </organisations>
         </ResourceFrame>
 
-        <SiteFrame id="PT:STCP:SiteFrame:Erros_SF:LOC" version="1">
+        <SiteFrame id="PT:EXEMPLO:SiteFrame:Erros_SF:LOC" version="1">
           <stopPlaces>
 
             <!--
@@ -122,7 +122,7 @@
               Valores: onstreetBus, onstreetTram, metroStation, railStation,
                        busStation, ferryTerminal, multimodal, etc.
             -->
-            <StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
               <Name>Bolhão</Name>
               <Centroid>
                 <Location>
@@ -141,7 +141,7 @@
                   É a localização precisa da plataforma de embarque —
                   diferente do Centroid do StopPlace (centro geral).
                 -->
-                <Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1">
                   <Name>Bolhão — Sentido Castelo do Queijo</Name>
                   <Centroid>
                     <Location>
@@ -158,7 +158,7 @@
           </stopPlaces>
         </SiteFrame>
 
-        <ServiceFrame id="PT:STCP:ServiceFrame:Erros_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:Erros_SvF:LOC" version="1">
           <lines>
 
             <!--
@@ -170,20 +170,20 @@
               Sem este campo, os sistemas de informação ao passageiro não
               conseguem apresentar a linha correctamente.
             -->
-            <Line id="PT:STCP:Line:200:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:200:LOC" version="1">
               <Name>Linha 200 — Bolhão / Castelo do Queijo</Name>
               <PublicCode>200</PublicCode>
               <TransportMode>bus</TransportMode>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
             </Line>
 
           </lines>
 
           <scheduledStopPoints>
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
             </ScheduledStopPoint>
           </scheduledStopPoints>
@@ -192,7 +192,7 @@
             <!--
               ERR-04: Referência para ID inexistente
               ────────────────────────────────────────
-              ERRADO:   <QuayRef ref="PT:STCP:Quay:Bolhao_NAOEXISTE:LOC" .../>
+              ERRADO:   <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_NAOEXISTE:LOC" .../>
               CORRECTO: O ref deve apontar para um ID definido no mesmo ficheiro
               ou no mesmo pacote ZIP.
 
@@ -200,19 +200,19 @@
               comete um erro de digitação, ou quando o SiteFrame e o ServiceFrame
               estão em ficheiros separados do ZIP mas um não inclui o outro.
             -->
-            <PassengerStopAssignment id="PT:STCP:PSA:BLRB1:LOC" version="1" order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Bolhao:LOC" version="1"/>
+            <PassengerStopAssignment id="PT:EXEMPLO:PSA:BLRB1:LOC" version="1" order="1">
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1"/>
               <!-- ID correcto — existe no SiteFrame acima -->
-              <QuayRef ref="PT:STCP:Quay:Bolhao_IDA:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1"/>
             </PassengerStopAssignment>
           </stopAssignments>
 
         </ServiceFrame>
 
-        <ServiceCalendarFrame id="PT:STCP:SCF:Erros_SCF:LOC" version="1">
+        <ServiceCalendarFrame id="PT:EXEMPLO:SCF:Erros_SCF:LOC" version="1">
           <dayTypes>
-            <DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1">
+            <DayType id="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1">
               <Name>Dias Úteis</Name>
               <properties>
                 <PropertyOfDay>
@@ -222,32 +222,32 @@
             </DayType>
           </dayTypes>
           <operatingDays>
-            <OperatingDay id="PT:STCP:OperatingDay:20260430:LOC" version="1">
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1">
               <CalendarDate>2026-04-30</CalendarDate>
             </OperatingDay>
           </operatingDays>
           <dayTypeAssignments>
-            <DayTypeAssignment id="PT:STCP:DTA:DU_20260430:LOC" version="1" order="1">
-              <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260430:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260430:LOC" version="1" order="1">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
 
-        <TimetableFrame id="PT:STCP:TimetableFrame:Erros_TF:LOC" version="1">
+        <TimetableFrame id="PT:EXEMPLO:TimetableFrame:Erros_TF:LOC" version="1">
 
           <!--
             Para o ServiceJourneyPattern e Route mínimos (necessários para referência):
           -->
           <vehicleJourneys>
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0600:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0600:LOC" version="1">
               <Name>200 IDA — DU 06:00</Name>
               <DayTypeRefs>
-                <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
 
               <passingTimes>
                 <!--
@@ -269,11 +269,11 @@
                     Paragens intermédias: ArrivalTime + DepartureTime
                 -->
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:00:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:40:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

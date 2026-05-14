@@ -6,7 +6,7 @@
 
 ## Contexto
 
-Vai converter dados reais da STCP Porto para NeTEx. Desta vez, o sujeito é a **Linha 201 (Aliados → Viso)**, uma linha diferente da âncora do curso (Linha 200), para praticar a generalização dos conceitos.
+Vai converter dados reais da Operadora Exemplo para NeTEx. Desta vez, o sujeito é a **Linha 201 (Aliados → Viso)**, uma linha diferente da âncora do curso (Linha 200), para praticar a generalização dos conceitos.
 
 Os ficheiros GTFS de comparação estão em `../exemplos/comparacao_gtfs/`.
 
@@ -17,7 +17,7 @@ Os ficheiros GTFS de comparação estão em `../exemplos/comparacao_gtfs/`.
 ### routes.txt (extrato)
 ```
 agency_id,route_id,route_short_name,route_type,route_long_name,route_url,route_color,route_text_color
-STCP,201,201,3,Aliados-viso,http://www.stcp.pt/pt/viajar/linhas/?linha=201,187EC2,FFFFFF
+Operadora Exemplo,201,201,3,Aliados-viso,http://www.exemplo.pt/pt/viajar/linhas/?linha=201,187EC2,FFFFFF
 ```
 
 ### stops.txt (6 paragens da direção IDA)
@@ -44,7 +44,7 @@ route_id,service_id,trip_id,trip_headsign,direction_id
 Crie um ficheiro NeTEx (`exercicio_02_solucao.xml`) com:
 
 ### Parte A — ResourceFrame (10 min)
-- Operador STCP (já visto no Módulo 1 e Exercício 1)
+- Operador Operadora Exemplo (já visto no Módulo 1 e Exercício 1)
 
 ### Parte B — ServiceFrame: Line e Direction (15 min)
 1. `Line` para a Linha 201 com todos os campos mapeados do GTFS
@@ -52,7 +52,7 @@ Crie um ficheiro NeTEx (`exercicio_02_solucao.xml`) com:
 
 ### Parte C — ServiceFrame: ScheduledStopPoint (20 min)
 - 6 `ScheduledStopPoint` com `id`, `Name` e `Location` corretos
-- Atenção ao formato do ID: `PT:STCP:ScheduledStopPoint:<stop_id>:LOC`
+- Atenção ao formato do ID: `PT:EXEMPLO:ScheduledStopPoint:<stop_id>:LOC`
 - Nota: PRFL, GGF, CMO e HSA5 já foram definidos no Módulo 2 para a Linha 200 — os IDs devem ser **idênticos** (partilhados entre linhas)
 
 ### Parte D — ServiceFrame: Route e ServiceJourneyPattern (20 min)
@@ -82,7 +82,7 @@ A solução está em [`solucoes/exercicio_02_solucao.xml`](solucoes/exercicio_02
 
 ## Autoavaliação
 
-- [ ] O `id` da `Line` usa o formato `PT:STCP:Line:201:LOC`?
+- [ ] O `id` da `Line` usa o formato `PT:EXEMPLO:Line:201:LOC`?
 - [ ] Os `ScheduledStopPoint` partilhados com a Linha 200 têm o mesmo `id`?
 - [ ] A `Route` tem `lineRef` e `DirectionRef` com os IDs corretos?
 - [ ] O `ServiceJourneyPattern` lista as 6 paragens em ordem crescente de `order`?

@@ -1,6 +1,5 @@
 # GTFS PT Formação
 
-> **O primeiro recurso educativo aberto em português sobre GTFS (General Transit Feed Specification).**
 
 Dirigido a técnicos de operadores de transporte público, profissionais de sistemas de informação de mobilidade e estudantes de engenharia de transportes.
 
@@ -22,7 +21,7 @@ Dirigido a técnicos de operadores de transporte público, profissionais de sist
 
 **Legenda**: Completo / Em Progresso / Planeado
 
-> **Progresso**: 9/9 módulos completos. Rede âncora: STCP Porto, Linha 200.
+> **Progresso**: 9/9 módulos completos. Rede âncora: Operadora Exemplo, Linha 200.
 
 ## Público-alvo
 

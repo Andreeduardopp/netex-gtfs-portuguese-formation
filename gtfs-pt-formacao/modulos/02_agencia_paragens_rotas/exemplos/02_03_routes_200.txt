@@ -1,2 +1,2 @@
 route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
-200,STCP,200,Bolhão - Castelo do Queijo,3,187EC2,FFFFFF
+200,Operadora Exemplo,200,Bolhão - Castelo do Queijo,3,187EC2,FFFFFF

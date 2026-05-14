@@ -2,7 +2,7 @@
 
 ## Contexto
 
-A **Estação de Campanhã** é o principal interface intermodal do Porto, ligando serviços ferroviários (CP — Comboios de Portugal), Metro do Porto (Linha F — Laranja) e autocarros urbanos da STCP. A estação foi recentemente renovada com um novo terminal intermodal.
+A **Estação de Campanhã** é o principal interface intermodal do Porto, ligando serviços ferroviários (CP — Comboios de Portugal), Metro do Porto (Linha F — Laranja) e autocarros urbanos da Operadora Exemplo. A estação foi recentemente renovada com um novo terminal intermodal.
 
 Assuma os seguintes dados simplificados:
 
@@ -12,8 +12,8 @@ Assuma os seguintes dados simplificados:
 | CP — Linha do Norte (Plataforma 2) | Piso 0 (térreo) | Sim (via rampa) |
 | CP — Linha do Douro (Plataforma 5) | Piso 0 (térreo) | Não (sem rampa, degrau alto) |
 | Metro Linha F | Piso -1 (subterrâneo) | Sim (elevador) |
-| STCP Linha 205 | Piso 0 (terminal rodoviário) | Sim |
-| STCP Linha 400 | Piso 0 (terminal rodoviário) | Sim |
+| Operadora Exemplo Linha 205 | Piso 0 (terminal rodoviário) | Sim |
+| Operadora Exemplo Linha 400 | Piso 0 (terminal rodoviário) | Sim |
 
 ---
 
@@ -38,9 +38,9 @@ Crie um ficheiro `transfers.txt` que modele as seguintes transferências na Esta
 
 1. **CP → Metro** (descida de piso): `transfer_type=2`, tempo mínimo de 5 minutos (300 s)
 2. **Metro → CP** (subida de piso): `transfer_type=2`, tempo mínimo de 6 minutos (360 s)
-3. **CP → STCP** (mesmo piso, terminal rodoviário adjacente): `transfer_type=2`, tempo mínimo de 3 minutos (180 s)
-4. **Metro → STCP** (subida de piso + caminhada): `transfer_type=2`, tempo mínimo de 7 minutos (420 s)
-5. **Entre linhas STCP** (mesma zona do terminal): `transfer_type=0` (recomendado, sem tempo mínimo)
+3. **CP → Operadora Exemplo** (mesmo piso, terminal rodoviário adjacente): `transfer_type=2`, tempo mínimo de 3 minutos (180 s)
+4. **Metro → Operadora Exemplo** (subida de piso + caminhada): `transfer_type=2`, tempo mínimo de 7 minutos (420 s)
+5. **Entre linhas Operadora Exemplo** (mesma zona do terminal): `transfer_type=0` (recomendado, sem tempo mínimo)
 
 Modele as transferências nos **dois sentidos** (ida e volta), considerando que o tempo pode ser assimétrico.
 

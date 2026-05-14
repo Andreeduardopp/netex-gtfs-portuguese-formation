@@ -25,7 +25,7 @@ O v1 continua a ser amplamente utilizado em feeds de produção, mas apresenta l
 
 ### 1.2 Porquê Estudar Ambos?
 
-- Muitos feeds em produção (incluindo o da STCP) usam apenas v1 [[DATA-01]](#DATA-01)
+- Muitos feeds em produção (incluindo o da Operadora Exemplo) usam apenas v1 [[DATA-01]](#DATA-01)
 - O v2 está a ser adotado progressivamente e é recomendado para novos feeds [[BP-01]](#BP-01)
 - Compreender o v1 ajuda a entender as motivações por trás do design do v2
 
@@ -284,7 +284,7 @@ O GTFS Realtime complementa o GTFS Schedule (estático) com informação dinâmi
 | `VehiclePosition` | Posição GPS dos veículos | Localização no mapa em tempo real |
 | `Alert` | Alertas de serviço | "Paragem X temporariamente desativada" |
 
-O GTFS Realtime usa Protocol Buffers (não CSV) e é transmitido via feeds HTTP. A maioria dos operadores portugueses ainda não publica GTFS Realtime, embora a STCP e o Metro do Porto tenham sistemas de informação ao passageiro em tempo real.
+O GTFS Realtime usa Protocol Buffers (não CSV) e é transmitido via feeds HTTP. A maioria dos operadores portugueses ainda não publica GTFS Realtime, embora a Operadora Exemplo e o Metro do Porto tenham sistemas de informação ao passageiro em tempo real.
 
 ### 6.2 GTFS-Pathways (Referência ao Módulo 5)
 
@@ -335,4 +335,4 @@ Para profissionais que também trabalham com NeTEx (obrigatório para o NAP euro
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="PT-01"></a>[PT-01] | IMT. "Ponto de Acesso Nacional (NAP) Portugal." https://nap-portugal.imt-ip.pt |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 (MMTIS). https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=OJ:L_202400490 |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

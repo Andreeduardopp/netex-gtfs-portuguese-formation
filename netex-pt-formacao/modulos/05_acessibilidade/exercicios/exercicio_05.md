@@ -6,7 +6,7 @@
 
 ## Contexto
 
-A STCP está a preparar a submissão de dados de acessibilidade ao NAP Portugal, conforme exigido pelo Regulamento (UE) 2024/490. O ponto de partida é o feed GTFS atual da Linha 200, que contém os campos `wheelchair_accessible` (em `trips.txt`) e `wheelchair_boarding` (em `stops.txt`).
+A Operadora Exemplo está a preparar a submissão de dados de acessibilidade ao NAP Portugal, conforme exigido pelo Regulamento (UE) 2024/490. O ponto de partida é o feed GTFS atual da Linha 200, que contém os campos `wheelchair_accessible` (em `trips.txt`) e `wheelchair_boarding` (em `stops.txt`).
 
 ### Dados GTFS disponíveis
 
@@ -59,7 +59,7 @@ As `ServiceJourney` devem referenciar o `JourneyPatternRef` e `DayTypeRef` já d
 
 ## Parte C — Cenário de Auditoria
 
-A STCP detetou que a paragem MFZ1 (Marechal Fontaine) foi renovada em março de 2026: o lancil foi rebaixado, foi instalado piso tátil e um botão sonoro.
+A Operadora Exemplo detetou que a paragem MFZ1 (Marechal Fontaine) foi renovada em março de 2026: o lancil foi rebaixado, foi instalado piso tátil e um botão sonoro.
 
 Modele esta alteração usando o mecanismo de versionamento do NeTEx:
 1. O `Quay` original (version="1") com `WheelchairAccess=no` válido até `2026-03-01`

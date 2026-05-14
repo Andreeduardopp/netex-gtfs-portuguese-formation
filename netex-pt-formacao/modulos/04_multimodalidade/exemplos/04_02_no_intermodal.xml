@@ -7,12 +7,12 @@
   Campanhã é o maior nó de transferência intermodal do Porto:
     - Comboio (CP): Regional, InterRegional, Alfa Pendular, Internacional
     - Metro (Metro do Porto): Linha E (Violeta) — estação Campanhã
-    - Autocarro (STCP): múltiplas linhas (600, 601, 602, 800, 900...)
+    - Autocarro (EXEMPLO): múltiplas linhas (600, 601, 602, 800, 900...)
     - Táxi e Partilha de Bicicleta: Gira
 
   PROBLEMA NO GTFS:
   ─────────────────────────────────────────────────────────────────────────
-  No GTFS, estes modos estão em feeds separados (CP, Metro Porto, STCP)
+  No GTFS, estes modos estão em feeds separados (CP, Metro Porto, EXEMPLO)
   sem qualquer relação estrutural definida. Um sistema de pesquisa de
   percursos só pode inferir a transferência por proximidade geográfica.
 
@@ -201,9 +201,9 @@
                  Sub-StopPlace — Terminal de Autocarros, Campanhã
                  ─────────────────────────────────────────────────────────
                  Paragens de autocarro a sul da estação de comboio.
-                 Várias linhas STCP servem Campanhã: 600, 601, 602, 800...
+                 Várias linhas EXEMPLO servem Campanhã: 600, 601, 602, 800...
             -->
-            <StopPlace id="PT:STCP:StopPlace:Campanha_Bus:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Campanha_Bus:LOC" version="1">
               <Name>Campanhã (Autocarros)</Name>
 
               <Centroid>
@@ -218,7 +218,7 @@
 
               <quays>
 
-                <Quay id="PT:STCP:Quay:Campanha_Bus_A:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Campanha_Bus_A:LOC" version="1">
                   <Name>Campanhã Bus — Sentido Centro</Name>
                   <Centroid>
                     <Location>
@@ -229,7 +229,7 @@
                   <QuayType>busStop</QuayType>
                 </Quay>
 
-                <Quay id="PT:STCP:Quay:Campanha_Bus_B:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Campanha_Bus_B:LOC" version="1">
                   <Name>Campanhã Bus — Sentido Circular / Periférico</Name>
                   <Centroid>
                     <Location>
@@ -313,7 +313,7 @@
                           nameOfRefClass="AccessSpace" version="1"/>
               </From>
               <To>
-                <PlaceRef ref="PT:STCP:StopPlace:Campanha_Bus:LOC"
+                <PlaceRef ref="PT:EXEMPLO:StopPlace:Campanha_Bus:LOC"
                           nameOfRefClass="StopPlace" version="1"/>
               </To>
 
@@ -339,7 +339,7 @@
                           nameOfRefClass="StopPlace" version="1"/>
               </From>
               <To>
-                <PlaceRef ref="PT:STCP:StopPlace:Campanha_Bus:LOC"
+                <PlaceRef ref="PT:EXEMPLO:StopPlace:Campanha_Bus:LOC"
                           nameOfRefClass="StopPlace" version="1"/>
               </To>
 

@@ -1,6 +1,5 @@
 # NeTEx PT Formação
 
-> **O primeiro recurso educativo aberto em português sobre NeTEx (Network Timetable Exchange).**
 
 Dirigido a técnicos de operadores de transporte público portugueses.
 

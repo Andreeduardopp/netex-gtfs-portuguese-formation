@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang
+Operadora Exemplo,Operadora Exemplo,https://www.exemplo.pt,Europe/Lisbon,pt

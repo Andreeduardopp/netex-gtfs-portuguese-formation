@@ -29,7 +29,7 @@
   ✅ Encoding UTF-8
 
   ERROS COMUNS EVITADOS:
-  ❌ ID sem prefixo PT: → ✅ todos com PT:STCP:...
+  ❌ ID sem prefixo PT: → ✅ todos com PT:EXEMPLO:...
   ❌ ref para ID inexistente → ✅ todos os ref resolvem
   ❌ version="0" ou ausente → ✅ todos com version="1"
   ❌ Campo Name ausente → ✅ todos os objetos têm Name
@@ -47,12 +47,12 @@
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
 
   <!-- M: ParticipantRef — código do operador no formato PT:<org> -->
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
 
     <!-- CompositeFrame agrupa todos os outros frames -->
-    <CompositeFrame id="PT:STCP:CompositeFrame:STCP_L200_Perfil_PT:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:EXEMPLO_L200_Perfil_PT:LOC" version="1">
 
       <!-- M: validBetween — período de validade dos dados -->
       <validBetween>
@@ -65,7 +65,7 @@
         <!-- ══════════════════════════════════════════════════════
              RESOURCEFRAME — Authority e Operator (M obrigatório)
              ══════════════════════════════════════════════════════ -->
-        <ResourceFrame id="PT:STCP:ResourceFrame:STCP_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:EXEMPLO_RF:LOC" version="1">
           <organisations>
 
             <!--
@@ -85,12 +85,12 @@
               Operator: o operador de transporte.
               Campos M: id, version, Name, ContactDetails/Url, OrganisationType
             -->
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
-              <Name>STCP — Sociedade de Transportes Colectivos do Porto</Name>
-              <ShortName>STCP</ShortName>
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
+              <Name>EXEMPLO — Sociedade de Transportes Colectivos do Porto</Name>
+              <ShortName>EXEMPLO</ShortName>
               <ContactDetails>
-                <Url>https://www.stcp.pt</Url>
-                <Email>geral@stcp.pt</Email>
+                <Url>https://www.exemplo.pt</Url>
+                <Email>geral@exemplo.pt</Email>
                 <Phone>+351 225 071 000</Phone>
               </ContactDetails>
               <OrganisationType>operator</OrganisationType>
@@ -102,13 +102,13 @@
         <!-- ══════════════════════════════════════════════════════
              SITEFRAME — StopPlace e Quay (M obrigatório)
              ══════════════════════════════════════════════════════ -->
-        <SiteFrame id="PT:STCP:SiteFrame:STCP_L200_SF:LOC" version="1">
+        <SiteFrame id="PT:EXEMPLO:SiteFrame:EXEMPLO_L200_SF:LOC" version="1">
           <stopPlaces>
 
             <!--
               StopPlace: campos M = id, version, Name, StopPlaceType, Centroid/Location
             -->
-            <StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
               <Name>Bolhão</Name>
               <Centroid>
                 <Location>
@@ -122,7 +122,7 @@
                 <!--
                   Quay: campos M = id, version, Name, QuayType, Centroid/Location
                 -->
-                <Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1">
                   <Name>Bolhão — Sentido Castelo do Queijo</Name>
                   <Centroid>
                     <Location>
@@ -135,7 +135,7 @@
               </quays>
             </StopPlace>
 
-            <StopPlace id="PT:STCP:StopPlace:CasteloQueijo:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:CasteloQueijo:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <Centroid>
                 <Location>
@@ -146,7 +146,7 @@
               <StopPlaceType>onstreetBus</StopPlaceType>
               <TransportMode>bus</TransportMode>
               <quays>
-                <Quay id="PT:STCP:Quay:CQ10:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:CQ10:LOC" version="1">
                   <Name>Castelo do Queijo</Name>
                   <Centroid>
                     <Location>
@@ -165,49 +165,49 @@
         <!-- ══════════════════════════════════════════════════════
              SERVICEFRAME — Rede, Linhas, Paragens, Horário-Padrão
              ══════════════════════════════════════════════════════ -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:STCP_L200_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:EXEMPLO_L200_SvF:LOC" version="1">
 
-          <Network id="PT:STCP:Network:STCP:LOC" version="1">
-            <Name>Rede STCP Porto</Name>
+          <Network id="PT:EXEMPLO:Network:EXEMPLO:LOC" version="1">
+            <Name>Rede Operadora Exemplo</Name>
           </Network>
 
           <lines>
             <!--
               Line: campos M = id, version, Name, TransportMode, PublicCode
             -->
-            <Line id="PT:STCP:Line:200:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:200:LOC" version="1">
               <Name>Linha 200 — Bolhão / Castelo do Queijo</Name>
               <ShortName>200</ShortName>
               <!-- M: PublicCode — o número visível ao público -->
               <PublicCode>200</PublicCode>
               <!-- M: TransportMode — modo de transporte -->
               <TransportMode>bus</TransportMode>
-              <NetworkRef ref="PT:STCP:Network:STCP:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <NetworkRef ref="PT:EXEMPLO:Network:EXEMPLO:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
             </Line>
           </lines>
 
           <scheduledStopPoints>
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
             </ScheduledStopPoint>
           </scheduledStopPoints>
 
           <routePoints>
-            <RoutePoint id="PT:STCP:RoutePoint:BLRB1:LOC" version="1">
+            <RoutePoint id="PT:EXEMPLO:RoutePoint:BLRB1:LOC" version="1">
               <projections>
-                <PointProjection id="PT:STCP:PP:BLRB1:LOC" version="1" order="1">
-                  <ProjectedPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+                <PointProjection id="PT:EXEMPLO:PP:BLRB1:LOC" version="1" order="1">
+                  <ProjectedPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
                 </PointProjection>
               </projections>
             </RoutePoint>
-            <RoutePoint id="PT:STCP:RoutePoint:CQ10:LOC" version="1">
+            <RoutePoint id="PT:EXEMPLO:RoutePoint:CQ10:LOC" version="1">
               <projections>
-                <PointProjection id="PT:STCP:PP:CQ10:LOC" version="1" order="1">
-                  <ProjectedPointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/>
+                <PointProjection id="PT:EXEMPLO:PP:CQ10:LOC" version="1" order="1">
+                  <ProjectedPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/>
                 </PointProjection>
               </projections>
             </RoutePoint>
@@ -217,16 +217,16 @@
             <!--
               Route: campos M = id, version, LineRef, pointsInSequence
             -->
-            <Route id="PT:STCP:Route:200_IDA:LOC" version="1">
+            <Route id="PT:EXEMPLO:Route:200_IDA:LOC" version="1">
               <Name>200 IDA — Bolhão → Castelo do Queijo</Name>
-              <LineRef ref="PT:STCP:Line:200:LOC" version="1"/>
+              <LineRef ref="PT:EXEMPLO:Line:200:LOC" version="1"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <PointOnRoute id="PT:STCP:POR:200_IDA_01:LOC" version="1" order="1">
-                  <RoutePointRef ref="PT:STCP:RoutePoint:BLRB1:LOC" version="1"/>
+                <PointOnRoute id="PT:EXEMPLO:POR:200_IDA_01:LOC" version="1" order="1">
+                  <RoutePointRef ref="PT:EXEMPLO:RoutePoint:BLRB1:LOC" version="1"/>
                 </PointOnRoute>
-                <PointOnRoute id="PT:STCP:POR:200_IDA_30:LOC" version="1" order="30">
-                  <RoutePointRef ref="PT:STCP:RoutePoint:CQ10:LOC" version="1"/>
+                <PointOnRoute id="PT:EXEMPLO:POR:200_IDA_30:LOC" version="1" order="30">
+                  <RoutePointRef ref="PT:EXEMPLO:RoutePoint:CQ10:LOC" version="1"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -236,17 +236,17 @@
             <!--
               ServiceJourneyPattern: campos M = id, version, RouteRef, pointsInSequence
             -->
-            <ServiceJourneyPattern id="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1">
+            <ServiceJourneyPattern id="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1">
               <Name>200 IDA — Padrão Normal</Name>
-              <RouteRef ref="PT:STCP:Route:200_IDA:LOC" version="1"/>
+              <RouteRef ref="PT:EXEMPLO:Route:200_IDA:LOC" version="1"/>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_01:LOC" version="1" order="1">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1" order="1">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
                   <ForAlighting>false</ForAlighting>
                   <ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_30:LOC" version="1" order="30">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1" order="30">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
@@ -258,15 +258,15 @@
             PassengerStopAssignment: campos M = ScheduledStopPointRef + StopPlaceRef + QuayRef
           -->
           <stopAssignments>
-            <PassengerStopAssignment id="PT:STCP:PSA:BLRB1_Bolhao:LOC" version="1" order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Bolhao:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:Bolhao_IDA:LOC" version="1"/>
+            <PassengerStopAssignment id="PT:EXEMPLO:PSA:BLRB1_Bolhao:LOC" version="1" order="1">
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1"/>
             </PassengerStopAssignment>
-            <PassengerStopAssignment id="PT:STCP:PSA:CQ10_CasteloQueijo:LOC" version="1" order="1">
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:CasteloQueijo:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:CQ10:LOC" version="1"/>
+            <PassengerStopAssignment id="PT:EXEMPLO:PSA:CQ10_CasteloQueijo:LOC" version="1" order="1">
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:CasteloQueijo:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:CQ10:LOC" version="1"/>
             </PassengerStopAssignment>
           </stopAssignments>
 
@@ -275,9 +275,9 @@
         <!-- ══════════════════════════════════════════════════════
              SERVICECALENDARFRAME — Calendário de serviço
              ══════════════════════════════════════════════════════ -->
-        <ServiceCalendarFrame id="PT:STCP:ServiceCalendarFrame:STCP_SCF:LOC" version="1">
+        <ServiceCalendarFrame id="PT:EXEMPLO:ServiceCalendarFrame:EXEMPLO_SCF:LOC" version="1">
           <dayTypes>
-            <DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1">
+            <DayType id="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1">
               <Name>Dias Úteis</Name>
               <properties>
                 <PropertyOfDay>
@@ -287,14 +287,14 @@
             </DayType>
           </dayTypes>
           <operatingDays>
-            <OperatingDay id="PT:STCP:OperatingDay:20260430:LOC" version="1">
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1">
               <CalendarDate>2026-04-30</CalendarDate>
             </OperatingDay>
           </operatingDays>
           <dayTypeAssignments>
-            <DayTypeAssignment id="PT:STCP:DTA:DU_20260430:LOC" version="1" order="1">
-              <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260430:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260430:LOC" version="1" order="1">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
           </dayTypeAssignments>
@@ -303,29 +303,29 @@
         <!-- ══════════════════════════════════════════════════════
              TIMETABLEFRAME — Horários
              ══════════════════════════════════════════════════════ -->
-        <TimetableFrame id="PT:STCP:TimetableFrame:STCP_L200_TF:LOC" version="1">
+        <TimetableFrame id="PT:EXEMPLO:TimetableFrame:EXEMPLO_L200_TF:LOC" version="1">
           <vehicleJourneys>
             <!--
               ServiceJourney: campos M = id, version, DayTypeRefs, JourneyPatternRef
             -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0600:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0600:LOC" version="1">
               <Name>200 IDA — Dias Úteis 06:00</Name>
               <DayTypeRefs>
-                <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
               <passingTimes>
                 <!--
                   TimetabledPassingTime: M = StopPointInJourneyPatternRef +
                   (DepartureTime ou ArrivalTime)
                 -->
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:00:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:40:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

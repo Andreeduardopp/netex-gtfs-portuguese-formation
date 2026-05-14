@@ -1,2 +1,2 @@
 feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_contact_email,feed_contact_url,feed_version
-"Sociedade de Transportes Colectivos do Porto, E.I.M., S.A",http://www.stcp.pt,pt,20260430,20270429,powerqubit@stcp.pt,http://www.stcp.pt,Escolar|228|2026-04-30 00:58:24
+"Sociedade de Transportes Colectivos do Porto, E.I.M., S.A",http://www.exemplo.pt,pt,20260430,20270429,powerqubit@exemplo.pt,http://www.exemplo.pt,Escolar|228|2026-04-30 00:58:24

@@ -74,7 +74,7 @@ Crie o ficheiro `board_alight.txt` com estes dados. Use `record_use=0` e `schedu
 
 ## Questões de Reflexão
 
-1. O sistema Andante do Porto abrange múltiplos operadores (STCP, Metro do Porto, CP). Porque é que modelar tarifas intermodais é particularmente difícil no Fares v1?
+1. O sistema Andante do Porto abrange múltiplos operadores (Operadora Exemplo, Metro do Porto, CP). Porque é que modelar tarifas intermodais é particularmente difícil no Fares v1?
 
 2. Se Portugal quisesse publicar dados tarifários no NAP (Ponto de Acesso Nacional) seguindo o regulamento MMTIS, seria preferível GTFS Fares v2 ou NeTEx Part 3? Que fatores influenciam esta decisão?
 

@@ -34,7 +34,7 @@ O NeTEx (Parte 3 — Fares) tem um modelo de tarifas completo e muito expressivo
 O **`FareFrame`** é o frame NeTEx dedicado às tarifas. [[STD-03]](#STD-03)
 
 ```xml
-<FareFrame id="PT:STCP:FareFrame:Andante_FF:LOC" version="1">
+<FareFrame id="PT:EXEMPLO:FareFrame:Andante_FF:LOC" version="1">
   <Name>Andante Porto — Tarifas Base</Name>
 
   <tariffZones> ... </tariffZones>   <!-- zonas geográficas de tarifa -->
@@ -52,11 +52,11 @@ Uma **`TariffZone`** define uma região geográfica à qual pertence um conjunto
 O sistema Andante de Porto usa zonas concêntricas Z2, Z3, Z4... que representam o número mínimo de zonas para uma viagem. Cada paragem pertence a uma ou mais zonas.
 
 ```xml
-<TariffZone id="PT:STCP:TariffZone:Z2:LOC" version="1">
+<TariffZone id="PT:EXEMPLO:TariffZone:Z2:LOC" version="1">
   <Name>Andante Z2</Name>
 </TariffZone>
 
-<TariffZone id="PT:STCP:TariffZone:Z3:LOC" version="1">
+<TariffZone id="PT:EXEMPLO:TariffZone:Z3:LOC" version="1">
   <Name>Andante Z3</Name>
 </TariffZone>
 ```
@@ -66,11 +66,11 @@ O sistema Andante de Porto usa zonas concêntricas Z2, Z3, Z4... que representam
 As `ScheduledStopPoint` são ligadas às `TariffZone` diretamente no `ServiceFrame`:
 
 ```xml
-<ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+<ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
   <Name>Bolhão</Name>
   <!-- Bolhão está na zona Z2 do Andante -->
   <tariffZones>
-    <TariffZoneRef ref="PT:STCP:TariffZone:Z2:LOC" version="1"/>
+    <TariffZoneRef ref="PT:EXEMPLO:TariffZone:Z2:LOC" version="1"/>
   </tariffZones>
 </ScheduledStopPoint>
 ```
@@ -206,4 +206,4 @@ O NeTEx Parte 3 (Fares) é o subsistema mais extenso e complexo do NeTEx. Este m
 | <a id="STD-03"></a>[STD-03] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-3:2024 (Parte 3 — Fares). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 da Comissão, de 14 de Dezembro de 2023. JO L, 2024/490. https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=OJ:L_202400490 |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

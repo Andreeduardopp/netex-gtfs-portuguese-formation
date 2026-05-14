@@ -31,7 +31,7 @@ Se encontrou um erro num ficheiro XML de exemplo ou no texto de um módulo:
 
 1. **Toda afirmação técnica** (definições NeTEx, especificações, regras do standard) deve incluir uma referência à fonte original (spec NeTEx, Transmodel, regulação EU, perfil PT, etc.)
 2. **Texto adaptado ou traduzido** de outros projetos (ex: `etalab/netex-france-formation`) deve indicar explicitamente a origem e a natureza da adaptação
-3. **Dados e exemplos** baseados em feeds reais de operadores devem creditar a fonte (ex: "Dados baseados no feed GTFS público da STCP, disponível em [URL]")
+3. **Dados e exemplos** baseados em feeds reais de operadores devem creditar a fonte (ex: "Dados baseados no feed GTFS público da Operadora Exemplo, disponível em [URL]")
 4. **Diagramas e figuras** reproduzidos ou adaptados de outras fontes devem incluir "Fonte:" ou "Adaptado de:" na legenda
 5. **Citações diretas** (texto copiado ipsis verbis) devem usar aspas ou blocos de citação `>` e indicar autor/fonte/ano
 

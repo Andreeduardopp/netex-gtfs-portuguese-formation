@@ -3,13 +3,13 @@
   EXEMPLO 01 — Anatomia de um Ficheiro NeTEx
   ==========================================
   Curso: NeTEx PT Formação — Módulo 1: Conceitos Base
-  Fonte dos dados: STCP (Sociedade de Transportes Colectivos do Porto) [DATA-03]
+  Fonte dos dados: EXEMPLO (Sociedade de Transportes Colectivos do Porto) [DATA-03]
   Perfil: NeTEx Portugal (PT-EPIP) [PT-01]
 
   O que este ficheiro demonstra:
   - A estrutura raiz PublicationDelivery (o "envelope" de todo o ficheiro NeTEx)
   - O CompositeFrame como contentor de múltiplos frames
-  - O ResourceFrame com Authority (IMT) e Operator (STCP)
+  - O ResourceFrame com Authority (IMT) e Operator (EXEMPLO)
   - O ServiceFrame com a definição mínima da Linha 200
   - O formato correcto de identificadores NeTEx para Portugal
   - O uso de validBetween para controlo de validade
@@ -18,7 +18,7 @@
   - [STD-01] CEN/TS 16614-1:2024 (NeTEx Parte 1 — Topologia de Rede)
   - [STD-04] CEN EN 12896 (Transmodel)
   - [PT-01]  IMT. Perfil Nacional NeTEx Portugal
-  - [DATA-03] STCP. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
+  - [DATA-03] EXEMPLO. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
 -->
 
 <!--
@@ -43,9 +43,9 @@
   <!--
     ParticipantRef: identifica a organização que publicou estes dados.
     Formato: PT:<código da organização>
-    A STCP usa "STCP" como código de participante.
+    A EXEMPLO usa "EXEMPLO" como código de participante.
   -->
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <!--
     dataObjects: contentor de todos os frames de dados.
@@ -59,14 +59,14 @@
 
       id: formato = <país>:<operador>:<Tipo>:<identificadorLocal>:<âmbito>
         - PT     = Portugal (código ISO 3166-1)
-        - STCP   = operador (código STCP)
+        - EXEMPLO   = operador (código EXEMPLO)
         - CompositeFrame = tipo de objecto
-        - STCP_L200_2026 = identificador local (linha 200, versão 2026)
+        - EXEMPLO_L200_2026 = identificador local (linha 200, versão 2026)
         - LOC    = âmbito local (válido em Portugal)
 
       version: número inteiro incremental. Começa em 1.
     -->
-    <CompositeFrame id="PT:STCP:CompositeFrame:STCP_L200_2026:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:EXEMPLO_L200_2026:LOC" version="1">
 
       <!--
         validBetween: período de validade de todos os dados dentro deste frame.
@@ -94,13 +94,13 @@
           Equivalente GTFS aproximado: agency.txt
           Mas muito mais rico — distingue Authority de Operator.
         -->
-        <ResourceFrame id="PT:STCP:ResourceFrame:STCP_RF_2026:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:EXEMPLO_RF_2026:LOC" version="1">
 
           <!--
             organisations: lista de entidades organizacionais.
             NeTEx distingue:
             - Authority: entidade com poder regulatório (ex: IMT, CM Porto)
-            - Operator: entidade que opera o serviço (ex: STCP, Metro do Porto)
+            - Operator: entidade que opera o serviço (ex: EXEMPLO, Metro do Porto)
 
             No GTFS, agency.txt mistura os dois papéis.
             No NeTEx, são objetos distintos — uma linha pode ter uma Authority
@@ -125,30 +125,30 @@
 
             <!--
               Operator: entidade que opera o serviço de transporte.
-              A STCP opera os autocarros do Porto.
+              A EXEMPLO opera os autocarros do Porto.
 
               PublicCode: código público reconhecível pelos utilizadores.
-              Url: website oficial da STCP (= agency_url no GTFS).
+              Url: website oficial da EXEMPLO (= agency_url no GTFS).
               Phone: número de contacto (= agency_phone no GTFS).
 
               Correspondência GTFS:
-                agency_id   → id do Operator (PT:STCP:Operator:STCP:LOC)
+                agency_id   → id do Operator (PT:EXEMPLO:Operator:EXEMPLO:LOC)
                 agency_name → Name
                 agency_url  → ContactDetails/Url
                 agency_phone → ContactDetails/Phone
                 agency_lang → (implícito pelo país PT)
                 agency_timezone → (definido ao nível do ServiceFrame)
             -->
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
               <Name>Sociedade de Transportes Colectivos do Porto, E.I.M., S.A.</Name>
-              <ShortName>STCP</ShortName>
-              <PublicCode>STCP</PublicCode>
+              <ShortName>EXEMPLO</ShortName>
+              <PublicCode>EXEMPLO</PublicCode>
               <ContactDetails>
-                <Url>https://www.stcp.pt</Url>
+                <Url>https://www.exemplo.pt</Url>
                 <Phone>225071000</Phone>
               </ContactDetails>
               <CustomerServiceContactDetails>
-                <Email>clientes@stcp.pt</Email>
+                <Email>clientes@exemplo.pt</Email>
               </CustomerServiceContactDetails>
             </Operator>
 
@@ -170,19 +170,19 @@
 
           Equivalente GTFS aproximado: routes.txt + stops.txt (parcial)
         -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:STCP_SF_2026:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:EXEMPLO_SF_2026:LOC" version="1">
 
           <!--
             Network: agrupa linhas sob uma marca/rede comum.
-            A STCP opera uma única rede de autocarros urbanos do Porto.
+            A EXEMPLO opera uma única rede de autocarros urbanos do Porto.
 
             Equivalente GTFS: não existe directamente. O agency_id
             é o mais próximo, mas não modela a rede como entidade própria.
           -->
-          <Network id="PT:STCP:Network:STCP_Porto:LOC" version="1">
-            <Name>Rede de Autocarros STCP — Porto</Name>
-            <ShortName>STCP</ShortName>
-            <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+          <Network id="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1">
+            <Name>Rede de Autocarros EXEMPLO — Porto</Name>
+            <ShortName>EXEMPLO</ShortName>
+            <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
           </Network>
 
           <lines>
@@ -199,7 +199,7 @@
               TransportMode: "bus" = autocarro (equivalente a route_type=3 no GTFS).
 
               Correspondência GTFS routes.txt:
-                route_id         → id (PT:STCP:Line:200:LOC)
+                route_id         → id (PT:EXEMPLO:Line:200:LOC)
                 route_short_name → PublicCode ("200")
                 route_long_name  → Name ("Bolhão — Castelo do Queijo")
                 route_type       → TransportMode ("bus")
@@ -207,7 +207,7 @@
                 route_text_color → Presentation/TextColour
                 agency_id        → OperatorRef
             -->
-            <Line id="PT:STCP:Line:200:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:200:LOC" version="1">
               <Name>Bolhão — Castelo do Queijo</Name>
               <ShortName>200</ShortName>
               <PublicCode>200</PublicCode>
@@ -223,9 +223,9 @@
                 <Colour>187EC2</Colour>
                 <TextColour>FFFFFF</TextColour>
               </Presentation>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <NetworkRef ref="PT:STCP:Network:STCP_Porto:LOC" version="1"/>
-              <Url>https://www.stcp.pt/pt/viajar/linhas/?linha=200</Url>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <NetworkRef ref="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1"/>
+              <Url>https://www.exemplo.pt/pt/viajar/linhas/?linha=200</Url>
             </Line>
 
           </lines>
@@ -255,7 +255,7 @@
               Coordenadas GTFS: 41.151868, -8.607115
               Zona tarifária GTFS: PRT1
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
               <!--
                 Location: coordenadas do ponto lógico de paragem.
@@ -271,7 +271,7 @@
             </ScheduledStopPoint>
 
             <!-- Paragem: Carmo | stop_id GTFS: CMO -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1">
               <Name>Carmo</Name>
               <Location>
                 <Longitude>-8.616926</Longitude>
@@ -280,7 +280,7 @@
             </ScheduledStopPoint>
 
             <!-- Paragem: Praça da Galiza | stop_id GTFS: PRG4 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1">
               <Name>Praça da Galiza</Name>
               <Location>
                 <Longitude>-8.627041</Longitude>
@@ -289,7 +289,7 @@
             </ScheduledStopPoint>
 
             <!-- Paragem: Mercado da Foz | stop_id GTFS: MFZ1 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <Location>
                 <Longitude>-8.673343</Longitude>
@@ -298,7 +298,7 @@
             </ScheduledStopPoint>
 
             <!-- Paragem: Castelo do Queijo (terminal) | stop_id GTFS: CQ10 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <Location>
                 <Longitude>-8.689127</Longitude>

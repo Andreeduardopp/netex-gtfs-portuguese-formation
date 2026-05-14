@@ -3,7 +3,7 @@
   EXEMPLO 02_02 — Linha de Autocarro Completa em NeTEx
   =====================================================
   Curso: NeTEx PT Formação — Módulo 2: Rede de Transporte
-  Fonte dos dados: STCP Porto, Linha 200 [DATA-03]
+  Fonte dos dados: Operadora Exemplo, Linha 200 [DATA-03]
 
   O que este ficheiro demonstra (além de 02_01):
   - Todas as 30 paragens da direção IDA (Bolhão → Castelo do Queijo)
@@ -14,7 +14,7 @@
   - Nota sobre PassengerStopAssignment (Módulo 4)
 
   Nota sobre stop IDs diferentes por direção:
-  A STCP usa stop_id distintos para a mesma paragem física em direções opostas.
+  A EXEMPLO usa stop_id distintos para a mesma paragem física em direções opostas.
   Por exemplo: FCH1 (Funchal IDA) ≠ FCH2 (Funchal VOLTA).
   Isto é uma característica do GTFS; em NeTEx, o lugar físico seria
   modelado como um único StopPlace com dois Quay (ver Módulo 4).
@@ -22,7 +22,7 @@
   Referências:
   - [STD-01] CEN/TS 16614-1:2024
   - [PT-01]  IMT. Perfil Nacional NeTEx Portugal
-  - [DATA-03] STCP. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
+  - [DATA-03] EXEMPLO. Feed GTFS Porto, versão Escolar 228 (2026-04-30)
 -->
 <PublicationDelivery
     xmlns="http://www.netex.org.uk/netex"
@@ -30,47 +30,47 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:STCP_L200_Completa:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:EXEMPLO_L200_Completa:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
       </validBetween>
       <frames>
 
-        <ResourceFrame id="PT:STCP:ResourceFrame:L200C_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:L200C_RF:LOC" version="1">
           <organisations>
             <Authority id="PT:IMT:Authority:IMT:LOC" version="1">
               <Name>Instituto da Mobilidade e dos Transportes</Name>
               <ShortName>IMT</ShortName>
             </Authority>
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
               <Name>Sociedade de Transportes Colectivos do Porto, E.I.M., S.A.</Name>
-              <ShortName>STCP</ShortName>
-              <PublicCode>STCP</PublicCode>
+              <ShortName>EXEMPLO</ShortName>
+              <PublicCode>EXEMPLO</PublicCode>
             </Operator>
           </organisations>
         </ResourceFrame>
 
-        <ServiceFrame id="PT:STCP:ServiceFrame:L200C_SF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:L200C_SF:LOC" version="1">
 
-          <Network id="PT:STCP:Network:STCP_Porto:LOC" version="1">
-            <Name>Rede de Autocarros STCP — Porto</Name>
-            <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+          <Network id="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1">
+            <Name>Rede de Autocarros EXEMPLO — Porto</Name>
+            <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
           </Network>
 
           <directions>
-            <Direction id="PT:STCP:Direction:200_CQ:LOC" version="1">
+            <Direction id="PT:EXEMPLO:Direction:200_CQ:LOC" version="1">
               <Name>Castelo do Queijo</Name>
             </Direction>
-            <Direction id="PT:STCP:Direction:200_BL:LOC" version="1">
+            <Direction id="PT:EXEMPLO:Direction:200_BL:LOC" version="1">
               <Name>Bolhão</Name>
             </Direction>
           </directions>
 
           <lines>
-            <Line id="PT:STCP:Line:200:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:200:LOC" version="1">
               <Name>Bolhão — Castelo do Queijo</Name>
               <ShortName>200</ShortName>
               <PublicCode>200</PublicCode>
@@ -82,9 +82,9 @@
                 <Colour>187EC2</Colour>
                 <TextColour>FFFFFF</TextColour>
               </Presentation>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <NetworkRef ref="PT:STCP:Network:STCP_Porto:LOC" version="1"/>
-              <Url>https://www.stcp.pt/pt/viajar/linhas/?linha=200</Url>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <NetworkRef ref="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1"/>
+              <Url>https://www.exemplo.pt/pt/viajar/linhas/?linha=200</Url>
             </Line>
           </lines>
 
@@ -95,304 +95,304 @@
           <scheduledStopPoints>
 
             <!-- seq 1  → IDA -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
               <Location><Longitude>-8.607115</Longitude><Latitude>41.151868</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 2 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MCBL:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MCBL:LOC" version="1">
               <Name>Mercado do Bolhão</Name>
               <Location><Longitude>-8.607564</Longitude><Latitude>41.149509</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 3 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRDJ:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRDJ:LOC" version="1">
               <Name>Pr. D. João I</Name>
               <Location><Longitude>-8.609126</Longitude><Latitude>41.147581</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 4 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1">
               <Name>Praça Filipa de Lencastre</Name>
               <Location><Longitude>-8.612768</Longitude><Latitude>41.148261</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 5 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1">
               <Name>Guil. G. Fernandes</Name>
               <Location><Longitude>-8.614767</Longitude><Latitude>41.147560</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 6 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1">
               <Name>Carmo</Name>
               <Location><Longitude>-8.616926</Longitude><Latitude>41.147223</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 7 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1">
               <Name>Hospital Santo António</Name>
               <Location><Longitude>-8.622450</Longitude><Latitude>41.147766</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 8 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PAL2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PAL2:LOC" version="1">
               <Name>Palácio</Name>
               <Location><Longitude>-8.625447</Longitude><Latitude>41.149145</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 9 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1">
               <Name>Praça da Galiza</Name>
               <Location><Longitude>-8.627041</Longitude><Latitude>41.152531</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 10 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JM1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JM1:LOC" version="1">
               <Name>Junta Massarelos</Name>
               <Location><Longitude>-8.631221</Longitude><Latitude>41.152694</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 11 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:GGT1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:GGT1:LOC" version="1">
               <Name>Gólgota</Name>
               <Location><Longitude>-8.633694</Longitude><Latitude>41.152639</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 12 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PLNT1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PLNT1:LOC" version="1">
               <Name>Planetário</Name>
               <Location><Longitude>-8.638289</Longitude><Latitude>41.153094</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 13 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FCUP1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FCUP1:LOC" version="1">
               <Name>Faculdade de Ciências</Name>
               <Location><Longitude>-8.641309</Longitude><Latitude>41.153838</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 14 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JB1:LOC" version="1">
               <Name>Jardim Botânico</Name>
               <Location><Longitude>-8.644222</Longitude><Latitude>41.154528</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 15 — fronteira de zona PRT1 → PRT2 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:LRD1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:LRD1:LOC" version="1">
               <Name>Lordelo</Name>
               <Location><Longitude>-8.649028</Longitude><Latitude>41.154389</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 16 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PLM1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PLM1:LOC" version="1">
               <Name>Palmeiras</Name>
               <Location><Longitude>-8.652107</Longitude><Latitude>41.152356</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 17 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FLUN1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FLUN1:LOC" version="1">
               <Name>Fluvial (norte)</Name>
               <Location><Longitude>-8.655194</Longitude><Latitude>41.152139</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 18 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PG1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PG1:LOC" version="1">
               <Name>Paulo da Gama</Name>
               <Location><Longitude>-8.658707</Longitude><Latitude>41.150856</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 19 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PT3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PT3:LOC" version="1">
               <Name>Pasteleira</Name>
               <Location><Longitude>-8.661488</Longitude><Latitude>41.150486</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 20 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRR3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRR3:LOC" version="1">
               <Name>Torres</Name>
               <Location><Longitude>-8.664619</Longitude><Latitude>41.150749</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 21 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PCL1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PCL1:LOC" version="1">
               <Name>Padre Luís Cabral</Name>
               <Location><Longitude>-8.668056</Longitude><Latitude>41.151806</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 22 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:UC1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:UC1:LOC" version="1">
               <Name>Universidade Católica</Name>
               <Location><Longitude>-8.670916</Longitude><Latitude>41.153538</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 23 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <Location><Longitude>-8.673343</Longitude><Latitude>41.155048</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 24 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:LIEG1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:LIEG1:LOC" version="1">
               <Name>Praça de Liége</Name>
               <Location><Longitude>-8.677168</Longitude><Latitude>41.155089</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 25 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CRTO3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CRTO3:LOC" version="1">
               <Name>Crasto</Name>
               <Location><Longitude>-8.679766</Longitude><Latitude>41.157713</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 26 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MLH5:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MLH5:LOC" version="1">
               <Name>Molhe</Name>
               <Location><Longitude>-8.681660</Longitude><Latitude>41.159880</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 27 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FCH1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FCH1:LOC" version="1">
               <Name>Funchal</Name>
               <Location><Longitude>-8.683490</Longitude><Latitude>41.163190</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 28 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:HMLM3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:HMLM3:LOC" version="1">
               <Name>Homem do Leme</Name>
               <Location><Longitude>-8.685965</Longitude><Latitude>41.163454</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 29 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TIM1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TIM1:LOC" version="1">
               <Name>Timor</Name>
               <Location><Longitude>-8.687170</Longitude><Latitude>41.165587</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 30 — terminal IDA -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <Location><Longitude>-8.689127</Longitude><Latitude>41.167422</Latitude></Location>
             </ScheduledStopPoint>
 
             <!--
               ScheduledStopPoints — DIREÇÃO VOLTA (Castelo do Queijo → Bolhão)
-              A STCP usa stop_id distintos para paragens em sentido oposto (prática comum).
+              A EXEMPLO usa stop_id distintos para paragens em sentido oposto (prática comum).
               Em NeTEx, a mesma paragem física (StopPlace) teria dois Quay distintos (ver Módulo 4).
             -->
             <!-- seq 1 VOLTA: CQ10 é partilhado com IDA -->
             <!-- seq 2 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TIM2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TIM2:LOC" version="1">
               <Name>Timor</Name>
               <Location><Longitude>-8.687120</Longitude><Latitude>41.165182</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 3 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PCV2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PCV2:LOC" version="1">
               <Name>Pero Covilhã</Name>
               <Location><Longitude>-8.685241</Longitude><Latitude>41.164550</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 4 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FCH2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FCH2:LOC" version="1">
               <Name>Funchal</Name>
               <Location><Longitude>-8.684057</Longitude><Latitude>41.162076</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 5 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MLH3:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MLH3:LOC" version="1">
               <Name>Molhe</Name>
               <Location><Longitude>-8.683185</Longitude><Latitude>41.160158</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 6 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JNN2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JNN2:LOC" version="1">
               <Name>Jacinto Nunes</Name>
               <Location><Longitude>-8.681560</Longitude><Latitude>41.158107</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 7 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CRTO4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CRTO4:LOC" version="1">
               <Name>Crasto</Name>
               <Location><Longitude>-8.680260</Longitude><Latitude>41.156600</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 8 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:LIEG2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:LIEG2:LOC" version="1">
               <Name>Praça de Liége</Name>
               <Location><Longitude>-8.677815</Longitude><Latitude>41.155061</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 9 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:DIU1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:DIU1:LOC" version="1">
               <Name>Diu</Name>
               <Location><Longitude>-8.675947</Longitude><Latitude>41.153634</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 10 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:MFZ2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:MFZ2:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <Location><Longitude>-8.673914</Longitude><Latitude>41.154021</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 11 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:UC2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:UC2:LOC" version="1">
               <Name>Universidade Católica</Name>
               <Location><Longitude>-8.671089</Longitude><Latitude>41.153543</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 12 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PCL2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PCL2:LOC" version="1">
               <Name>Padre Luís Cabral</Name>
               <Location><Longitude>-8.667786</Longitude><Latitude>41.151537</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 13 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRR4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRR4:LOC" version="1">
               <Name>Torres</Name>
               <Location><Longitude>-8.664217</Longitude><Latitude>41.150529</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 14 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PT2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PT2:LOC" version="1">
               <Name>Pasteleira</Name>
               <Location><Longitude>-8.661083</Longitude><Latitude>41.150417</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 15 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PG2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PG2:LOC" version="1">
               <Name>Paulo da Gama</Name>
               <Location><Longitude>-8.658648</Longitude><Latitude>41.150701</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 16 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FLUN2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FLUN2:LOC" version="1">
               <Name>Fluvial (norte)</Name>
               <Location><Longitude>-8.654639</Longitude><Latitude>41.152111</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 17 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PLM2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PLM2:LOC" version="1">
               <Name>Palmeiras</Name>
               <Location><Longitude>-8.651333</Longitude><Latitude>41.152636</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 18 — fronteira de zona PRT2 → PRT1 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:LRD2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:LRD2:LOC" version="1">
               <Name>Lordelo</Name>
               <Location><Longitude>-8.647722</Longitude><Latitude>41.154139</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 19 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JB2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JB2:LOC" version="1">
               <Name>Jardim Botânico</Name>
               <Location><Longitude>-8.643722</Longitude><Latitude>41.154389</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 20 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:FCUP2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:FCUP2:LOC" version="1">
               <Name>Faculdade de Ciências</Name>
               <Location><Longitude>-8.641035</Longitude><Latitude>41.153614</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 21 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PLNT2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PLNT2:LOC" version="1">
               <Name>Planetário</Name>
               <Location><Longitude>-8.637250</Longitude><Latitude>41.152694</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 22 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:GGT2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:GGT2:LOC" version="1">
               <Name>Gólgota</Name>
               <Location><Longitude>-8.634111</Longitude><Latitude>41.152444</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 23 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JM2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JM2:LOC" version="1">
               <Name>Junta Massarelos</Name>
               <Location><Longitude>-8.630306</Longitude><Latitude>41.152528</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 24 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRG6:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRG6:LOC" version="1">
               <Name>Praça da Galiza</Name>
               <Location><Longitude>-8.627780</Longitude><Latitude>41.152370</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 25 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PAL4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PAL4:LOC" version="1">
               <Name>Palácio</Name>
               <Location><Longitude>-8.624756</Longitude><Latitude>41.148321</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 26 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:HSA:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:HSA:LOC" version="1">
               <Name>Hospital Santo António</Name>
               <Location><Longitude>-8.620199</Longitude><Latitude>41.146508</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 27 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CORD7:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CORD7:LOC" version="1">
               <Name>Cordoaria</Name>
               <Location><Longitude>-8.616026</Longitude><Latitude>41.145224</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 28 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:AL1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:AL1:LOC" version="1">
               <Name>Avenida dos Aliados</Name>
               <Location><Longitude>-8.610983</Longitude><Latitude>41.147208</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 29 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRD1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRD1:LOC" version="1">
               <Name>Trindade</Name>
               <Location><Longitude>-8.609572</Longitude><Latitude>41.151789</Latitude></Location>
             </ScheduledStopPoint>
             <!-- seq 30 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:JN4:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:JN4:LOC" version="1">
               <Name>Jornal de Notícias</Name>
               <Location><Longitude>-8.607705</Longitude><Latitude>41.153388</Latitude></Location>
             </ScheduledStopPoint>
@@ -405,42 +405,42 @@
               Route IDA: Bolhão → Castelo do Queijo (direction_id=0)
               30 paragens, percurso normal (versão completa)
             -->
-            <Route id="PT:STCP:Route:200_IDA:LOC" version="1">
+            <Route id="PT:EXEMPLO:Route:200_IDA:LOC" version="1">
               <Name>200 IDA — Bolhão → Castelo do Queijo</Name>
-              <lineRef ref="PT:STCP:Line:200:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:200_CQ:LOC" version="1"/>
+              <lineRef ref="PT:EXEMPLO:Line:200:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:200_CQ:LOC" version="1"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_01:LOC" version="1" order="1"><PointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_02:LOC" version="1" order="2"><PointRef ref="PT:STCP:ScheduledStopPoint:MCBL:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_03:LOC" version="1" order="3"><PointRef ref="PT:STCP:ScheduledStopPoint:PRDJ:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_04:LOC" version="1" order="4"><PointRef ref="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_05:LOC" version="1" order="5"><PointRef ref="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_06:LOC" version="1" order="6"><PointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_07:LOC" version="1" order="7"><PointRef ref="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_08:LOC" version="1" order="8"><PointRef ref="PT:STCP:ScheduledStopPoint:PAL2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_09:LOC" version="1" order="9"><PointRef ref="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_10:LOC" version="1" order="10"><PointRef ref="PT:STCP:ScheduledStopPoint:JM1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_11:LOC" version="1" order="11"><PointRef ref="PT:STCP:ScheduledStopPoint:GGT1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_12:LOC" version="1" order="12"><PointRef ref="PT:STCP:ScheduledStopPoint:PLNT1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_13:LOC" version="1" order="13"><PointRef ref="PT:STCP:ScheduledStopPoint:FCUP1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_14:LOC" version="1" order="14"><PointRef ref="PT:STCP:ScheduledStopPoint:JB1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_15:LOC" version="1" order="15"><PointRef ref="PT:STCP:ScheduledStopPoint:LRD1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_16:LOC" version="1" order="16"><PointRef ref="PT:STCP:ScheduledStopPoint:PLM1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_17:LOC" version="1" order="17"><PointRef ref="PT:STCP:ScheduledStopPoint:FLUN1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_18:LOC" version="1" order="18"><PointRef ref="PT:STCP:ScheduledStopPoint:PG1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_19:LOC" version="1" order="19"><PointRef ref="PT:STCP:ScheduledStopPoint:PT3:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_20:LOC" version="1" order="20"><PointRef ref="PT:STCP:ScheduledStopPoint:TRR3:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_21:LOC" version="1" order="21"><PointRef ref="PT:STCP:ScheduledStopPoint:PCL1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_22:LOC" version="1" order="22"><PointRef ref="PT:STCP:ScheduledStopPoint:UC1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_23:LOC" version="1" order="23"><PointRef ref="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_24:LOC" version="1" order="24"><PointRef ref="PT:STCP:ScheduledStopPoint:LIEG1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_25:LOC" version="1" order="25"><PointRef ref="PT:STCP:ScheduledStopPoint:CRTO3:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_26:LOC" version="1" order="26"><PointRef ref="PT:STCP:ScheduledStopPoint:MLH5:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_27:LOC" version="1" order="27"><PointRef ref="PT:STCP:ScheduledStopPoint:FCH1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_28:LOC" version="1" order="28"><PointRef ref="PT:STCP:ScheduledStopPoint:HMLM3:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_29:LOC" version="1" order="29"><PointRef ref="PT:STCP:ScheduledStopPoint:TIM1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_IDA_30:LOC" version="1" order="30"><PointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_01:LOC" version="1" order="1"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_02:LOC" version="1" order="2"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MCBL:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_03:LOC" version="1" order="3"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRDJ:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_04:LOC" version="1" order="4"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_05:LOC" version="1" order="5"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_06:LOC" version="1" order="6"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_07:LOC" version="1" order="7"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_08:LOC" version="1" order="8"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PAL2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_09:LOC" version="1" order="9"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_10:LOC" version="1" order="10"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JM1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_11:LOC" version="1" order="11"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGT1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_12:LOC" version="1" order="12"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLNT1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_13:LOC" version="1" order="13"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCUP1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_14:LOC" version="1" order="14"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JB1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_15:LOC" version="1" order="15"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:LRD1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_16:LOC" version="1" order="16"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLM1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_17:LOC" version="1" order="17"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FLUN1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_18:LOC" version="1" order="18"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PG1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_19:LOC" version="1" order="19"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PT3:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_20:LOC" version="1" order="20"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRR3:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_21:LOC" version="1" order="21"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PCL1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_22:LOC" version="1" order="22"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:UC1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_23:LOC" version="1" order="23"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_24:LOC" version="1" order="24"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:LIEG1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_25:LOC" version="1" order="25"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CRTO3:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_26:LOC" version="1" order="26"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MLH5:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_27:LOC" version="1" order="27"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCH1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_28:LOC" version="1" order="28"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:HMLM3:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_29:LOC" version="1" order="29"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TIM1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_IDA_30:LOC" version="1" order="30"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/></PointOnRoute>
               </pointsInSequence>
             </Route>
 
@@ -449,84 +449,84 @@
               31 paragens — inclui Pero Covilhã e Jacinto Nunes (não existem na IDA)
               e algumas paragens têm stop_id diferente (sentido oposto da rua).
             -->
-            <Route id="PT:STCP:Route:200_VOLTA:LOC" version="1">
+            <Route id="PT:EXEMPLO:Route:200_VOLTA:LOC" version="1">
               <Name>200 VOLTA — Castelo do Queijo → Bolhão</Name>
-              <lineRef ref="PT:STCP:Line:200:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:200_BL:LOC" version="1"/>
+              <lineRef ref="PT:EXEMPLO:Line:200:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:200_BL:LOC" version="1"/>
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_01:LOC" version="1" order="1"><PointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_02:LOC" version="1" order="2"><PointRef ref="PT:STCP:ScheduledStopPoint:TIM2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_03:LOC" version="1" order="3"><PointRef ref="PT:STCP:ScheduledStopPoint:PCV2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_04:LOC" version="1" order="4"><PointRef ref="PT:STCP:ScheduledStopPoint:FCH2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_05:LOC" version="1" order="5"><PointRef ref="PT:STCP:ScheduledStopPoint:MLH3:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_06:LOC" version="1" order="6"><PointRef ref="PT:STCP:ScheduledStopPoint:JNN2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_07:LOC" version="1" order="7"><PointRef ref="PT:STCP:ScheduledStopPoint:CRTO4:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_08:LOC" version="1" order="8"><PointRef ref="PT:STCP:ScheduledStopPoint:LIEG2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_09:LOC" version="1" order="9"><PointRef ref="PT:STCP:ScheduledStopPoint:DIU1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_10:LOC" version="1" order="10"><PointRef ref="PT:STCP:ScheduledStopPoint:MFZ2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_11:LOC" version="1" order="11"><PointRef ref="PT:STCP:ScheduledStopPoint:UC2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_12:LOC" version="1" order="12"><PointRef ref="PT:STCP:ScheduledStopPoint:PCL2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_13:LOC" version="1" order="13"><PointRef ref="PT:STCP:ScheduledStopPoint:TRR4:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_14:LOC" version="1" order="14"><PointRef ref="PT:STCP:ScheduledStopPoint:PT2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_15:LOC" version="1" order="15"><PointRef ref="PT:STCP:ScheduledStopPoint:PG2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_16:LOC" version="1" order="16"><PointRef ref="PT:STCP:ScheduledStopPoint:FLUN2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_17:LOC" version="1" order="17"><PointRef ref="PT:STCP:ScheduledStopPoint:PLM2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_18:LOC" version="1" order="18"><PointRef ref="PT:STCP:ScheduledStopPoint:LRD2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_19:LOC" version="1" order="19"><PointRef ref="PT:STCP:ScheduledStopPoint:JB2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_20:LOC" version="1" order="20"><PointRef ref="PT:STCP:ScheduledStopPoint:FCUP2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_21:LOC" version="1" order="21"><PointRef ref="PT:STCP:ScheduledStopPoint:PLNT2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_22:LOC" version="1" order="22"><PointRef ref="PT:STCP:ScheduledStopPoint:GGT2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_23:LOC" version="1" order="23"><PointRef ref="PT:STCP:ScheduledStopPoint:JM2:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_24:LOC" version="1" order="24"><PointRef ref="PT:STCP:ScheduledStopPoint:PRG6:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_25:LOC" version="1" order="25"><PointRef ref="PT:STCP:ScheduledStopPoint:PAL4:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_26:LOC" version="1" order="26"><PointRef ref="PT:STCP:ScheduledStopPoint:HSA:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_27:LOC" version="1" order="27"><PointRef ref="PT:STCP:ScheduledStopPoint:CORD7:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_28:LOC" version="1" order="28"><PointRef ref="PT:STCP:ScheduledStopPoint:AL1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_29:LOC" version="1" order="29"><PointRef ref="PT:STCP:ScheduledStopPoint:TRD1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_30:LOC" version="1" order="30"><PointRef ref="PT:STCP:ScheduledStopPoint:JN4:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:200_VOLTA_31:LOC" version="1" order="31"><PointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_01:LOC" version="1" order="1"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_02:LOC" version="1" order="2"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TIM2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_03:LOC" version="1" order="3"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PCV2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_04:LOC" version="1" order="4"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCH2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_05:LOC" version="1" order="5"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MLH3:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_06:LOC" version="1" order="6"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JNN2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_07:LOC" version="1" order="7"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CRTO4:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_08:LOC" version="1" order="8"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:LIEG2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_09:LOC" version="1" order="9"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:DIU1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_10:LOC" version="1" order="10"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:MFZ2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_11:LOC" version="1" order="11"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:UC2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_12:LOC" version="1" order="12"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PCL2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_13:LOC" version="1" order="13"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRR4:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_14:LOC" version="1" order="14"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PT2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_15:LOC" version="1" order="15"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PG2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_16:LOC" version="1" order="16"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FLUN2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_17:LOC" version="1" order="17"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLM2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_18:LOC" version="1" order="18"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:LRD2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_19:LOC" version="1" order="19"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JB2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_20:LOC" version="1" order="20"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCUP2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_21:LOC" version="1" order="21"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLNT2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_22:LOC" version="1" order="22"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGT2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_23:LOC" version="1" order="23"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JM2:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_24:LOC" version="1" order="24"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRG6:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_25:LOC" version="1" order="25"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PAL4:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_26:LOC" version="1" order="26"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:HSA:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_27:LOC" version="1" order="27"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CORD7:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_28:LOC" version="1" order="28"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:AL1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_29:LOC" version="1" order="29"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_30:LOC" version="1" order="30"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:JN4:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:200_VOLTA_31:LOC" version="1" order="31"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/></PointOnRoute>
               </pointsInSequence>
             </Route>
           </routes>
 
           <journeyPatterns>
             <!-- Padrão IDA completo -->
-            <ServiceJourneyPattern id="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1">
+            <ServiceJourneyPattern id="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1">
               <Name>200 IDA — Normal (30 paragens)</Name>
-              <RouteRef ref="PT:STCP:Route:200_IDA:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:200_CQ:LOC" version="1"/>
+              <RouteRef ref="PT:EXEMPLO:Route:200_IDA:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:200_CQ:LOC" version="1"/>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_01:LOC" version="1" order="1"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/><ForAlighting>false</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_02:LOC" version="1" order="2"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:MCBL:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_03:LOC" version="1" order="3"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PRDJ:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_04:LOC" version="1" order="4"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_05:LOC" version="1" order="5"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_06:LOC" version="1" order="6"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_07:LOC" version="1" order="7"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_08:LOC" version="1" order="8"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PAL2:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_09:LOC" version="1" order="9"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PRG4:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_10:LOC" version="1" order="10"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:JM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_11:LOC" version="1" order="11"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:GGT1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_12:LOC" version="1" order="12"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PLNT1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_13:LOC" version="1" order="13"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:FCUP1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_14:LOC" version="1" order="14"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:JB1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_15:LOC" version="1" order="15"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:LRD1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_16:LOC" version="1" order="16"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PLM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_17:LOC" version="1" order="17"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:FLUN1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_18:LOC" version="1" order="18"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PG1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_19:LOC" version="1" order="19"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PT3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_20:LOC" version="1" order="20"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TRR3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_21:LOC" version="1" order="21"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PCL1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_22:LOC" version="1" order="22"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:UC1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_23:LOC" version="1" order="23"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:MFZ1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_24:LOC" version="1" order="24"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:LIEG1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_25:LOC" version="1" order="25"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CRTO3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_26:LOC" version="1" order="26"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:MLH5:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_27:LOC" version="1" order="27"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:FCH1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_28:LOC" version="1" order="28"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:HMLM3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_29:LOC" version="1" order="29"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TIM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:200_IDA_30:LOC" version="1" order="30"><ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CQ10:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>false</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1" order="1"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/><ForAlighting>false</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_02:LOC" version="1" order="2"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:MCBL:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_03:LOC" version="1" order="3"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRDJ:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_04:LOC" version="1" order="4"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_05:LOC" version="1" order="5"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_06:LOC" version="1" order="6"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_07:LOC" version="1" order="7"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_08:LOC" version="1" order="8"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PAL2:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_09:LOC" version="1" order="9"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRG4:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_10:LOC" version="1" order="10"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:JM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_11:LOC" version="1" order="11"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGT1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_12:LOC" version="1" order="12"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLNT1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_13:LOC" version="1" order="13"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCUP1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_14:LOC" version="1" order="14"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:JB1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_15:LOC" version="1" order="15"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:LRD1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_16:LOC" version="1" order="16"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PLM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_17:LOC" version="1" order="17"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:FLUN1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_18:LOC" version="1" order="18"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PG1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_19:LOC" version="1" order="19"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PT3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_20:LOC" version="1" order="20"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRR3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_21:LOC" version="1" order="21"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PCL1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_22:LOC" version="1" order="22"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:UC1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_23:LOC" version="1" order="23"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:MFZ1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_24:LOC" version="1" order="24"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:LIEG1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_25:LOC" version="1" order="25"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CRTO3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_26:LOC" version="1" order="26"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:MLH5:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_27:LOC" version="1" order="27"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:FCH1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_28:LOC" version="1" order="28"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:HMLM3:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_29:LOC" version="1" order="29"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TIM1:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding></StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1" order="30"><ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CQ10:LOC" version="1"/><ForAlighting>true</ForAlighting><ForBoarding>false</ForBoarding></StopPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
           </journeyPatterns>
@@ -539,14 +539,14 @@
           -->
 
           <destinationDisplays>
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:CQ:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:CQ:LOC" version="1">
               <FrontText>Castelo do Queijo</FrontText>
             </DestinationDisplay>
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:BL:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:BL:LOC" version="1">
               <FrontText>Bolhão</FrontText>
             </DestinationDisplay>
             <!-- trip_headsign "Foz (Mercado)" para viagens curtas -->
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:MFZ:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:MFZ:LOC" version="1">
               <FrontText>Foz (Mercado)</FrontText>
             </DestinationDisplay>
           </destinationDisplays>

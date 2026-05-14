@@ -36,7 +36,7 @@ Reescreva o calendário de Maio de 2026 usando **apenas** `calendar_dates.txt` c
 ## Questões de Reflexão
 
 1. Qual das duas abordagens (regras+exceções vs só exceções) é mais fácil de manter quando se adicionam novos feriados?
-2. A STCP usa `DOMINGOS|FERIADOS` como `service_id`. Porque é que as Best Practices desaconselham caracteres especiais nos IDs?
+2. A Operadora Exemplo usa `DOMINGOS|FERIADOS` como `service_id`. Porque é que as Best Practices desaconselham caracteres especiais nos IDs?
 3. Se a Carris Metropolitana precisasse de adicionar um quarto tipo de serviço (ex: vésperas de feriado com horário reduzido), que alterações seriam necessárias em cada abordagem?
 
 ---

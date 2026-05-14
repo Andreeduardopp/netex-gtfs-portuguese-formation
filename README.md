@@ -18,7 +18,7 @@ Recurso educativo aberto em português sobre **NeTEx** (Network Timetable Exchan
 
 ## Dados de exemplo
 
-A pasta [`exemplos/`](exemplos/) contém o feed GTFS real da STCP Porto (Linha 200, Bolhão–Castelo do Queijo) usado como rede âncora em ambos os cursos.
+A pasta [`exemplos/`](exemplos/) contém o feed GTFS real da Operadora Exemplo (Linha 200, Bolhão–Castelo do Queijo) usado como rede âncora em ambos os cursos.
 
 ---
 

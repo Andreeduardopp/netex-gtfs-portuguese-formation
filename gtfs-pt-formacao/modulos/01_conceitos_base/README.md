@@ -86,7 +86,7 @@ MCBL,Mercado do Bolhão,41.149509,-8.607564
 
 | Tipo | Formato | Exemplo |
 |------|---------|---------|
-| **ID** | String sem espaços (recomendado) | `BLRB1`, `200`, `STCP` |
+| **ID** | String sem espaços (recomendado) | `BLRB1`, `200`, `Operadora Exemplo` |
 | **Texto** | String UTF-8 | `Bolhão`, `Mercado do Bolhão` |
 | **Latitude** | Decimal (graus, WGS 84) | `41.151868` |
 | **Longitude** | Decimal (graus, WGS 84) | `-8.607115` |
@@ -94,7 +94,7 @@ MCBL,Mercado do Bolhão,41.149509,-8.607564
 | **Data** | `YYYYMMDD` | `20260430` |
 | **Inteiro** | Número inteiro | `0`, `1`, `3` |
 | **Cor** | Hexadecimal (6 dígitos, sem `#`) | `187EC2`, `FFFFFF` |
-| **URL** | URL completo | `https://www.stcp.pt` |
+| **URL** | URL completo | `https://www.exemplo.pt` |
 | **Timezone** | Fuso horário IANA | `Europe/Lisbon` |
 
 > **Atenção ao formato de hora**: no GTFS, horas que passam da meia-noite usam valores superiores a `24:00:00`. Uma viagem que chega à 1:30 da manhã é representada como `25:30:00` se começou antes da meia-noite. Isto garante que a sequência temporal de uma viagem é sempre crescente.
@@ -104,7 +104,7 @@ MCBL,Mercado do Bolhão,41.149509,-8.607564
 O feed GTFS é distribuído como um ficheiro `.zip` que contém diretamente os ficheiros `.txt` na raiz — sem pastas intermediárias: [[BP-01]](#BP-01)
 
 ```
-feed_stcp.zip
+feed_exemplo.zip
 ├── agency.txt
 ├── routes.txt
 ├── stops.txt
@@ -198,7 +198,7 @@ Define a hora de passagem de cada viagem em cada paragem.
 | `stop_id` | ID | Sim | Em que paragem |
 | `stop_sequence` | Inteiro | Sim | Ordem de passagem (crescente) |
 
-> Este é tipicamente o **ficheiro mais pesado** do feed — a STCP Linha 200 tem ~10.000 registos só para `stop_times.txt`.
+> Este é tipicamente o **ficheiro mais pesado** do feed — a Operadora Exemplo Linha 200 tem ~10.000 registos só para `stop_times.txt`.
 
 ### 3.6 `calendar.txt` / `calendar_dates.txt` — O Calendário
 
@@ -221,7 +221,7 @@ Definem **quando** cada `service_id` está ativo.
 | `date` | Data | Sim | Data da exceção |
 | `exception_type` | Inteiro | Sim | 1=adição, 2=remoção |
 
-> A STCP usa **exclusivamente `calendar_dates.txt`** com `exception_type=1`, listando explicitamente cada data ativa. Esta abordagem é comum entre operadores portugueses. Os dois ficheiros serão explorados em detalhe no Módulo 4.
+> A Operadora Exemplo usa **exclusivamente `calendar_dates.txt`** com `exception_type=1`, listando explicitamente cada data ativa. Esta abordagem é comum entre operadores portugueses. Os dois ficheiros serão explorados em detalhe no Módulo 4.
 
 ---
 
@@ -256,17 +256,17 @@ Define o traçado geográfico das rotas no mapa. Cada shape é uma sequência de
 
 ## 5. Anatomia de um Feed GTFS Real
 
-O feed GTFS da STCP (Linha 200) disponível em `exemplos/rede_exemplo_portugal/gtfs/` contém: [[DATA-01]](#DATA-01)
+O feed GTFS da Operadora Exemplo (Linha 200) disponível em `exemplos/rede_exemplo_portugal/gtfs/` contém: [[DATA-01]](#DATA-01)
 
 | Ficheiro | Registos | Descrição |
 |----------|----------|-----------|
-| `agency.txt` | 1 | STCP |
+| `agency.txt` | 1 | Operadora Exemplo |
 | `routes.txt` | 1 | Linha 200 |
 | `stops.txt` | ~59 | Paragens IDA + VOLTA |
 | `trips.txt` | ~340 | Viagens (3 tipos de dia × ~57 viagens × 2 direções) |
 | `stop_times.txt` | ~10.000 | Horários de passagem |
 | `calendar_dates.txt` | ~900 | Datas ativas por service_id |
-| `feed_info.txt` | 1 | Metadados da STCP |
+| `feed_info.txt` | 1 | Metadados da Operadora Exemplo |
 
 Nos módulos seguintes, vamos explorar cada um destes ficheiros em detalhe, usando os dados reais da Linha 200 como base.
 
@@ -275,7 +275,7 @@ Nos módulos seguintes, vamos explorar cada um destes ficheiros em detalhe, usan
 ## Exemplos
 
 Os ficheiros de exemplo deste módulo estão disponíveis na pasta principal de dados:
-- [`exemplos/rede_exemplo_portugal/gtfs/`](../../exemplos/rede_exemplo_portugal/gtfs/) — Feed GTFS completo da STCP Linha 200
+- [`exemplos/rede_exemplo_portugal/gtfs/`](../../exemplos/rede_exemplo_portugal/gtfs/) — Feed GTFS completo da Operadora Exemplo Linha 200
 
 ---
 
@@ -291,4 +291,4 @@ Os ficheiros de exemplo deste módulo estão disponíveis na pasta principal de 
 |----|-----------|
 | <a id="STD-01"></a>[STD-01] | MobilityData. "GTFS Schedule Reference." https://gtfs.org/schedule/reference |
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

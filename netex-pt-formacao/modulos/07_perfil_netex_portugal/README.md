@@ -116,7 +116,7 @@ PT:<CodigoOrganizacao>:<TipoDeObjecto>:<IdLocal>:LOC
 | Organização | Código |
 |------------|--------|
 | IMT (autoridade nacional) | `IMT` |
-| STCP (Porto) | `STCP` |
+| Operadora Exemplo (Porto) | `Operadora Exemplo` |
 | Carris (Lisboa) | `Carris` |
 | Metro do Porto | `MetroPorto` |
 | Metro de Lisboa | `MetroLisboa` |
@@ -133,12 +133,12 @@ PT:<CodigoOrganizacao>:<TipoDeObjecto>:<IdLocal>:LOC
 | Tipo | Exemplo de ID |
 |------|---------------|
 | `Authority` | `PT:IMT:Authority:IMT:LOC` |
-| `Operator` | `PT:STCP:Operator:STCP:LOC` |
-| `Line` | `PT:STCP:Line:200:LOC` |
-| `StopPlace` | `PT:STCP:StopPlace:Bolhao:LOC` |
-| `Quay` | `PT:STCP:Quay:Bolhao_IDA:LOC` |
-| `ScheduledStopPoint` | `PT:STCP:ScheduledStopPoint:BLRB1:LOC` |
-| `ServiceJourney` | `PT:STCP:ServiceJourney:200_DU_0600:LOC` |
+| `Operator` | `PT:EXEMPLO:Operator:Operadora Exemplo:LOC` |
+| `Line` | `PT:EXEMPLO:Line:200:LOC` |
+| `StopPlace` | `PT:EXEMPLO:StopPlace:Bolhao:LOC` |
+| `Quay` | `PT:EXEMPLO:Quay:Bolhao_IDA:LOC` |
+| `ScheduledStopPoint` | `PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC` |
+| `ServiceJourney` | `PT:EXEMPLO:ServiceJourney:200_DU_0600:LOC` |
 
 ### 3.3 O sufixo `:LOC`
 
@@ -164,7 +164,7 @@ O NAP Portugal aceita ficheiros NeTEx como **pacote ZIP** com a seguinte estrutu
 **Convenção de nomenclatura do ZIP:**
 
 ```
-STCP_NeTEx_2026-04-30.zip
+EXEMPLO_NeTEx_2026-04-30.zip
 ```
 
 ### 4.1 PublicationDelivery obrigatório em todos os ficheiros
@@ -172,7 +172,7 @@ STCP_NeTEx_2026-04-30.zip
 ```xml
 <PublicationDelivery version="1.0">
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
   ...
 </PublicationDelivery>
 ```
@@ -242,4 +242,4 @@ Para quem vier do projeto `etalab/netex-france-formation`, as diferenças princi
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
 | <a id="PT-02"></a>[PT-02] | IMT. "NAP Portugal — Portal do Ponto de Acesso Nacional." https://nap-portugal.imt-ip.pt |
 | <a id="PROJ-01"></a>[PROJ-01] | etalab / Direction interministérielle du numérique. "netex-france-formation." https://github.com/etalab/netex-france-formation |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

@@ -11,7 +11,7 @@
 | **Formato** | CSV (ficheiros `.txt` num `.zip`) | XML (por norma um `.xml` por `Frame`) |
 | **Modelo conceptual** | Pragmático, sem modelo formal | Baseado no Transmodel (CEN EN 12896) |
 | **Cobertura** | Horários, paragens, rotas, tarifas básicas | Tudo do GTFS + acessibilidade detalhada, multimodalidade, tarifas complexas |
-| **Identificadores** | Locais (sem formato obrigatório) | Globais, hierárquicos: `PT:STCP:Line:200:LOC` |
+| **Identificadores** | Locais (sem formato obrigatório) | Globais, hierárquicos: `PT:EXEMPLO:Line:200:LOC` |
 | **Versionamento** | Não existe nativamente | Nativo — cada objeto tem `version` e `validFrom/To` |
 | **Complexidade** | Baixa — 6 ficheiros obrigatórios | Alta — schema XSD extenso (~500 tipos XML) |
 | **Adoção** | 10.000+ agências globalmente | Obrigatório na UE (Regulamento 2024/490) |
@@ -47,7 +47,7 @@
 2. **Hierarquia de paragens** — `StopPlace` → `Quay` → `BoardingPosition`
 3. **Multimodalidade** — `AccessSpace` e `PathLink` para modelar nós intermodais
 4. **Tarifas avançadas** — passes mensais, bilhetes combinados, zonas variáveis
-5. **Identificadores globais** — formato `PT:STCP:StopPlace:BLRB:LOC`
+5. **Identificadores globais** — formato `PT:EXEMPLO:StopPlace:BLRB:LOC`
 6. **Perfis nacionais** — subconjuntos obrigatórios por país
 
 ## O que o GTFS Oferece que o NeTEx Não

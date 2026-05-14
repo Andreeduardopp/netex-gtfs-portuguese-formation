@@ -5,20 +5,20 @@
   Módulo 1 — Conceitos Base
 
   PARTE A — Identificadores Correctos:
-    STCP (Operator)       → PT:STCP:Operator:STCP:LOC
-    Linha 201 (Line)      → PT:STCP:Line:201:LOC
-    Paragem 0AAL2 (SSP)   → PT:STCP:ScheduledStopPoint:0AAL2:LOC
-    Linha 300 (Line)      → PT:STCP:Line:300:LOC
+    EXEMPLO (Operator)       → PT:EXEMPLO:Operator:EXEMPLO:LOC
+    Linha 201 (Line)      → PT:EXEMPLO:Line:201:LOC
+    Paragem 0AAL2 (SSP)   → PT:EXEMPLO:ScheduledStopPoint:0AAL2:LOC
+    Linha 300 (Line)      → PT:EXEMPLO:Line:300:LOC
     IMT (Authority)       → PT:IMT:Authority:IMT:LOC
       (nota: o "operador" no ID do Authority é o código da própria autoridade)
 
   PARTE B — Erros nos Fragmentos:
     Fragmento 1: ID "200" não tem o formato hierárquico.
-      Correcto: id="PT:STCP:Line:200:LOC"
+      Correcto: id="PT:EXEMPLO:Line:200:LOC"
     Fragmento 2: lineRef usa "200" em vez do ID completo.
-      Correcto: ref="PT:STCP:Line:200:LOC"
+      Correcto: ref="PT:EXEMPLO:Line:200:LOC"
     Fragmento 3: Falta o atributo version="1" no Operator.
-      Correcto: <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+      Correcto: <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
 
   PARTE C — ResourceFrame completo (ver abaixo):
 -->
@@ -29,10 +29,10 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Exercicio01:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Exercicio01:LOC" version="1">
 
       <validBetween>
         <!-- FromDate = 2026-04-30 conforme pedido no enunciado -->
@@ -42,10 +42,10 @@
       <frames>
 
         <!--
-          ResourceFrame com Authority (IMT) e Operator (STCP).
+          ResourceFrame com Authority (IMT) e Operator (EXEMPLO).
           Todos os campos do agency.txt GTFS mapeados para NeTEx.
         -->
-        <ResourceFrame id="PT:STCP:ResourceFrame:Exercicio01_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:Exercicio01_RF:LOC" version="1">
           <organisations>
 
             <!--
@@ -62,10 +62,10 @@
             </Authority>
 
             <!--
-              Operator: STCP — mapeia directamente o agency.txt GTFS.
+              Operator: EXEMPLO — mapeia directamente o agency.txt GTFS.
 
               Mapeamento campo a campo:
-                agency_id    → id (PT:STCP:Operator:STCP:LOC)
+                agency_id    → id (PT:EXEMPLO:Operator:EXEMPLO:LOC)
                 agency_name  → Name (nome completo)
                              → ShortName (nome abreviado)
                              → PublicCode (código público)
@@ -73,12 +73,12 @@
                 agency_phone → ContactDetails/Phone
                 (agency_timezone e agency_lang são implícitos pelo país PT)
             -->
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
               <Name>Sociedade de Transportes Colectivos do Porto, E.I.M., S.A.</Name>
-              <ShortName>STCP</ShortName>
-              <PublicCode>STCP</PublicCode>
+              <ShortName>EXEMPLO</ShortName>
+              <PublicCode>EXEMPLO</PublicCode>
               <ContactDetails>
-                <Url>https://www.stcp.pt</Url>
+                <Url>https://www.exemplo.pt</Url>
                 <!--
                   Phone: mapeado de agency_phone.
                   GTFS: "225071000" → NeTEx: incluir indicativo internacional

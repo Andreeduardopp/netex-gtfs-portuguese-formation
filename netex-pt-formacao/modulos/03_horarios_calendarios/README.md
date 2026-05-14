@@ -6,7 +6,7 @@ Após completar este módulo, o leitor será capaz de:
 
 - Modelar uma `ServiceJourney` com tempos de passagem (`TimetabledPassingTime`) em NeTEx
 - Construir um `TimetableFrame` completo para a Linha 200
-- Definir `DayType` para os três tipos de serviço da STCP (dias úteis, sábados, domingos/feriados)
+- Definir `DayType` para os três tipos de serviço da Operadora Exemplo (dias úteis, sábados, domingos/feriados)
 - Usar `DayTypeAssignment` e `OperatingDay` para mapear `calendar_dates.txt` para NeTEx
 - Converter `trips.txt` + `stop_times.txt` + `calendar_dates.txt` para os equivalentes NeTEx
 
@@ -30,21 +30,21 @@ A distinção fundamental: em GTFS, os horários de uma viagem estão numa tabel
 ### 1.2 Estrutura de uma ServiceJourney
 
 ```xml
-<ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0600:LOC" version="1">
+<ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0600:LOC" version="1">
   <!-- Referência ao padrão de paragens (definido no Módulo 2) -->
-  <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
+  <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
   <!-- Referência ao tipo de dia (definido na Secção 2) -->
   <DayTypeRefs>
-    <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+    <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
   </DayTypeRefs>
   <passingTimes>
     <TimetabledPassingTime>
-      <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+      <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
       <DepartureTime>06:00:00</DepartureTime>
     </TimetabledPassingTime>
     <!-- ... outros tempos ... -->
     <TimetabledPassingTime>
-      <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+      <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
       <ArrivalTime>06:27:00</ArrivalTime>
     </TimetabledPassingTime>
   </passingTimes>
@@ -127,7 +127,7 @@ O GTFS usa dois mecanismos para calendários:
 - `calendar.txt`: regras por dia da semana + datas de início/fim
 - `calendar_dates.txt`: exceções data a data (additions ou removals)
 
-A STCP usa **exclusivamente `calendar_dates.txt`** com `exception_type=1` (service added), ou seja, lista explicitamente cada data em que cada `service_id` está ativo. Três tipos de serviço:
+A Operadora Exemplo usa **exclusivamente `calendar_dates.txt`** com `exception_type=1` (service added), ou seja, lista explicitamente cada data em que cada `service_id` está ativo. Três tipos de serviço:
 
 | `service_id` GTFS | Descrição | Dias típicos |
 |---|---|---|
@@ -140,7 +140,7 @@ A STCP usa **exclusivamente `calendar_dates.txt`** com `exception_type=1` (servi
 Um **`DayType`** define uma categoria de dias de operação. [[STD-02]](#STD-02) Corresponde ao `service_id` do GTFS, mas é mais expressivo, pode incluir propriedades como dias da semana.
 
 ```xml
-<DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1">
+<DayType id="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1">
   <Name>Dias Úteis</Name>
   <properties>
     <PropertyOfDay>
@@ -182,22 +182,22 @@ DayTypeAssignment ← OperatingDay 2026-05-05 (terça-feira)
 Todos estes objetos vivem no **`ServiceCalendarFrame`**:
 
 ```xml
-<ServiceCalendarFrame id="PT:STCP:ServiceCalendarFrame:2026-2027:LOC" version="1">
+<ServiceCalendarFrame id="PT:EXEMPLO:ServiceCalendarFrame:2026-2027:LOC" version="1">
   <dayTypes>
-    <DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1"> ... </DayType>
-    <DayType id="PT:STCP:DayType:Sabados:LOC" version="1"> ... </DayType>
-    <DayType id="PT:STCP:DayType:DomingosFeriados:LOC" version="1"> ... </DayType>
+    <DayType id="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"> ... </DayType>
+    <DayType id="PT:EXEMPLO:DayType:Sabados:LOC" version="1"> ... </DayType>
+    <DayType id="PT:EXEMPLO:DayType:DomingosFeriados:LOC" version="1"> ... </DayType>
   </dayTypes>
   <operatingDays>
-    <OperatingDay id="PT:STCP:OperatingDay:20260430:LOC" version="1">
+    <OperatingDay id="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1">
       <CalendarDate>2026-04-30</CalendarDate>
     </OperatingDay>
     <!-- ... um OperatingDay por data ... -->
   </operatingDays>
   <dayTypeAssignments>
-    <DayTypeAssignment id="PT:STCP:DTA:DU_20260430:LOC" version="1" order="1">
-      <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-      <OperatingDayRef ref="PT:STCP:OperatingDay:20260430:LOC" version="1"/>
+    <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260430:LOC" version="1" order="1">
+      <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+      <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1"/>
     </DayTypeAssignment>
     <!-- ... -->
   </dayTypeAssignments>
@@ -269,7 +269,7 @@ Para a Linha 200 completa, o `TimetableFrame` conteria ~340 `ServiceJourney` (ID
 
 ---
 
-## 5. Horários da Linha 200 — Dados Reais STCP
+## 5. Horários da Linha 200 — Dados Reais Operadora Exemplo
 
 Tempos de passagem reais para a partida das 06:00 de Bolhão, comparando os 3 tipos de serviço: [[DATA-03]](#DATA-03)
 
@@ -304,4 +304,4 @@ Ligeira diferença no Carmo (+1 min em dias úteis) — provavelmente maior trá
 | <a id="STD-01"></a>[STD-01] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-1:2024 (Parte 1). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="STD-02"></a>[STD-02] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-2:2024 (Parte 2: Horários). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

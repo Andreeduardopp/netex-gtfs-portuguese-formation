@@ -9,7 +9,7 @@
   1. O que é igual entre 200_DU_0600 e 200_DU_0620:
      - DayTypeRef (ambas operam em DiasUteis)
      - JourneyPatternRef (mesmo padrão de paragens)
-     - OperatorRef (mesma STCP)
+     - OperatorRef (mesma EXEMPLO)
      - AccessibilityAssessment (mesmo veículo, mesma acessibilidade)
      - Estrutura dos TimetabledPassingTime (mesmos StopPointInJourneyPatternRef)
      O que muda: id da ServiceJourney, Name, os valores de ArrivalTime/DepartureTime.
@@ -38,10 +38,10 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Exercicio03:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Exercicio03:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
         <ToDate>2026-05-09</ToDate>
@@ -49,20 +49,20 @@
       <frames>
 
         <!-- PARTE A: ServiceCalendarFrame -->
-        <ServiceCalendarFrame id="PT:STCP:ServiceCalendarFrame:Exercicio03:LOC" version="1">
+        <ServiceCalendarFrame id="PT:EXEMPLO:ServiceCalendarFrame:Exercicio03:LOC" version="1">
 
           <dayTypes>
-            <DayType id="PT:STCP:DayType:DiasUteis:LOC" version="1">
+            <DayType id="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1">
               <Name>Dias Úteis</Name>
               <ShortName>DU</ShortName>
               <properties><PropertyOfDay><DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek></PropertyOfDay></properties>
             </DayType>
-            <DayType id="PT:STCP:DayType:Sabados:LOC" version="1">
+            <DayType id="PT:EXEMPLO:DayType:Sabados:LOC" version="1">
               <Name>Sábados</Name>
               <ShortName>SAB</ShortName>
               <properties><PropertyOfDay><DaysOfWeek>Saturday</DaysOfWeek></PropertyOfDay></properties>
             </DayType>
-            <DayType id="PT:STCP:DayType:DomingosFeriados:LOC" version="1">
+            <DayType id="PT:EXEMPLO:DayType:DomingosFeriados:LOC" version="1">
               <Name>Domingos e Feriados</Name>
               <ShortName>DF</ShortName>
               <properties><PropertyOfDay><DaysOfWeek>Sunday</DaysOfWeek></PropertyOfDay></properties>
@@ -70,74 +70,74 @@
           </dayTypes>
 
           <operatingDays>
-            <OperatingDay id="PT:STCP:OperatingDay:20260430:LOC" version="1"><CalendarDate>2026-04-30</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260501:LOC" version="1"><CalendarDate>2026-05-01</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260502:LOC" version="1"><CalendarDate>2026-05-02</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260503:LOC" version="1"><CalendarDate>2026-05-03</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260504:LOC" version="1"><CalendarDate>2026-05-04</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260505:LOC" version="1"><CalendarDate>2026-05-05</CalendarDate></OperatingDay>
-            <OperatingDay id="PT:STCP:OperatingDay:20260509:LOC" version="1"><CalendarDate>2026-05-09</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1"><CalendarDate>2026-04-30</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260501:LOC" version="1"><CalendarDate>2026-05-01</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260502:LOC" version="1"><CalendarDate>2026-05-02</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260503:LOC" version="1"><CalendarDate>2026-05-03</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260504:LOC" version="1"><CalendarDate>2026-05-04</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260505:LOC" version="1"><CalendarDate>2026-05-05</CalendarDate></OperatingDay>
+            <OperatingDay id="PT:EXEMPLO:OperatingDay:20260509:LOC" version="1"><CalendarDate>2026-05-09</CalendarDate></OperatingDay>
           </operatingDays>
 
           <dayTypeAssignments>
             <!-- 20260430 quinta-feira → DiasUteis -->
-            <DayTypeAssignment id="PT:STCP:DTA:DU_20260430:LOC" version="1" order="1">
-              <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260430:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260430:LOC" version="1" order="1">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260430:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260501 feriado nacional → DomingosFeriados (NÃO DiasUteis) -->
-            <DayTypeAssignment id="PT:STCP:DTA:DF_20260501:LOC" version="1" order="2">
-              <DayTypeRef ref="PT:STCP:DayType:DomingosFeriados:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260501:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DF_20260501:LOC" version="1" order="2">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DomingosFeriados:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260501:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260502 sábado → Sabados -->
-            <DayTypeAssignment id="PT:STCP:DTA:SAB_20260502:LOC" version="1" order="3">
-              <DayTypeRef ref="PT:STCP:DayType:Sabados:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260502:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:SAB_20260502:LOC" version="1" order="3">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:Sabados:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260502:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260503 domingo → DomingosFeriados -->
-            <DayTypeAssignment id="PT:STCP:DTA:DF_20260503:LOC" version="1" order="4">
-              <DayTypeRef ref="PT:STCP:DayType:DomingosFeriados:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260503:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DF_20260503:LOC" version="1" order="4">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DomingosFeriados:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260503:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260504 segunda → DiasUteis -->
-            <DayTypeAssignment id="PT:STCP:DTA:DU_20260504:LOC" version="1" order="5">
-              <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260504:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260504:LOC" version="1" order="5">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260504:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260505 terça → DiasUteis -->
-            <DayTypeAssignment id="PT:STCP:DTA:DU_20260505:LOC" version="1" order="6">
-              <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260505:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:DU_20260505:LOC" version="1" order="6">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260505:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
             <!-- 20260509 sábado → Sabados -->
-            <DayTypeAssignment id="PT:STCP:DTA:SAB_20260509:LOC" version="1" order="7">
-              <DayTypeRef ref="PT:STCP:DayType:Sabados:LOC" version="1"/>
-              <OperatingDayRef ref="PT:STCP:OperatingDay:20260509:LOC" version="1"/>
+            <DayTypeAssignment id="PT:EXEMPLO:DTA:SAB_20260509:LOC" version="1" order="7">
+              <DayTypeRef ref="PT:EXEMPLO:DayType:Sabados:LOC" version="1"/>
+              <OperatingDayRef ref="PT:EXEMPLO:OperatingDay:20260509:LOC" version="1"/>
               <isAvailable>true</isAvailable>
             </DayTypeAssignment>
           </dayTypeAssignments>
 
         </ServiceCalendarFrame>
 
-        <TimetableFrame id="PT:STCP:TimetableFrame:Exercicio03_TF:LOC" version="1">
+        <TimetableFrame id="PT:EXEMPLO:TimetableFrame:Exercicio03_TF:LOC" version="1">
           <vehicleJourneys>
 
             <!-- PARTE B: Viagem dias úteis 06:20 -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0620:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0620:LOC" version="1">
               <Name>200 IDA — Dias Úteis 06:20</Name>
               <DayTypeRefs>
-                <DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <AccessibilityAssessment id="PT:STCP:AA:200_DU_0620:LOC" version="1">
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:200_DU_0620:LOC" version="1">
                 <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                 <limitations>
                   <AccessibilityLimitation>
@@ -147,41 +147,41 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:20:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_06:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_06:LOC" version="1"/>
                   <ArrivalTime>06:25:00</ArrivalTime>
                   <DepartureTime>06:25:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_09:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_09:LOC" version="1"/>
                   <ArrivalTime>06:30:00</ArrivalTime>
                   <DepartureTime>06:30:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_23:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_23:LOC" version="1"/>
                   <ArrivalTime>06:41:00</ArrivalTime>
                   <DepartureTime>06:41:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:47:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
             </ServiceJourney>
 
             <!-- PARTE C: Viagem sábado 06:00 -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_SAB_0600:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_SAB_0600:LOC" version="1">
               <Name>200 IDA — Sábados 06:00</Name>
               <DayTypeRefs>
                 <!-- DayTypeRef diferente da viagem de dias úteis -->
-                <DayTypeRef ref="PT:STCP:DayType:Sabados:LOC" version="1"/>
+                <DayTypeRef ref="PT:EXEMPLO:DayType:Sabados:LOC" version="1"/>
               </DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <AccessibilityAssessment id="PT:STCP:AA:200_SAB_0600:LOC" version="1">
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:200_SAB_0600:LOC" version="1">
                 <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                 <limitations>
                   <AccessibilityLimitation>
@@ -191,26 +191,26 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:00:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_06:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_06:LOC" version="1"/>
                   <ArrivalTime>06:04:00</ArrivalTime>
                   <DepartureTime>06:04:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_09:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_09:LOC" version="1"/>
                   <ArrivalTime>06:10:00</ArrivalTime>
                   <DepartureTime>06:10:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_23:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_23:LOC" version="1"/>
                   <ArrivalTime>06:21:00</ArrivalTime>
                   <DepartureTime>06:21:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:27:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

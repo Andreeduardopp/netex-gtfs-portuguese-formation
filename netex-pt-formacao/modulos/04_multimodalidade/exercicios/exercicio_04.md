@@ -8,10 +8,10 @@
 
 A Trindade é um dos nós de transporte mais importantes do centro do Porto. É servida por:
 
-- **STCP** — autocarro: múltiplas linhas passam na Rua de Camões / Rua 31 de Janeiro
+- **Operadora Exemplo** — autocarro: múltiplas linhas passam na Rua de Camões / Rua 31 de Janeiro
 - **Metro do Porto** — estação Trindade (Linhas A, B, C, E, F — todas exceto Linha D)
 
-No feed GTFS da STCP, as paragens da Trindade incluem:
+No feed GTFS da Operadora Exemplo, as paragens da Trindade incluem:
 
 | stop_id | stop_name | stop_lat | stop_lon |
 |---------|-----------|----------|----------|
@@ -30,11 +30,11 @@ A estação de metro tem as seguintes coordenadas aproximadas:
 Crie um `SiteFrame` com o `StopPlace` para as paragens de autocarro da Trindade.
 
 **Requisitos:**
-1. `StopPlace` com id `PT:STCP:StopPlace:Trindade:LOC`, nome "Trindade", `StopPlaceType=onstreetBus`
+1. `StopPlace` com id `PT:EXEMPLO:StopPlace:Trindade:LOC`, nome "Trindade", `StopPlaceType=onstreetBus`
 2. Três `Quay` dentro do StopPlace:
-   - `PT:STCP:Quay:Trindade_TRD1:LOC` — nome "Trindade — TRD1", coords de TRD1
-   - `PT:STCP:Quay:Trindade_TRD2:LOC` — nome "Trindade — TRD2", coords de TRD2
-   - `PT:STCP:Quay:Trindade_TRD3:LOC` — nome "Trindade — TRD3", coords de TRD3
+   - `PT:EXEMPLO:Quay:Trindade_TRD1:LOC` — nome "Trindade — TRD1", coords de TRD1
+   - `PT:EXEMPLO:Quay:Trindade_TRD2:LOC` — nome "Trindade — TRD2", coords de TRD2
+   - `PT:EXEMPLO:Quay:Trindade_TRD3:LOC` — nome "Trindade — TRD3", coords de TRD3
 3. `StopPlace` para o metro adjacente:
    - Id: `PT:MetroPorto:StopPlace:Trindade_Metro:LOC`
    - Nome: "Trindade (Metro)"
@@ -62,9 +62,9 @@ Lembre-se:
 Crie um `ServiceFrame` com:
 
 1. Três `ScheduledStopPoint` (um por stop_id GTFS):
-   - `PT:STCP:ScheduledStopPoint:TRD1:LOC` — nome "Trindade"
-   - `PT:STCP:ScheduledStopPoint:TRD2:LOC` — nome "Trindade"
-   - `PT:STCP:ScheduledStopPoint:TRD3:LOC` — nome "Trindade"
+   - `PT:EXEMPLO:ScheduledStopPoint:TRD1:LOC` — nome "Trindade"
+   - `PT:EXEMPLO:ScheduledStopPoint:TRD2:LOC` — nome "Trindade"
+   - `PT:EXEMPLO:ScheduledStopPoint:TRD3:LOC` — nome "Trindade"
 
 2. Três `PassengerStopAssignment` ligando cada SSP ao respetivo Quay:
    - TRD1 → StopPlace:Trindade + Quay:Trindade_TRD1
@@ -76,7 +76,7 @@ Crie um `ServiceFrame` com:
 ## Questões de Reflexão
 
 **1. Centralização vs. distribuição de dados**
-No GTFS de Portugal, cada operador tem o seu feed independente (STCP, Metro Porto, CP são feeds separados). Em NeTEx, um único `SiteFrame` pode descrever os `StopPlace` de vários operadores.
+No GTFS de Portugal, cada operador tem o seu feed independente (Operadora Exemplo, Metro Porto, CP são feeds separados). Em NeTEx, um único `SiteFrame` pode descrever os `StopPlace` de vários operadores.
 
 Quais são as vantagens e desvantagens desta centralização? Quem deveria ser o `ParticipantRef` de um ficheiro que descreve a infraestrutura partilhada?
 

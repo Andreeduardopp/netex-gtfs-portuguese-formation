@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  SOLUÇÃO — Exercício 2: Rede de Transporte (Linha 201 STCP)
+  SOLUÇÃO — Exercício 2: Rede de Transporte (Linha 201 EXEMPLO)
   ===========================================================
   Módulo 2 — Rede de Transporte
 
@@ -40,47 +40,47 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Exercicio02:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Exercicio02:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
       </validBetween>
       <frames>
 
         <!-- PARTE A: ResourceFrame -->
-        <ResourceFrame id="PT:STCP:ResourceFrame:Exercicio02_RF:LOC" version="1">
+        <ResourceFrame id="PT:EXEMPLO:ResourceFrame:Exercicio02_RF:LOC" version="1">
           <organisations>
-            <Operator id="PT:STCP:Operator:STCP:LOC" version="1">
+            <Operator id="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1">
               <Name>Sociedade de Transportes Colectivos do Porto, E.I.M., S.A.</Name>
-              <ShortName>STCP</ShortName>
-              <PublicCode>STCP</PublicCode>
+              <ShortName>EXEMPLO</ShortName>
+              <PublicCode>EXEMPLO</PublicCode>
               <ContactDetails>
-                <Url>https://www.stcp.pt</Url>
+                <Url>https://www.exemplo.pt</Url>
               </ContactDetails>
             </Operator>
           </organisations>
         </ResourceFrame>
 
-        <ServiceFrame id="PT:STCP:ServiceFrame:Exercicio02_SF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:Exercicio02_SF:LOC" version="1">
 
-          <!-- Network: rede STCP, consistente com os exemplos do módulo -->
-          <Network id="PT:STCP:Network:STCP_Porto:LOC" version="1">
-            <Name>Rede de Autocarros STCP — Porto</Name>
-            <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+          <!-- Network: rede EXEMPLO, consistente com os exemplos do módulo -->
+          <Network id="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1">
+            <Name>Rede de Autocarros EXEMPLO — Porto</Name>
+            <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
           </Network>
 
           <!-- PARTE B: Line e Direction -->
 
           <!--
             Line 201: mesmos campos que a Linha 200, apenas route_id e nomes diferentes.
-            route_id=201 → id=PT:STCP:Line:201:LOC
+            route_id=201 → id=PT:EXEMPLO:Line:201:LOC
             route_long_name="Aliados-viso" → Name="Aliados — Viso"
-            Cor e modo de transporte são os mesmos (toda a frota STCP é azul, tipo=bus).
+            Cor e modo de transporte são os mesmos (toda a frota EXEMPLO é azul, tipo=bus).
           -->
           <lines>
-            <Line id="PT:STCP:Line:201:LOC" version="1">
+            <Line id="PT:EXEMPLO:Line:201:LOC" version="1">
               <Name>Aliados — Viso</Name>
               <ShortName>201</ShortName>
               <PublicCode>201</PublicCode>
@@ -92,9 +92,9 @@
                 <Colour>187EC2</Colour>
                 <TextColour>FFFFFF</TextColour>
               </Presentation>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <NetworkRef ref="PT:STCP:Network:STCP_Porto:LOC" version="1"/>
-              <Url>https://www.stcp.pt/pt/viajar/linhas/?linha=201</Url>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <NetworkRef ref="PT:EXEMPLO:Network:EXEMPLO_Porto:LOC" version="1"/>
+              <Url>https://www.exemplo.pt/pt/viajar/linhas/?linha=201</Url>
             </Line>
           </lines>
 
@@ -103,7 +103,7 @@
               trip_headsign="Viso" → Direction com Name="Viso"
               direction_id=0 → DirectionType=outbound
             -->
-            <Direction id="PT:STCP:Direction:201_VISO:LOC" version="1">
+            <Direction id="PT:EXEMPLO:Direction:201_VISO:LOC" version="1">
               <Name>Viso</Name>
             </Direction>
           </directions>
@@ -117,7 +117,7 @@
           <scheduledStopPoints>
 
             <!-- stop_id=AL1, "Av. Aliados", PRT1 — específico da Linha 201 -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:AL1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:AL1:LOC" version="1">
               <Name>Avenida dos Aliados</Name>
               <Location>
                 <Longitude>-8.610983</Longitude>
@@ -126,7 +126,7 @@
             </ScheduledStopPoint>
 
             <!-- stop_id=TRD6, "Trindade" — específico da Linha 201 (IDA) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:TRD6:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:TRD6:LOC" version="1">
               <Name>Trindade</Name>
               <Location>
                 <Longitude>-8.610854</Longitude>
@@ -135,7 +135,7 @@
             </ScheduledStopPoint>
 
             <!-- stop_id=PRFL — PARTILHADO com Linha 200 (mesmo id) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1">
               <Name>Praça Filipa de Lencastre</Name>
               <Location>
                 <Longitude>-8.612768</Longitude>
@@ -144,7 +144,7 @@
             </ScheduledStopPoint>
 
             <!-- stop_id=GGF — PARTILHADO com Linha 200 (mesmo id) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1">
               <Name>Guil. G. Fernandes</Name>
               <Location>
                 <Longitude>-8.614767</Longitude>
@@ -153,7 +153,7 @@
             </ScheduledStopPoint>
 
             <!-- stop_id=CMO — PARTILHADO com Linha 200 (mesmo id) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1">
               <Name>Carmo</Name>
               <Location>
                 <Longitude>-8.616926</Longitude>
@@ -162,7 +162,7 @@
             </ScheduledStopPoint>
 
             <!-- stop_id=HSA5 — PARTILHADO com Linha 200 (mesmo id) -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1">
               <Name>Hospital Santo António</Name>
               <Location>
                 <Longitude>-8.622450</Longitude>
@@ -174,52 +174,52 @@
 
           <!-- PARTE D: Route e ServiceJourneyPattern -->
           <routes>
-            <Route id="PT:STCP:Route:201_IDA:LOC" version="1">
+            <Route id="PT:EXEMPLO:Route:201_IDA:LOC" version="1">
               <Name>201 IDA — Aliados → Viso</Name>
-              <lineRef ref="PT:STCP:Line:201:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:201_VISO:LOC" version="1"/>
+              <lineRef ref="PT:EXEMPLO:Line:201:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:201_VISO:LOC" version="1"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_01:LOC" version="1" order="1"><PointRef ref="PT:STCP:ScheduledStopPoint:AL1:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_02:LOC" version="1" order="2"><PointRef ref="PT:STCP:ScheduledStopPoint:TRD6:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_03:LOC" version="1" order="3"><PointRef ref="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_04:LOC" version="1" order="4"><PointRef ref="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_05:LOC" version="1" order="5"><PointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/></PointOnRoute>
-                <PointOnRoute id="PT:STCP:PointOnRoute:201_IDA_06:LOC" version="1" order="6"><PointRef ref="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_01:LOC" version="1" order="1"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:AL1:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_02:LOC" version="1" order="2"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD6:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_03:LOC" version="1" order="3"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_04:LOC" version="1" order="4"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_05:LOC" version="1" order="5"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/></PointOnRoute>
+                <PointOnRoute id="PT:EXEMPLO:PointOnRoute:201_IDA_06:LOC" version="1" order="6"><PointRef ref="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1"/></PointOnRoute>
               </pointsInSequence>
             </Route>
           </routes>
 
           <journeyPatterns>
-            <ServiceJourneyPattern id="PT:STCP:SJP:201_IDA_NORMAL:LOC" version="1">
+            <ServiceJourneyPattern id="PT:EXEMPLO:SJP:201_IDA_NORMAL:LOC" version="1">
               <Name>201 IDA — Normal (6 paragens — extrato)</Name>
-              <RouteRef ref="PT:STCP:Route:201_IDA:LOC" version="1"/>
-              <DirectionRef ref="PT:STCP:Direction:201_VISO:LOC" version="1"/>
+              <RouteRef ref="PT:EXEMPLO:Route:201_IDA:LOC" version="1"/>
+              <DirectionRef ref="PT:EXEMPLO:Direction:201_VISO:LOC" version="1"/>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_01:LOC" version="1" order="1">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:AL1:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_01:LOC" version="1" order="1">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:AL1:LOC" version="1"/>
                   <ForAlighting>false</ForAlighting>
                   <ForBoarding>true</ForBoarding>
-                  <DestinationDisplayRef ref="PT:STCP:DestinationDisplay:VISO:LOC" version="1"/>
+                  <DestinationDisplayRef ref="PT:EXEMPLO:DestinationDisplay:VISO:LOC" version="1"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_02:LOC" version="1" order="2">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:TRD6:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_02:LOC" version="1" order="2">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:TRD6:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_03:LOC" version="1" order="3">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:PRFL:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_03:LOC" version="1" order="3">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:PRFL:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_04:LOC" version="1" order="4">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:GGF:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_04:LOC" version="1" order="4">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:GGF:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_05:LOC" version="1" order="5">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:CMO:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_05:LOC" version="1" order="5">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:CMO:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="PT:STCP:SPIJP:201_IDA_06:LOC" version="1" order="6">
-                  <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:HSA5:LOC" version="1"/>
+                <StopPointInJourneyPattern id="PT:EXEMPLO:SPIJP:201_IDA_06:LOC" version="1" order="6">
+                  <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:HSA5:LOC" version="1"/>
                   <ForAlighting>true</ForAlighting><ForBoarding>true</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
@@ -227,7 +227,7 @@
           </journeyPatterns>
 
           <destinationDisplays>
-            <DestinationDisplay id="PT:STCP:DestinationDisplay:VISO:LOC" version="1">
+            <DestinationDisplay id="PT:EXEMPLO:DestinationDisplay:VISO:LOC" version="1">
               <!-- trip_headsign="Viso" → FrontText="Viso" -->
               <FrontText>Viso</FrontText>
             </DestinationDisplay>

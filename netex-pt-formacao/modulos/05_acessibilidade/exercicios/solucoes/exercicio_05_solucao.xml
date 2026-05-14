@@ -53,10 +53,10 @@
     version="1.0">
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Exercicio05:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Exercicio05:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
         <ToDate>2027-04-29</ToDate>
@@ -64,19 +64,19 @@
       <frames>
 
         <!-- PARTE A + PARTE C: SiteFrame com AccessibilityAssessment nas paragens -->
-        <SiteFrame id="PT:STCP:SiteFrame:Exercicio05_SF:LOC" version="1">
+        <SiteFrame id="PT:EXEMPLO:SiteFrame:Exercicio05_SF:LOC" version="1">
           <stopPlaces>
 
             <!-- BLRB1 — wheelchair_boarding=1 → WheelchairAccess=yes -->
-            <StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
               <Name>Bolhão</Name>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
-                <Quay id="PT:STCP:Quay:BLRB1:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:BLRB1:LOC" version="1">
                   <Name>Bolhão (BLRB1)</Name>
                   <Centroid><Location><Longitude>-8.607115</Longitude><Latitude>41.151868</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_BLRB1:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_BLRB1:LOC" version="1">
                     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -92,15 +92,15 @@
             </StopPlace>
 
             <!-- CMO — wheelchair_boarding=1 → WheelchairAccess=yes -->
-            <StopPlace id="PT:STCP:StopPlace:Carmo:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Carmo:LOC" version="1">
               <Name>Carmo</Name>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
-                <Quay id="PT:STCP:Quay:CMO:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:CMO:LOC" version="1">
                   <Name>Carmo (CMO)</Name>
                   <Centroid><Location><Longitude>-8.614560</Longitude><Latitude>41.146210</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_CMO:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_CMO:LOC" version="1">
                     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -116,11 +116,11 @@
             </StopPlace>
 
             <!-- PRG4 — wheelchair_boarding=0 → WheelchairAccess=unknown -->
-            <StopPlace id="PT:STCP:StopPlace:PracaRepublica:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:PracaRepublica:LOC" version="1">
               <Name>Praça da Galiza</Name>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
-                <Quay id="PT:STCP:Quay:PRG4:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:PRG4:LOC" version="1">
                   <Name>Praça da Galiza (PRG4)</Name>
                   <Centroid><Location><Longitude>-8.629470</Longitude><Latitude>41.156670</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
@@ -129,7 +129,7 @@
                     Ver Questão de Reflexão 1: se fosse feito levantamento de campo
                     e descoberto o poste obstrutor, mudaria para WheelchairAccess=partial.
                   -->
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_PRG4:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_PRG4:LOC" version="1">
                     <MobilityImpairedAccess>unknown</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -145,7 +145,7 @@
             </StopPlace>
 
             <!-- MFZ1 — PARTE C: versionamento antes e depois das obras -->
-            <StopPlace id="PT:STCP:StopPlace:MarechalFontaine:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:MarechalFontaine:LOC" version="1">
               <Name>Mercado da Foz</Name>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
@@ -154,7 +154,7 @@
                   PARTE C — version="1": antes das obras (wheelchair_boarding=2)
                   Válido até 2026-03-01 (data das obras).
                 -->
-                <Quay id="PT:STCP:Quay:MFZ1:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:MFZ1:LOC" version="1">
                   <Name>Mercado da Foz (MFZ1)</Name>
                   <validBetween>
                     <FromDate>2026-01-01</FromDate>
@@ -162,7 +162,7 @@
                   </validBetween>
                   <Centroid><Location><Longitude>-8.636440</Longitude><Latitude>41.157610</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_MFZ1_v1:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_MFZ1_v1:LOC" version="1">
                     <MobilityImpairedAccess>no</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -181,14 +181,14 @@
                   Válido a partir de 2026-03-01.
                   Coordenadas mantidas (mesma localização, apenas renovação).
                 -->
-                <Quay id="PT:STCP:Quay:MFZ1:LOC" version="2">
+                <Quay id="PT:EXEMPLO:Quay:MFZ1:LOC" version="2">
                   <Name>Mercado da Foz (MFZ1) — renovada</Name>
                   <validBetween>
                     <FromDate>2026-03-01</FromDate>
                   </validBetween>
                   <Centroid><Location><Longitude>-8.636440</Longitude><Latitude>41.157610</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_MFZ1_v2:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_MFZ1_v2:LOC" version="1">
                     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -205,15 +205,15 @@
             </StopPlace>
 
             <!-- CQ10 — wheelchair_boarding=1 → WheelchairAccess=yes -->
-            <StopPlace id="PT:STCP:StopPlace:CasteloQueijo:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:CasteloQueijo:LOC" version="1">
               <Name>Castelo do Queijo</Name>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
-                <Quay id="PT:STCP:Quay:CQ10:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:CQ10:LOC" version="1">
                   <Name>Castelo do Queijo (CQ10)</Name>
                   <Centroid><Location><Longitude>-8.676240</Longitude><Latitude>41.168930</Latitude></Location></Centroid>
                   <QuayType>busStop</QuayType>
-                  <AccessibilityAssessment id="PT:STCP:AA:Quay_CQ10:LOC" version="1">
+                  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_CQ10:LOC" version="1">
                     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                     <limitations>
                       <AccessibilityLimitation>
@@ -232,16 +232,16 @@
         </SiteFrame>
 
         <!-- PARTE B: TimetableFrame com AccessibilityAssessment nas ServiceJourney -->
-        <TimetableFrame id="PT:STCP:TimetableFrame:Exercicio05_TF:LOC" version="1">
+        <TimetableFrame id="PT:EXEMPLO:TimetableFrame:Exercicio05_TF:LOC" version="1">
           <vehicleJourneys>
 
             <!-- 200_DU_0600 — wheelchair_accessible=1 → yes -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0600:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0600:LOC" version="1">
               <Name>200 IDA — Dias Úteis 06:00</Name>
-              <DayTypeRefs><DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/></DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_DU_0600:LOC" version="1">
+              <DayTypeRefs><DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/></DayTypeRefs>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_DU_0600:LOC" version="1">
                 <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                 <limitations><AccessibilityLimitation>
                   <WheelchairAccess>yes</WheelchairAccess>
@@ -252,23 +252,23 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:00:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:27:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
             </ServiceJourney>
 
             <!-- 200_DU_0740 — wheelchair_accessible=1 → yes -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DU_0740:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DU_0740:LOC" version="1">
               <Name>200 IDA — Dias Úteis 07:40</Name>
-              <DayTypeRefs><DayTypeRef ref="PT:STCP:DayType:DiasUteis:LOC" version="1"/></DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_DU_0740:LOC" version="1">
+              <DayTypeRefs><DayTypeRef ref="PT:EXEMPLO:DayType:DiasUteis:LOC" version="1"/></DayTypeRefs>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_DU_0740:LOC" version="1">
                 <MobilityImpairedAccess>yes</MobilityImpairedAccess>
                 <limitations><AccessibilityLimitation>
                   <WheelchairAccess>yes</WheelchairAccess>
@@ -279,28 +279,28 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>07:40:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>08:25:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
             </ServiceJourney>
 
             <!-- 200_SAB_0604 — wheelchair_accessible=0 → unknown -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_SAB_0604:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_SAB_0604:LOC" version="1">
               <Name>200 IDA — Sábados 06:04</Name>
-              <DayTypeRefs><DayTypeRef ref="PT:STCP:DayType:Sabados:LOC" version="1"/></DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <DayTypeRefs><DayTypeRef ref="PT:EXEMPLO:DayType:Sabados:LOC" version="1"/></DayTypeRefs>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
               <!--
                 wheelchair_accessible=0 → unknown.
-                A STCP não registou informação de acessibilidade para esta viagem.
+                A EXEMPLO não registou informação de acessibilidade para esta viagem.
                 Não significa que não é acessível — significa que não se sabe.
               -->
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_SAB_0604:LOC" version="1">
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_SAB_0604:LOC" version="1">
                 <MobilityImpairedAccess>unknown</MobilityImpairedAccess>
                 <limitations><AccessibilityLimitation>
                   <WheelchairAccess>unknown</WheelchairAccess>
@@ -311,29 +311,29 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:04:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:44:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
             </ServiceJourney>
 
             <!-- 200_DF_0604 — wheelchair_accessible=2 → no -->
-            <ServiceJourney id="PT:STCP:ServiceJourney:200_DF_0604:LOC" version="1">
+            <ServiceJourney id="PT:EXEMPLO:ServiceJourney:200_DF_0604:LOC" version="1">
               <Name>200 IDA — Domingos/Feriados 06:04</Name>
-              <DayTypeRefs><DayTypeRef ref="PT:STCP:DayType:DomingosFeriados:LOC" version="1"/></DayTypeRefs>
-              <JourneyPatternRef ref="PT:STCP:SJP:200_IDA_NORMAL:LOC" version="1"/>
-              <OperatorRef ref="PT:STCP:Operator:STCP:LOC" version="1"/>
+              <DayTypeRefs><DayTypeRef ref="PT:EXEMPLO:DayType:DomingosFeriados:LOC" version="1"/></DayTypeRefs>
+              <JourneyPatternRef ref="PT:EXEMPLO:SJP:200_IDA_NORMAL:LOC" version="1"/>
+              <OperatorRef ref="PT:EXEMPLO:Operator:EXEMPLO:LOC" version="1"/>
               <!--
                 wheelchair_accessible=2 → no.
                 Ver Questão de Reflexão 2: mesmo que BLRB1 seja acessível,
                 este serviço não deve ser apresentado a utilizadores com filtro
                 de acessibilidade ativo, porque o veículo não está preparado.
               -->
-              <AccessibilityAssessment id="PT:STCP:AA:SJ_200_DF_0604:LOC" version="1">
+              <AccessibilityAssessment id="PT:EXEMPLO:AA:SJ_200_DF_0604:LOC" version="1">
                 <MobilityImpairedAccess>no</MobilityImpairedAccess>
                 <limitations><AccessibilityLimitation>
                   <WheelchairAccess>no</WheelchairAccess>
@@ -344,11 +344,11 @@
               </AccessibilityAssessment>
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_01:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_01:LOC" version="1"/>
                   <DepartureTime>06:04:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef ref="PT:STCP:SPIJP:200_IDA_30:LOC" version="1"/>
+                  <StopPointInJourneyPatternRef ref="PT:EXEMPLO:SPIJP:200_IDA_30:LOC" version="1"/>
                   <ArrivalTime>06:50:00</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>

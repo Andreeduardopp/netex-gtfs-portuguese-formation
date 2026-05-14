@@ -84,7 +84,7 @@ O projeto francês utiliza **Livebook** (notebooks interativos Elixir) com 7 mó
 | Estrutura pedagógica (conceito → exemplo → exercício) | ✅ Adaptar — funciona bem |
 | Progressão modular (bases → rede → paragens → horários) | ✅ Adaptar — lógica clara |
 | Exemplos XML comentados extensivamente | ✅ Adaptar — metodologia excelente |
-| Rede âncora (Rochefort) | ❌ Substituir por **STCP Porto** (dados reais, ver Task 1.2) |
+| Rede âncora (Rochefort) | ❌ Substituir por **Operadora Exemplo** (dados reais, ver Task 1.2) |
 | Notebooks Livebook/Elixir | ❌ Substituir por Markdown + XML estático (mais acessível ao público PT) |
 | Referências ao perfil francês | ❌ Substituir por referências ao perfil nacional PT |
 
@@ -97,7 +97,7 @@ Projeto Francês (7 módulos)          Projeto Português (9 módulos)
 ────────────────────────────         ──────────────────────────────────
 1. Intro                             0. Antes de Começar (+ GTFS bridge)
 2. Bases                             1. Conceitos Base (Transmodel/NeTEx)
-3. Rede (Rochefort)        →         2. Rede de Transporte (STCP Porto)
+3. Rede (Rochefort)        →         2. Rede de Transporte (Operadora Exemplo)
 4. StopPlace               →         4. Multimodalidade
 5a. Acessib. Transporte    →         5. Acessibilidade
 5b. Acessib. Voirie        →         (integrado no Módulo 5)

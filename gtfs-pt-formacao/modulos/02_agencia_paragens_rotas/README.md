@@ -31,14 +31,14 @@ O `agency.txt` identifica a(s) empresa(s) que operam o serviço: [[STD-01]](#STD
 
 *`agency_id` é obrigatório quando o feed contém dados de múltiplos operadores.
 
-### 1.2 STCP — Exemplo
+### 1.2 Operadora Exemplo — Exemplo
 
 ```csv
 agency_id,agency_name,agency_url,agency_timezone,agency_lang
-STCP,STCP,https://www.stcp.pt,Europe/Lisbon,pt
+Operadora Exemplo,Operadora Exemplo,https://www.exemplo.pt,Europe/Lisbon,pt
 ```
 
-Ver ficheiro: [`exemplos/02_01_agency_stcp.txt`](exemplos/02_01_agency_stcp.txt)
+Ver ficheiro: [`exemplos/02_01_agency_exemplo.txt`](exemplos/02_01_agency_exemplo.txt)
 
 ### 1.3 Feeds Multi-Operador
 
@@ -46,7 +46,7 @@ Alguns feeds agregam dados de múltiplos operadores. Nesse caso, `agency_id` é 
 
 ```csv
 agency_id,agency_name,agency_url,agency_timezone,agency_lang
-STCP,STCP,https://www.stcp.pt,Europe/Lisbon,pt
+Operadora Exemplo,Operadora Exemplo,https://www.exemplo.pt,Europe/Lisbon,pt
 MetroPorto,Metro do Porto,https://www.metrodoporto.pt,Europe/Lisbon,pt
 CP,Comboios de Portugal,https://www.cp.pt,Europe/Lisbon,pt
 ```
@@ -106,7 +106,7 @@ CAMP_P2,Campanhã — Plataforma 2,41.148860,-8.585500,0,EST_CAMP
 
 ### 2.4 Paragens da Linha 200 (Direção Castelo do Queijo)
 
-Primeiras 10 paragens extraídas do feed STCP: [[DATA-01]](#DATA-01)
+Primeiras 10 paragens extraídas do feed Operadora Exemplo: [[DATA-01]](#DATA-01)
 
 | Seq | `stop_id` | `stop_name` | `stop_lat` | `stop_lon` | `zone_id` |
 |-----|-----------|-------------|-----------|-----------|-----------|
@@ -166,28 +166,28 @@ Os códigos mais relevantes para operadores portugueses: [[STD-01]](#STD-01)
 | `0` | Eléctrico / Tram | Carris (elétricos históricos) |
 | `1` | Metro | Metro de Lisboa, Metro do Porto |
 | `2` | Comboio / Rail | CP, Fertagus |
-| `3` | Autocarro / Bus | STCP, Carris Metropolitana, Transdev |
+| `3` | Autocarro / Bus | Operadora Exemplo, Carris Metropolitana, Transdev |
 | `4` | Ferry | Transtejo/Soflusa |
 | `7` | Funicular | Elevador da Glória, Elevador da Bica |
 | `11` | Trolleybus | — (não existe atualmente em PT) |
 | `12` | Monorail | — (não existe atualmente em PT) |
 
-### 3.3 STCP Linha 200 
+### 3.3 Operadora Exemplo Linha 200 
 
 ```csv
 route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
-200,STCP,200,Bolhão - Castelo do Queijo,3,187EC2,FFFFFF
+200,Operadora Exemplo,200,Bolhão - Castelo do Queijo,3,187EC2,FFFFFF
 ```
 
 Ver ficheiro: [`exemplos/02_03_routes_200.txt`](exemplos/02_03_routes_200.txt)
 
 Leitura campo a campo:
 - `route_id=200` — identificador da rota
-- `agency_id=STCP` — referência ao operador em `agency.txt`
+- `agency_id=Operadora Exemplo` — referência ao operador em `agency.txt`
 - `route_short_name=200` — código que o passageiro vê no autocarro
 - `route_long_name=Bolhão - Castelo do Queijo` — nome completo com terminais
 - `route_type=3` — autocarro
-- `route_color=187EC2` — azul (cor da Linha 200 no mapa STCP)
+- `route_color=187EC2` — azul (cor da Linha 200 no mapa Operadora Exemplo)
 - `route_text_color=FFFFFF` — texto branco sobre fundo azul
 
 ---
@@ -199,9 +199,9 @@ A ligação entre os três ficheiros é feita pelo `agency_id`:
 ```
 agency.txt                routes.txt
 ┌──────────────┐          ┌───────────────────────┐
-│agency_id=STCP│ ◄─────── │ agency_id=STCP        │
+│agency_id=Operadora Exemplo│ ◄─────── │ agency_id=Operadora Exemplo        │
 │agency_name=  │          │ route_id=200          │
-│  STCP        │          │ route_short_name=200  │
+│  Operadora Exemplo        │          │ route_short_name=200  │
 └──────────────┘          └───────────────────────┘
 
 stops.txt (independente nesta fase — ligado via stop_times.txt no Módulo 3)
@@ -240,7 +240,7 @@ As cores `route_color` e `route_text_color` devem garantir contraste suficiente 
 
 ## Exemplos
 
-- [`exemplos/02_01_agency_stcp.txt`](exemplos/02_01_agency_stcp.txt) — `agency.txt` da STCP
+- [`exemplos/02_01_agency_exemplo.txt`](exemplos/02_01_agency_exemplo.txt) — `agency.txt` da Operadora Exemplo
 - [`exemplos/02_02_stops_200.txt`](exemplos/02_02_stops_200.txt) — Primeiras 10 paragens da Linha 200 (direção Castelo do Queijo)
 - [`exemplos/02_03_routes_200.txt`](exemplos/02_03_routes_200.txt) — Rota da Linha 200
 
@@ -259,4 +259,4 @@ As cores `route_color` e `route_text_color` devem garantir contraste suficiente 
 | <a id="STD-01"></a>[STD-01] | MobilityData. "GTFS Schedule Reference." https://gtfs.org/schedule/reference |
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="PT-01"></a>[PT-01] | IMT. "Ponto de Acesso Nacional (NAP) Portugal." https://nap-portugal.imt-ip.pt |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

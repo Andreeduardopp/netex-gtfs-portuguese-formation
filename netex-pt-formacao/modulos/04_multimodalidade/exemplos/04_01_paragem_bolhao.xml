@@ -5,7 +5,7 @@
   Módulo 4 — Multimodalidade e StopPlace
 
   Este ficheiro demonstra a separação entre camada LÓGICA e camada FÍSICA
-  para a paragem Bolhão da STCP em Porto.
+  para a paragem Bolhão da EXEMPLO em Porto.
 
   COMPARAÇÃO GTFS → NeTEx:
   ─────────────────────────────────────────────────────────────────────────
@@ -21,8 +21,8 @@
     1. SiteFrame — StopPlace "Bolhão" com 2 Quay (IDA e VOLTA)
     2. ServiceFrame — 2 ScheduledStopPoint + PassengerStopAssignment
 
-  DADOS REAIS: Paragens BLRB1 e BLRB2 do feed GTFS STCP Porto (Abr 2026)
-  Fonte: STCP. Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30). [DATA-03]
+  DADOS REAIS: Paragens BLRB1 e BLRB2 do feed GTFS Operadora Exemplo (Abr 2026)
+  Fonte: EXEMPLO. Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30). [DATA-03]
 -->
 <PublicationDelivery
     xmlns="http://www.netex.org.uk/netex"
@@ -31,10 +31,10 @@
 
   <PublicationTimestamp>2026-04-30T00:00:00Z</PublicationTimestamp>
   <!-- ParticipantRef identifica o sistema/organização que produz este ficheiro -->
-  <ParticipantRef>PT:STCP</ParticipantRef>
+  <ParticipantRef>PT:EXEMPLO</ParticipantRef>
 
   <dataObjects>
-    <CompositeFrame id="PT:STCP:CompositeFrame:Bolhao_M04:LOC" version="1">
+    <CompositeFrame id="PT:EXEMPLO:CompositeFrame:Bolhao_M04:LOC" version="1">
       <validBetween>
         <FromDate>2026-04-30</FromDate>
         <ToDate>2027-04-29</ToDate>
@@ -46,7 +46,7 @@
              O SiteFrame não tem equivalente direto em GTFS.
              É aqui que vivem os objetos físicos: StopPlace, Quay, etc.
              ═══════════════════════════════════════════════════════════════ -->
-        <SiteFrame id="PT:STCP:SiteFrame:Bolhao_SF:LOC" version="1">
+        <SiteFrame id="PT:EXEMPLO:SiteFrame:Bolhao_SF:LOC" version="1">
 
           <stopPlaces>
 
@@ -58,7 +58,7 @@
               StopPlaceType="onstreetBus" → paragem de autocarro à beira-de-estrada
               (vs. metroStation, railStation, busStation, etc.)
             -->
-            <StopPlace id="PT:STCP:StopPlace:Bolhao:LOC" version="1">
+            <StopPlace id="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1">
               <Name>Bolhão</Name>
 
               <!--
@@ -97,7 +97,7 @@
                   BLRB1 no GTFS corresponde à paragem de autocarro sentido IDA (Castelo do Queijo).
                   Em NeTEx, este Quay tem as COORDENADAS EXATAS da plataforma, não do lugar geral.
                 -->
-                <Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1">
                   <Name>Bolhão — Sentido Castelo do Queijo</Name>
 
                   <!-- PublicCode: código público da plataforma (equivale ao stop_code GTFS) -->
@@ -121,7 +121,7 @@
                   Em NeTEx, estão explicitamente dentro do mesmo StopPlace,
                   tornando a relação imediatamente visível no modelo.
                 -->
-                <Quay id="PT:STCP:Quay:Bolhao_VOLTA:LOC" version="1">
+                <Quay id="PT:EXEMPLO:Quay:Bolhao_VOLTA:LOC" version="1">
                   <Name>Bolhão — Sentido Aliados / Centro</Name>
                   <PublicCode>BLRB2</PublicCode>
 
@@ -147,7 +147,7 @@
              Contém os ScheduledStopPoint (pontos lógicos de paragem)
              e os PassengerStopAssignment (a ponte físico↔lógico).
              ═══════════════════════════════════════════════════════════════ -->
-        <ServiceFrame id="PT:STCP:ServiceFrame:Bolhao_SvF:LOC" version="1">
+        <ServiceFrame id="PT:EXEMPLO:ServiceFrame:Bolhao_SvF:LOC" version="1">
 
           <!--
             scheduledStopPoints = pontos lógicos de paragem.
@@ -163,7 +163,7 @@
               Não tem coordenadas — é uma abstração lógica.
               As coordenadas físicas estão no Quay:Bolhao_IDA (ligado abaixo).
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1">
               <Name>Bolhão</Name>
             </ScheduledStopPoint>
 
@@ -172,7 +172,7 @@
               Existe um SSP separado para cada ponto de paragem lógico —
               mas ambos pertencem ao mesmo StopPlace físico.
             -->
-            <ScheduledStopPoint id="PT:STCP:ScheduledStopPoint:BLRB2:LOC" version="1">
+            <ScheduledStopPoint id="PT:EXEMPLO:ScheduledStopPoint:BLRB2:LOC" version="1">
               <Name>Bolhão</Name>
             </ScheduledStopPoint>
 
@@ -198,18 +198,18 @@
               order="1" → sequência de prioridade se houver múltiplas atribuições
             -->
             <PassengerStopAssignment
-                id="PT:STCP:PSA:BLRB1_Bolhao_IDA:LOC"
+                id="PT:EXEMPLO:PSA:BLRB1_Bolhao_IDA:LOC"
                 version="1"
                 order="1">
 
               <!-- O ponto lógico (referenciado nos horários) -->
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB1:LOC" version="1"/>
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB1:LOC" version="1"/>
 
               <!-- O lugar físico geral (o StopPlace) -->
-              <StopPlaceRef ref="PT:STCP:StopPlace:Bolhao:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1"/>
 
               <!-- A plataforma específica onde o passageiro deve ir -->
-              <QuayRef ref="PT:STCP:Quay:Bolhao_IDA:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="1"/>
 
             </PassengerStopAssignment>
 
@@ -218,13 +218,13 @@
               ScheduledStopPoint BLRB2 → StopPlace Bolhão → Quay Bolhao_VOLTA
             -->
             <PassengerStopAssignment
-                id="PT:STCP:PSA:BLRB2_Bolhao_VOLTA:LOC"
+                id="PT:EXEMPLO:PSA:BLRB2_Bolhao_VOLTA:LOC"
                 version="1"
                 order="1">
 
-              <ScheduledStopPointRef ref="PT:STCP:ScheduledStopPoint:BLRB2:LOC" version="1"/>
-              <StopPlaceRef ref="PT:STCP:StopPlace:Bolhao:LOC" version="1"/>
-              <QuayRef ref="PT:STCP:Quay:Bolhao_VOLTA:LOC" version="1"/>
+              <ScheduledStopPointRef ref="PT:EXEMPLO:ScheduledStopPoint:BLRB2:LOC" version="1"/>
+              <StopPlaceRef ref="PT:EXEMPLO:StopPlace:Bolhao:LOC" version="1"/>
+              <QuayRef ref="PT:EXEMPLO:Quay:Bolhao_VOLTA:LOC" version="1"/>
 
             </PassengerStopAssignment>
 

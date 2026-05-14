@@ -1,2 +1,2 @@
 agency_id,route_id,route_short_name,route_type,route_long_name,route_url,route_color,route_text_color,route_sort_order
-STCP,200,200,3,Bolhão - Cast.queijo,http://www.stcp.pt/pt/viajar/linhas/?linha=200,187EC2,FFFFFF,1
+Operadora Exemplo,200,200,3,Bolhão - Cast.queijo,http://www.exemplo.pt/pt/viajar/linhas/?linha=200,187EC2,FFFFFF,1

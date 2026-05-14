@@ -7,7 +7,7 @@ Após completar este módulo, o leitor será capaz de:
 - Compreender o papel do `service_id` como abstração central do calendário GTFS
 - Criar padrões semanais com `calendar.txt` e exceções data a data com `calendar_dates.txt`
 - Distinguir as duas abordagens ao calendário: baseada em regras vs baseada em exceções
-- Modelar os três tipos de serviço da STCP (dias úteis, sábados, domingos/feriados)
+- Modelar os três tipos de serviço da Operadora Exemplo (dias úteis, sábados, domingos/feriados)
 - Aplicar as Best Practices para gestão de calendários em feeds de produção
 
 ---
@@ -120,11 +120,11 @@ Leitura:
 
 ---
 
-## 4. A Abordagem da STCP: Só `calendar_dates.txt`
+## 4. A Abordagem da Operadora Exemplo: Só `calendar_dates.txt`
 
 ### 4.1 A Abordagem Baseada em Exceções
 
-A STCP usa exclusivamente `calendar_dates.txt` com `exception_type=1`. Não existe `calendar.txt` no feed. [[DATA-01]](#DATA-01)
+A Operadora Exemplo usa exclusivamente `calendar_dates.txt` com `exception_type=1`. Não existe `calendar.txt` no feed. [[DATA-01]](#DATA-01)
 
 Isto significa que o feed lista explicitamente cada data em que cada `service_id` está ativo:
 
@@ -154,7 +154,7 @@ DOMINGOS|FERIADOS,20260503,1
 
 Esta abordagem é comum entre operadores que geram feeds programaticamente a partir de software de planeamento.
 
-### 4.3 Os Três `service_id` da STCP
+### 4.3 Os Três `service_id` da Operadora Exemplo
 
 | `service_id` GTFS | Descrição | Dias típicos |
 |---|---|---|
@@ -162,7 +162,7 @@ Esta abordagem é comum entre operadores que geram feeds programaticamente a par
 | `SÁBADOS` | Sábados | Sábados |
 | `DOMINGOS\|FERIADOS` | Domingos e feriados | Domingos + feriados nacionais |
 
-> **Nota sobre os IDs reais da STCP**: os `service_id` do feed real diferem das boas práticas por razões históricas:
+> **Nota sobre os IDs reais da Operadora Exemplo**: os `service_id` do feed real diferem das boas práticas por razões históricas:
 > - `DIAS UTEIS` contém um espaço (Best Practices recomendam `DIAS_UTEIS`)
 > - `SÁBADOS` contém um acento (recomendado: `SABADOS`)
 > - `DOMINGOS|FERIADOS` contém um pipe (recomendado: `DOMINGOS_FERIADOS`)
@@ -210,7 +210,7 @@ A frequência de atualização varia por operador, mas tipicamente está ligada 
 ## Exemplos
 
 - [`exemplos/04_01_calendar_semanal.txt`](exemplos/04_01_calendar_semanal.txt) — Padrão semanal com 3 tipos de serviço usando `calendar.txt`
-- [`exemplos/04_02_calendar_dates_stcp.txt`](exemplos/04_02_calendar_dates_stcp.txt) — Abordagem da STCP: só `calendar_dates.txt` com exception_type=1
+- [`exemplos/04_02_calendar_dates_exemplo.txt`](exemplos/04_02_calendar_dates_exemplo.txt) — Abordagem da Operadora Exemplo: só `calendar_dates.txt` com exception_type=1
 
 ---
 
@@ -227,4 +227,4 @@ A frequência de atualização varia por operador, mas tipicamente está ligada 
 | <a id="STD-01"></a>[STD-01] | MobilityData. "GTFS Schedule Reference." https://gtfs.org/schedule/reference |
 | <a id="BP-01"></a>[BP-01] | MobilityData. "GTFS Schedule Best Practices." https://gtfs.org/documentation/schedule/schedule-best-practices |
 | <a id="BP-02"></a>[BP-02] | Transit App. "Guidelines for Producing GTFS Static Data." https://resources.transitapp.com/article/458-guidelines-for-producing-gtfs-static-data-for-transit |
-| <a id="DATA-01"></a>[DATA-01] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-01"></a>[DATA-01] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |

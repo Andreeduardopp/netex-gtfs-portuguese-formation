@@ -58,7 +58,7 @@ Se já trabalha com GTFS, esta tabela mostra onde cada standard se posiciona:
 | **Formato** | CSV (ficheiros `.txt` num `.zip`) | XML (por norma um `.xml` por `Frame`) |
 | **Modelo conceptual** | Pragmático, sem modelo formal | Baseado no Transmodel (CEN EN 12896) [[STD-04]](#STD-04) |
 | **Cobertura** | Horários, paragens, rotas, tarifas básicas | Tudo do GTFS + acessibilidade, multimodalidade, tarifas complexas, informação ao passageiro |
-| **Identificadores** | Locais (sem formato obrigatório) | Globais, hierárquicos: `PT:STCP:Line:200:LOC` |
+| **Identificadores** | Locais (sem formato obrigatório) | Globais, hierárquicos: `PT:EXEMPLO:Line:200:LOC` |
 | **Versionamento** | Não existe | Nativo — cada objeto tem `version` e `validFrom/To` |
 | **Complexidade** | Baixa — 6 ficheiros obrigatórios | Alta — schema XSD extenso (~500 tipos XML) |
 | **Adoção** | 10.000+ agências globalmente | Obrigatório na UE (Regulamento 2024/490) [[REG-01]](#REG-01) |
@@ -201,9 +201,9 @@ Extensões VS Code recomendadas:
 
 **Validação de XML**: O **NeTEx Validator da Entur** permite validar ficheiros NeTEx contra o schema XSD e os perfis nacionais. [[TOOL-01]](#TOOL-01) Será introduzido no Módulo 8.
 
-### 5.3 A Rede Âncora: STCP Porto
+### 5.3 A Rede Âncora: Operadora Exemplo
 
-Todos os exemplos XML deste curso são baseados em dados reais da **STCP (Sociedade de Transportes Colectivos do Porto)**. [[DATA-03]](#DATA-03) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
+Todos os exemplos XML deste curso são baseados em dados reais da **Operadora Exemplo (Sociedade de Transportes Colectivos do Porto)**. [[DATA-03]](#DATA-03) Usamos a Linha 200 (Bolhão → Castelo do Queijo) como caso principal.
 
 A escolha de dados reais (vs. uma rede fictícia) tem uma razão pedagógica: os exemplos são mais credíveis quando podemos verificar que correspondem a uma realidade que o leitor conhece ou pode consultar.
 
@@ -257,4 +257,4 @@ Módulo 8 — Ferramentas Práticas (validação, submissão ao NAP)
 | <a id="PT-02"></a>[PT-02] | IMT. "Ponto de Acesso Nacional (NAP) Portugal." https://nap-portugal.imt-ip.pt |
 | <a id="PT-03"></a>[PT-03] | Instituto da Mobilidade e dos Transportes (IMT-IP). https://www.imt-ip.pt |
 | <a id="TOOL-01"></a>[TOOL-01] | Entur. "NeTEx Validator (Java)." https://github.com/entur/netex-validator-java |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP disponibilizado pela operadora. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo disponibilizado pela operadora. |

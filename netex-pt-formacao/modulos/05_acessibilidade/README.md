@@ -54,7 +54,7 @@ Pode ser associado a:
 ### 2.1 Estrutura Básica
 
 ```xml
-<AccessibilityAssessment id="PT:STCP:AA:200_DU_0600:LOC" version="1">
+<AccessibilityAssessment id="PT:EXEMPLO:AA:200_DU_0600:LOC" version="1">
   <!-- MobilityImpairedAccess = avaliação geral (yes/no/partial/unknown) -->
   <MobilityImpairedAccess>yes</MobilityImpairedAccess>
 
@@ -184,13 +184,13 @@ A IMT publicou orientações sobre os campos de acessibilidade obrigatórios par
 ### Cenário A — Quay totalmente acessível (nova paragem renovada)
 
 ```xml
-<Quay id="PT:STCP:Quay:Bolhao_IDA:LOC" version="2">
+<Quay id="PT:EXEMPLO:Quay:Bolhao_IDA:LOC" version="2">
   <Name>Bolhão — Sentido Castelo do Queijo</Name>
   <Centroid>...</Centroid>
   <QuayType>busStop</QuayType>
 
   <!-- AccessibilityAssessment da INFRAESTRUTURA (não do veículo) -->
-  <AccessibilityAssessment id="PT:STCP:AA:Quay_Bolhao_IDA:LOC" version="1">
+  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_Bolhao_IDA:LOC" version="1">
     <MobilityImpairedAccess>yes</MobilityImpairedAccess>
     <limitations>
       <AccessibilityLimitation>
@@ -209,11 +209,11 @@ A IMT publicou orientações sobre os campos de acessibilidade obrigatórios par
 ### Cenário B — Quay com limitações (paragem antiga sem obras)
 
 ```xml
-<Quay id="PT:STCP:Quay:Exemplo_Antigo:LOC" version="1">
+<Quay id="PT:EXEMPLO:Quay:Exemplo_Antigo:LOC" version="1">
   <Name>Exemplo — Paragem Antiga</Name>
   <QuayType>busStop</QuayType>
 
-  <AccessibilityAssessment id="PT:STCP:AA:Quay_Antigo:LOC" version="1">
+  <AccessibilityAssessment id="PT:EXEMPLO:AA:Quay_Antigo:LOC" version="1">
     <!-- MobilityImpairedAccess=partial → possível mas com condicionalismos -->
     <MobilityImpairedAccess>partial</MobilityImpairedAccess>
     <limitations>
@@ -250,4 +250,4 @@ A IMT publicou orientações sobre os campos de acessibilidade obrigatórios par
 | <a id="STD-06"></a>[STD-06] | CEN. "NeTEx – Network Timetable Exchange." CEN/TS 16614-6:2024 (Parte 6 — EPIAP). https://github.com/NeTEx-CEN/NeTEx |
 | <a id="REG-01"></a>[REG-01] | Regulamento Delegado (UE) 2024/490 da Comissão, de 14 de Dezembro de 2023. JO L, 2024/490. https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=OJ:L_202400490 |
 | <a id="PT-01"></a>[PT-01] | IMT. "Perfil Nacional NeTEx Portugal." https://ptprofiles.azurewebsites.net |
-| <a id="DATA-03"></a>[DATA-03] | STCP. "Feed GTFS STCP Porto (versão Escolar 228, 2026-04-30)." Feed oficial STCP. |
+| <a id="DATA-03"></a>[DATA-03] | Operadora Exemplo. "Feed GTFS Operadora Exemplo (versão Escolar 228, 2026-04-30)." Feed oficial Operadora Exemplo. |
